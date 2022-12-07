@@ -1,0 +1,17 @@
+.sb-button {
+  border: none;
+  padding-block: var(--spacing-4);
+  padding-inline: var(--spacing-12);
+}
+
+.sb-button[data-primary='true'] {
+  background-color: var(--color-primary);
+}
+
+.sb-button[data-primary='true']:where(:focus,:hover,:active) {
+  background-color: var(--color-primary-light);
+}
+
+.sb-button[data-primary='true']:where(:disabled) {
+  background-color: var(--color-disabled);
+}
