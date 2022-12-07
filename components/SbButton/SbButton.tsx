@@ -9,7 +9,7 @@ interface Props {
   onClick: () => void;
 }
 
-const Button: React.FC<Props> = ({
+const SbButton: React.FC<Props> = ({
   buttonType,
   children,
   disabled,
@@ -30,4 +30,4 @@ const Button: React.FC<Props> = ({
   );
 }
 
-export default Button;
+export default SbButton;
