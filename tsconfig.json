@@ -26,6 +26,7 @@
     "public/innerHTML.js",
   ],
   "exclude": [
+    "styleguide",
     "node_modules"
   ]
 }

@@ -1,0 +1,4 @@
+.page {
+  max-inline-size: var(--size-page-max-width);
+  padding: var(--spacing-12);
+}
