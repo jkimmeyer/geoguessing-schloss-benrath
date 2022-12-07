@@ -1,4 +1,3 @@
-
 ## Button Primary
 ```tsx
   <SbButton buttonType="Primary">Button-Test</SbButton>
