@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "styleguide": "npx styleguidist server",
-    "stylelint": "stylelint --config stylelint.config.js '**/*.css'"
+    "stylelint": "stylelint --config stylelint.config.js '**/*.css'",
     "tsc": "tsc"
   },
   "dependencies": {
