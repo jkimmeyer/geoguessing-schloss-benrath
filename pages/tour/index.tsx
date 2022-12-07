@@ -27,7 +27,7 @@ export default function index() {
       <Script src="script.js" />
       <Script id="3dvista" src="/innerHTML.js"/>
 
-      <div id="preloadContainer" className="fill-viewport">
+      <div id="preloadContainer" className="fill-viewport preload-container-class">
         <div>
           <div>
             <span>
@@ -37,7 +37,7 @@ export default function index() {
         </div>
       </div>
 
-      <div id="viewer" className="fill-viewport"></div>
+      <div id="viewer" className="fill-viewport viewer-class"></div>
     </div>
   )
 }
