@@ -9,6 +9,7 @@
     "lint": "next lint",
     "styleguide": "npx styleguidist server",
     "stylelint": "stylelint --config stylelint.config.js '**/*.css'"
+    "tsc": "tsc"
   },
   "dependencies": {
     "@babel/core": "^7.20.5",
