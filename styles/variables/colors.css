@@ -1,0 +1,13 @@
+/* Color Palette */
+:root,
+::before,
+::after {
+  --peach-blossom: #FE9B96;
+  --peach-blossom-lighter: #FFCCCA;
+
+  --light-grey: #F1F1F1;
+  --white: #FFFFFF;
+  --light-black: #333333;
+}
+
+/* UI Colors */
