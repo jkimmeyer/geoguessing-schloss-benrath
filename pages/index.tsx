@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import SbButton from '../components/SbButton/SbButton';
+import SbIcon from '../components/SbIcon/SbIcon';
 import Page from '../layouts/Page';
-import { ButtonType } from '../types';
+import { ButtonType, IconNames } from '../types';
 
 export default function Home() {
   return (
@@ -13,7 +14,15 @@ export default function Home() {
       </Head>
 
       <Page>
-        <SbButton buttonType={ButtonType.Primary} onClick={() => console.log("Link")}>Zurück zur Website</SbButton>
+        <SbButton
+          buttonType={ButtonType.Primary}
+          onClick={() => console.log("Link")}
+          icon={
+            <SbIcon icon={IconNames.Back} />
+          }
+        >
+          Zurück zur Website
+        </SbButton>
       </Page>
     </div>
   )

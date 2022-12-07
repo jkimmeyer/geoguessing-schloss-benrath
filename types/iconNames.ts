@@ -1,3 +1,4 @@
 export enum IconNames {
-  Home = 'mdi-light:home',
+  Home = 'fluent:home-32-regular',
+  Back = 'fluent:chevron-circle-left-32-regular'
 }
