@@ -23,8 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "public/innerHTML.js
-    "public/innerHTML.js
+    "public/innerHTML.js",
   ],
   "exclude": [
     "node_modules"
