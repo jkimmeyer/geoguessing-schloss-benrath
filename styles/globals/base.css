@@ -1,0 +1,111 @@
+/**
+/* This file is for setting minimum base styles and normalizing common tags.
+/* Do not style tags like h1, h2, p etc. globally because they rarely have the same styling on every page!
+**/
+html {
+  box-sizing: border-box;
+  block-size: 100%;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+body {
+  block-size: 100%;
+  font-family: var(--sans-serif-font);
+  font-feature-settings: 'kern' 1;
+  font-kerning: normal;
+  text-align: start;
+  text-size-adjust: 100%;
+  color: var(--color-text-neutral-darkest);
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+dfn,
+address {
+  font-style: normal;
+}
+
+abbr[title] {
+  border-block-end: 0;
+  text-decoration: underline;
+  cursor: help;
+}
+
+sub,
+sup {
+  position: relative;
+}
+
+sub {
+  inset-block-start: 4px;
+}
+
+sup {
+  inset-block-start: -6px;
+}
+
+hr {
+  block-size: 1px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+button {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  appearance: none;
+  display: inline-block;
+  overflow: visible;
+  position: relative;
+  vertical-align: top;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  text-align: center;
+  text-transform: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  text-decoration-skip: objects;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:focus,
+  &:hover,
+  &:active {
+    outline: 0;
+    text-decoration: underline;
+  }
+}
