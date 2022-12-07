@@ -80,21 +80,21 @@ button {
   text-transform: none;
   background-color: transparent;
   cursor: pointer;
+}
 
-  &[disabled] {
-    cursor: not-allowed;
-  }
+button[disabled] {
+  cursor: not-allowed;
+}
 
-  &:focus,
-  &:hover,
-  &:active {
-    outline: 0;
-  }
+button:focus,
+button:hover,
+button:active {
+  outline: 0;
+}
 
-  &::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-  }
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
 }
 
 a {
@@ -103,12 +103,12 @@ a {
   color: inherit;
   background-color: transparent;
   cursor: pointer;
+}
 
-  &:focus,
-  &:hover,
-  &:active {
-    outline: 0;
-    text-decoration: underline;
-  }
+a:focus,
+a:hover,
+a:active {
+  outline: 0;
+  text-decoration: underline;
 }
 /* stylelint-enable declaration-no-important */

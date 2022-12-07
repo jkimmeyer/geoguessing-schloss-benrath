@@ -1,0 +1,24 @@
+/* stylelint-disable no-duplicate-selectors */
+
+/* Color Palette */
+:root,
+::before,
+::after {
+  --peach-blossom: #fe9b96;
+  --peach-blossom-lighter: #ffccca;
+  --light-grey: #f1f1f1;
+  --white: #fff;
+  --light-black: #333;
+}
+
+/* UI Colors */
+:root,
+::before,
+::after {
+  --color-primary: var(--peach-blossom);
+  --color-primary-light: var(--peach-blossom-lighter);
+  --color-disabled: var(--light-grey);
+  --color-text: var(--light-black);
+}
+
+/* stylelint-enable no-duplicate-selectors */
