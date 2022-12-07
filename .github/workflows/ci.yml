@@ -11,6 +11,6 @@ jobs:
           node-version-file: .tool-versions
           cache: npm
       - run: npm install
-      - run: npm lint
-      - run: npm stylelint
-      - run: npm tsc
+      - run: npm run lint
+      - run: npm run stylelint
+      - run: npm run tsc
