@@ -1,5 +1,7 @@
 import { ButtonType } from './buttonType'
+import { IconNames } from './iconNames'
 
 export {
-  ButtonType
+  ButtonType,
+  IconNames,
 }
