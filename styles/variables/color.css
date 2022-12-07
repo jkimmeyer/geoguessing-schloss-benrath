@@ -4,11 +4,11 @@
 :root,
 ::before,
 ::after {
-  --peach-blossom: #fe9b96;
-  --peach-blossom-lighter: #ffccca;
-  --light-grey: #f1f1f1;
-  --white: #fff;
-  --light-black: #333;
+  --peach-blossom: hsl(3 98% 79%);
+  --peach-blossom-lighter: hsl(2 100% 90%);
+  --light-grey: hsl(0 0% 95%);
+  --white: hsl(0 0% 100%);
+  --light-black: hsl(0 0% 20%);
 }
 
 /* UI Colors */
