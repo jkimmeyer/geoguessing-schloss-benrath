@@ -1,0 +1,81 @@
+#: locale=de
+
+## Aktion
+
+### URL
+PopupWebFrameBehaviour_9B03ECF1_8BAA_3228_41D7_C2AB59DB3895.url = http://localhost/benrath/assets/room_01/fresco.html
+PopupWebFrameBehaviour_84056DAA_8BAE_7239_41C1_7A8DED3F2BA8.url = http://localhost/benrath/assets/room_01/stack.html
+PopupWebFrameBehaviour_995FB46B_8CAE_1238_41C8_4E1F67830436.url = http://localhost/benrath/assets/room_04/garden.html
+PopupWebFrameBehaviour_9A063720_8C6A_1E2E_41DA_6C6F893B4C1F.url = http://localhost/benrath/assets/room_04/table.html
+
+## E-Learning
+
+### Frage Screen
+quizQuestion_984D7504_8BBA_73E8_41C6_128FCC75D726.ok = OK
+
+### Report Screen
+quizScore_984F0505_8BBA_73E8_41D5_2369001E100D.title = - SCORE -
+quizScore_984F0505_8BBA_73E8_41D5_2369001E100D.completion = Completed
+quizScore_984F0505_8BBA_73E8_41D5_2369001E100D.questionsCorrect = Correct
+quizScore_984F0505_8BBA_73E8_41D5_2369001E100D.downloadCSV = Download .csv
+quizScore_984F0505_8BBA_73E8_41D5_2369001E100D.questionsIncorrect = Incorrect
+quizScore_984F0505_8BBA_73E8_41D5_2369001E100D.items = Items Found
+quizScore_984F0505_8BBA_73E8_41D5_2369001E100D.questions = Questions
+quizScore_984F0505_8BBA_73E8_41D5_2369001E100D.repeat = Repeat
+quizScore_984F0505_8BBA_73E8_41D5_2369001E100D.submitToLMS = Submit
+quizScore_984F0505_8BBA_73E8_41D5_2369001E100D.elapsedTime = Time
+
+### Score Name
+score1.label = searchgame
+
+### Timeout Screen
+quizTimeout_98725504_8BBA_73E8_41C8_B84C4433B8DD.title = - TIMEOUT -
+quizTimeout_98725504_8BBA_73E8_41C8_B84C4433B8DD.repeat = Repeat
+quizTimeout_98725504_8BBA_73E8_41C8_B84C4433B8DD.score = View Score
+
+## Hotspot
+
+### Tooltip
+HotspotPanoramaOverlayArea_85DC9B63_8BAA_1628_41C9_55ED0B7DF489.toolTip = Historischer Kamin
+
+## Media
+
+### Audio
+audiores_9437A1B8_8CAA_1219_41DE_B6E4FC198ECE.mp3Url = media/audio_944A8682_8CAA_1EE9_41D1_195499C95122_de.mp3
+audiores_9437A1B8_8CAA_1219_41DE_B6E4FC198ECE.mp3Url = media/audio_944A8682_8CAA_1EE9_41D1_195499C95122_de.mp3
+audiores_9B22454B_8CB6_327F_41CB_8436B4CD9C13.mp3Url = media/audio_99E6ABAC_8C6E_7639_41CA_2712780C7099_de.mp3
+audiores_9A9E60C2_8CB6_1268_41D8_AA58FD027003.mp3Url = media/audio_9A086BCC_8C6E_3679_41E0_70B18D2E18D7_de.mp3
+audiores_9B146C65_8CB6_1228_41A9_A4D1D3B5B45C.mp3Url = media/audio_9A38A058_8C6E_3219_41D0_D0A8DEC388DA_de.mp3
+audiores_9AFB8B5E_8CB6_7619_41D6_4ABAB62E9A5B.mp3Url = media/audio_9A3B3D9A_8C6E_3219_41B5_5CF980E3F0BD_de.mp3
+audiores_9BEE9725_8CA9_FE28_41D7_2CAB9FF6708A.mp3Url = media/audio_9B68F3EE_8CB6_1638_41BE_C3DDE42F12AE_de.mp3
+audiores_98193A58_8B9E_3619_41BE_F57F55FF4D6C.mp3Url = media/audio_9D96107B_8B9E_721F_41DE_9A1CF20DDF9F_de.mp3
+audiores_981B8692_8B9E_3EE9_41BB_0256E25D3CA5.mp3Url = media/audio_9DFD683C_8B9E_3219_41D2_43D22F30CB9A_de.mp3
+audiores_9AADE872_8CB6_1228_41CE_C087856F2DF8.mp3Url = media/audio_9E3D72CB_8B9A_1678_41D5_0EB3BB229319_de.mp3
+audiores_9E3B8D13_8B9A_13EF_41E1_1F7BA3740F55.mp3Url = media/audio_9ECA0F9F_8B9A_0E17_4184_9B5B915EC497_de.mp3
+audiores_9E4F47BD_8B9A_1E18_41A7_7FBD1A699493.mp3Url = media/audio_9FD35EEB_8B96_0E38_41DE_9E7FB75E0B80_de.mp3
+
+### Floorplan
+
+### Image
+imlevel_9C6C5FF9_8D4A_C729_41C9_8A2E69263888.url = media/map_99F87989_8BBA_12FB_41DB_1325EA25166C_de_0.png
+imlevel_9C6C2FFE_8D4A_C72E_41D6_5AE3E48B443C.url = media/map_99F87989_8BBA_12FB_41DB_1325EA25166C_de_1.png
+imlevel_9C6C3FFF_8D4A_C72E_41B3_3F726B92165E.url = media/map_99F87989_8BBA_12FB_41DB_1325EA25166C_de_2.png
+
+### Titel
+panorama_80E5272B_8BBE_355F_41BD_C30D1BF8FD8E.label = benrath_test_1
+panorama_8185DEC1_8BBE_74CB_41DB_14D15E82D986.label = benrath_test_2
+panorama_8180C743_8BBE_35CF_41C5_C88A27BC38BC.label = benrath_test_3
+panorama_80E22E44_8BBA_17CA_41AC_35C0C4CBFD97.label = benrath_test_4
+map_99F87989_8BBA_12FB_41DB_1325EA25166C.label = floorplan
+
+## Skin
+
+### Multiline Text
+HTMLText_83A85272_8D4A_3936_41DE_F7B086EE3D4B.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;font-size:29px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:29px;"><B>Zu suchende Elemente</B></SPAN></SPAN></DIV><p STYLE="margin:0; line-height:10px;"><BR STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-size:12px;font-family:Arial, Helvetica, sans-serif;"/></p><DIV STYLE="text-align:left;font-size:17px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:17px;"><B>{{quiz.items.found}}/{{quiz.item.count}}</B></SPAN></SPAN></DIV></div>
+
+## Tour
+
+### Beschreibung
+
+### Titel
+tour.name = Unbenannt 2
