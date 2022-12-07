@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "stylelint": "stylelint --config stylelint.config.js '**/*.css'"
+    "stylelint": "stylelint --config stylelint.config.js '**/*.css'",
+    "tsc": "tsc"
   },
   "dependencies": {
     "@types/node": "18.11.9",
