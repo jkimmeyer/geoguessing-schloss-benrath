@@ -1,6 +1,6 @@
 /* Variables: Order alphabetically */
-@import 'variables/colors';
-@import 'variables/spacings';
+@import 'variables/color';
+@import 'variables/spacing';
 
 /* Globals: Order is important */
 @import 'globals/fonts';
