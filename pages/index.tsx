@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import SbButton from '../components/SbButton/SbButton';
+import { ButtonType } from '../types';
 
 export default function Home() {
   return (
@@ -10,6 +12,7 @@ export default function Home() {
       </Head>
       <main>
         Hello World
+        <SbButton buttonType={ButtonType.Primary} onClick={() => console.log("Hello")}>Test</SbButton>
       </main>
     </div>
   )
