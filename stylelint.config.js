@@ -1,11 +1,12 @@
+'use strict';
 
 module.exports = {
   "plugins": [
     "stylelint-order",
     "stylelint-use-logical-spec",
   ],
-  "ignore": [
-    'public/**/*',
+  "ignoreFiles": [
+    'public/**/*.css',
     'styles/tour.css'
   ],
   "rules": {

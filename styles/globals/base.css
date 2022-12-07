@@ -2,6 +2,8 @@
 /* This file is for setting minimum base styles and normalizing common tags.
 /* Do not style tags like h1, h2, p etc. globally because they rarely have the same styling on every page!
 **/
+/* stylelint-disable declaration-no-important */
+
 html {
   box-sizing: border-box;
   block-size: 100%;
@@ -109,3 +111,4 @@ a {
     text-decoration: underline;
   }
 }
+/* stylelint-enable declaration-no-important */

@@ -68,7 +68,7 @@ select {
   html:focus-within {
     scroll-behavior: auto;
   }
-
+  /* stylelint-disable declaration-no-important, time-min-milliseconds */
   *,
   *::before,
   *::after {
@@ -77,4 +77,5 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+  /* stylelint-enable declaration-no-important, time-min-milliseconds */
 }
