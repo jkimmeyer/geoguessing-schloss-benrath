@@ -8,8 +8,6 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <Script src="tdvquiz.js" strategy="beforeInteractive" />
-        <Script src="lib/tdvplayer.js" strategy="beforeInteractive" />
       </body>
     </Html>
   )

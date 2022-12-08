@@ -24,6 +24,9 @@ export default function index() {
         <meta name="theme-color" content="#FFFFFF" />
       </Head>
 
+      <Script src="tdvquiz.js" strategy="beforeInteractive" />
+      <Script src="lib/tdvplayer.js" strategy="beforeInteractive" />
+
       <Script src="script.js" />
       <Script id="3dvista" src="/innerHTML.js"/>
 
@@ -38,6 +41,7 @@ export default function index() {
       </div>
 
       <div id="viewer" className="fill-viewport viewer-class"></div>
+
     </div>
   )
 }

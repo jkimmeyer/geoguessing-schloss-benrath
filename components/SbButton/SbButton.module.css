@@ -1,7 +1,16 @@
 .sb-button {
+  display: inline-flex;
+  align-items: center;
   border: none;
   padding-block: var(--spacing-4);
   padding-inline: var(--spacing-12);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* stylelint-disable-next-line selector-max-combinators */
+.sb-button > * + * {
+  margin-inline-start: var(--spacing-4);
 }
 
 .sb-button[data-primary='true'] {

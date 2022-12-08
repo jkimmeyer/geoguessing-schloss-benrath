@@ -49,7 +49,6 @@ function loadTour() {
   tour.bind(TDV.Tour.EVENT_TOUR_LOADED, onVirtualTourLoaded);
   tour.bind(TDV.Tour.EVENT_TOUR_ENDED, onVirtualTourEnded);
   tour.load();
-  debugger
 }
 
 function pauseTour() {

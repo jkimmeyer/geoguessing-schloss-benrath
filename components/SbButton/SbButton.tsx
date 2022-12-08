@@ -5,14 +5,16 @@ interface Props {
   buttonType?: ButtonType;
   disabled?: Boolean;
   children?: React.ReactNode;
+  icon?: React.ReactNode;
   onClick: () => void;
 }
 
-const Button: React.FC<Props> = ({
+const SbButton: React.FC<Props> = ({
   buttonType,
   children,
   disabled,
   onClick,
+  icon,
 }) => {
   return (
     <button
@@ -22,9 +24,10 @@ const Button: React.FC<Props> = ({
       data-secondary={buttonType === ButtonType.Secondary}
       onClick={onClick}
     >
-      {children}
+      {icon}
+      <span>{children}</span>
     </button>
   );
 }
 
-export default Button;
+export default SbButton;
