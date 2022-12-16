@@ -5,6 +5,7 @@ import Page from '../layouts/Page';
 import { ButtonType, IconNames } from '../types';
 import '../config/i18n';
 import { useTranslation } from 'react-i18next';
+import Image from 'next/image';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -25,7 +26,28 @@ export default function Home() {
             <SbIcon icon={IconNames.Back} />
           }
         >
-          Zurück zur Website
+          {t('backToOfficalPage')}
+        </SbButton>
+        <h1>{t('castleOfBenrath')}</h1>
+        <h2>{t('riddle')}</h2>
+        <Image src="https://via.placeholder.com/1920x480" alt="Placeholder Image" width="1920" height="480" />
+        <h3>{t('intro.chapter1.title')}</h3>
+        <p>{t('intro.chapter1.teaserText')}</p>
+
+        <h3>{t('intro.chapter2.title')}</h3>
+        <p>{t('intro.chapter2.teaserText')}</p>
+
+        <h3>{t('intro.chapter3.title')}</h3>
+        <p>{t('intro.chapter3.teaserText')}</p>
+
+        <SbButton
+          buttonType={ButtonType.Primary}
+          href='/tour'
+          icon={
+            <SbIcon icon={IconNames.Play} />
+          }
+        >
+          { t('startTour') }
         </SbButton>
       </Page>
     </div>
