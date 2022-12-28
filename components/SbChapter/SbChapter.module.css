@@ -1,0 +1,25 @@
+.chapter {
+  inline-size: 100%;
+  block-size: 50vh;
+  margin-block-end: var(--spacing-64);
+  padding-block: var(--spacing-32);
+}
+
+.chapter:nth-child(even) {
+  background-color: var(--color-primary);
+}
+
+.chapter--title,
+.chapter--text,
+.chapter--content {
+  inline-size: 40vw;
+  margin-inline: auto;
+}
+
+.chapter--text {
+  font-family: var(--serif-font);
+}
+
+.chapter--content {
+  margin-block: var(--spacing-16);
+}

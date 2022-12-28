@@ -1,0 +1,6 @@
+.image-slider--list {
+  display: flex;
+  overflow-x: scroll;
+  align-items: center;
+  gap: var(--spacing-2);
+}

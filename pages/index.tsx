@@ -1,14 +1,69 @@
 import Head from 'next/head'
 import SbButton from '../components/SbButton/SbButton';
+import SbChapter from '../components/SbChapter/SbChapter';
 import SbIcon from '../components/SbIcon/SbIcon';
+import SbImageSlider from '../components/SbImageSlider/SbImageSlider';
 import Page from '../layouts/Page';
-import { ButtonType, IconNames } from '../types';
+import Image from 'next/image'
+import { ButtonType, IconNames, ImageType } from '../types';
 import '../config/i18n';
 import { useTranslation } from 'react-i18next';
-import Image from 'next/image';
+import gameOverlay from '../assets/images/GameOverlay_objectHovered.png'
+import SbTitle from '../components/SbTitle/SbTitle';
 
 export default function Home() {
   const { t } = useTranslation();
+
+  const images: ImageType[] = [
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    },
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    },
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    },
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    },
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    },
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    },
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    },
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    },
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    },
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    },
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    },
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    }
+  ]
 
   return (
     <div>
@@ -18,37 +73,54 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Page>
-        <SbButton
-          buttonType={ButtonType.Primary}
-          onClick={() => console.log("Link")}
-          icon={
-            <SbIcon icon={IconNames.Back} />
-          }
+      <Page
+        title={t('castleOfBenrath')}
+        subtitle={
+          <SbTitle />
+        }
+        headerButton={
+          <SbButton
+            buttonType={ButtonType.Primary}
+            href="https://schloss-benrath.de"
+            icon={
+              <SbIcon icon={IconNames.Back} />
+            }
+          >
+            {t('backToOfficalPage')}
+          </SbButton>
+        }
+        headerSlider={
+            <SbImageSlider images={images} />
+        }
+      >
+
+        <SbChapter
+          title={t('landing_page.intro.chapter1.title')}
+          text={t('landing_page.intro.chapter1.teaserText')}
         >
-          {t('backToOfficalPage')}
-        </SbButton>
-        <h1>{t('castleOfBenrath')}</h1>
-        <h2>{t('riddle')}</h2>
-        <Image src="https://via.placeholder.com/1920x480" alt="Placeholder Image" width="1920" height="480" />
-        <h3>{t('intro.chapter1.title')}</h3>
-        <p>{t('intro.chapter1.teaserText')}</p>
+          <Image src={gameOverlay} alt="Test" width={480} />
+        </SbChapter>
 
-        <h3>{t('intro.chapter2.title')}</h3>
-        <p>{t('intro.chapter2.teaserText')}</p>
+        <SbChapter
+          title={t('landing_page.intro.chapter2.title')}
+          text={t('landing_page.intro.chapter2.teaserText')}
+        />
 
-        <h3>{t('intro.chapter3.title')}</h3>
-        <p>{t('intro.chapter3.teaserText')}</p>
+        <SbChapter
+          title={t('landing_page.intro.chapter3.title')}
+          text={t('landing_page.intro.chapter3.teaserText')}
+        />
 
         <SbButton
           buttonType={ButtonType.Primary}
-          href='/tour'
+          href='/register'
+          buttonSize="large"
           icon={
             <SbIcon icon={IconNames.Play} />
           }
         >
-          { t('startTour') }
-        </SbButton>
+          { t('landingPage.startTour') }
+          </SbButton>
       </Page>
     </div>
   )

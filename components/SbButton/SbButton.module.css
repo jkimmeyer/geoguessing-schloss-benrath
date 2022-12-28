@@ -2,8 +2,8 @@
   display: inline-flex;
   align-items: center;
   border: none;
-  padding-block: var(--spacing-4);
-  padding-inline: var(--spacing-12);
+  padding-block: var(--spacing-8);
+  padding-inline: var(--spacing-16);
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -18,9 +18,15 @@
 }
 
 .sb-button[data-primary='true']:where(:focus,:hover,:active) {
+  text-decoration: none;
   background-color: var(--color-primary-light);
 }
 
 .sb-button[data-primary='true']:where(:disabled) {
   background-color: var(--color-disabled);
+}
+
+.sb-button[data-size='large'] {
+  padding-block: var(--spacing-8);
+  padding-inline: var(--spacing-64);
 }

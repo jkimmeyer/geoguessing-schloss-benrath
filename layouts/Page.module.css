@@ -1,4 +1,33 @@
 .page {
-  max-inline-size: var(--size-page-max-width);
-  padding: var(--spacing-12);
+  padding-block: var(--spacing-8) var(--spacing-64);
+}
+
+.page--header {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: var(--spacing-8);
+  margin-block-end: var(--spacing-12);
+  padding-inline: var(--spacing-8);
+}
+
+.page--title,
+.page--subtitle {
+  display: block;
+  margin-block-end: var(--spacing-32);
+}
+
+.page--title {
+  font-size: 96px;
+}
+
+.page--subtitle {
+  font-size: 80px;
+  line-height: 1.15;
+}
+
+.page--main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
