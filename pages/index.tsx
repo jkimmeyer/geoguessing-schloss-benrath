@@ -117,20 +117,20 @@ export default function Home(props: Props) {
       >
 
         <SbChapter
-          title={t('landing_page.intro.chapter1.title')}
-          text={t('landing_page.intro.chapter1.teaserText')}
+          title={t('landingPage.intro.chapter1.title')}
+          text={t('landingPage.intro.chapter1.teaserText')}
         >
           <Image src={gameOverlay} alt="Test" width={480} />
         </SbChapter>
 
         <SbChapter
-          title={t('landing_page.intro.chapter2.title')}
-          text={t('landing_page.intro.chapter2.teaserText')}
+          title={t('landingPage.intro.chapter2.title')}
+          text={t('landingPage.intro.chapter2.teaserText')}
         />
 
         <SbChapter
-          title={t('landing_page.intro.chapter3.title')}
-          text={t('landing_page.intro.chapter3.teaserText')}
+          title={t('landingPage.intro.chapter3.title')}
+          text={t('landingPage.intro.chapter3.teaserText')}
         />
 
         <SbButton
