@@ -1,0 +1,8 @@
+.data-table {
+  inline-size: 100%;
+}
+
+.data-table--head-cell {
+  text-align: start;
+  text-transform: uppercase;
+}

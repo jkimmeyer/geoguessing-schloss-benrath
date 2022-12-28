@@ -3,12 +3,34 @@ import '../../config/i18n';
 import { useTranslation } from 'react-i18next';
 import Page from '../../layouts/Page';
 import SbChapter from '../../components/SbChapter/SbChapter';
-import SbInput from '../../components/SbInput/SbInput';
 import SbButton from '../../components/SbButton/SbButton';
 import { ButtonType } from '../../types';
 import SbTitle from '../../components/SbTitle/SbTitle';
+import prisma from '../../config/prisma';
+import { GetServerSideProps } from 'next';
+import SbTable from '../../components/SbTable/SbTable';
 
-export default function Home() {
+export const getServerSideProps: GetServerSideProps = async () => {
+  const ranking = await prisma.ranking.findMany();
+
+  return {
+    props: {
+      ranking
+    },
+  };
+};
+
+interface RankingProps {
+  id: string,
+  playerName: string,
+  score: number,
+}
+
+type Props = {
+  ranking: RankingProps[];
+};
+
+export default function Home(props: Props) {
   const { t } = useTranslation();
 
   return (
@@ -20,15 +42,30 @@ export default function Home() {
 
       <Page
         title={t('castleOfBenrath')}
-        subtitle={
-          <SbTitle />
-        }
       >
-        <SbChapter title={t('register.chooseName')} text={t('register.chooseNameHint')}>
-          <SbInput label={t('register.playerName')} placeholder={t('register.playerName')} type="text" />
+        <SbChapter title={t('leaderboard.title')} text={t('leaderboard.description')}>
+          <SbTable columns={[
+            t('leaderboard.position'),
+            t('leaderboard.playerName'),
+            t('leaderboard.score'),
+          ]}>
+            {props.ranking.sort((a, b) => b.score - a.score).map((rank, index) => (
+              <tr key={rank.id}>
+                <td>
+                  {index + 1}
+                </td>
+                <td>
+                  {rank.playerName}
+                </td>
+                <td>
+                  {rank.score}
+                </td>
+              </tr>
+            ))}
+          </SbTable>
         </SbChapter>
 
-        <SbButton buttonType={ButtonType.Primary} href="/tour">{t('continue')}</SbButton>
+        <SbButton buttonType={ButtonType.Primary} href="/tour">{t('playAgain')}</SbButton>
       </Page>
     </div>
   )

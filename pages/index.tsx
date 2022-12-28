@@ -10,30 +10,9 @@ import '../config/i18n';
 import { useTranslation } from 'react-i18next';
 import gameOverlay from '../assets/images/GameOverlay_objectHovered.png'
 import SbTitle from '../components/SbTitle/SbTitle';
-import prisma from '../config/prisma';
-import { GetServerSideProps } from 'next';
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const ranking = await prisma.ranking.findMany();
 
-  return {
-    props: {
-      ranking
-    },
-  };
-};
-
-interface RankingProps {
-  id: string,
-  playerName: string,
-  score: number,
-}
-
-type Props = {
-  ranking: RankingProps[];
-};
-
-export default function Home(props: Props) {
+export default function Home() {
   const { t } = useTranslation();
 
   const images: ImageType[] = [
@@ -143,13 +122,6 @@ export default function Home(props: Props) {
         >
           { t('landingPage.startTour') }
         </SbButton>
-        {props.ranking.map((rank) => (
-
-          <div key={rank.id}>
-              {rank.playerName}
-          </div>
-
-        ))}
       </Page>
     </div>
   )
