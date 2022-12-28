@@ -1,0 +1,14 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource geoguessingBenrath {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model ranking {
+  id         String @id @default(auto()) @map("_id") @geoguessingBenrath.ObjectId
+  playerName String
+  score      Float
+}
