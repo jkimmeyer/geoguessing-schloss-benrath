@@ -19,6 +19,7 @@
   --color-primary-light: var(--peach-blossom-lighter);
   --color-disabled: var(--light-grey);
   --color-text: var(--light-black);
+  --color-background-neutral: var(--light-grey);
 }
 
 /* stylelint-enable no-duplicate-selectors */

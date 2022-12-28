@@ -1,10 +1,15 @@
 import Head from 'next/head'
 import SbButton from '../components/SbButton/SbButton';
+import SbChapter from '../components/SbChapter/SbChapter';
 import SbIcon from '../components/SbIcon/SbIcon';
+import SbImageSlider from '../components/SbImageSlider/SbImageSlider';
 import Page from '../layouts/Page';
-import { ButtonType, IconNames } from '../types';
+import Image from 'next/image'
+import { ButtonType, IconNames, ImageType } from '../types';
 import '../config/i18n';
 import { useTranslation } from 'react-i18next';
+import gameOverlay from '../assets/images/GameOverlay_objectHovered.png'
+import SbTitle from '../components/SbTitle/SbTitle';
 import prisma from '../config/prisma';
 import { GetServerSideProps } from 'next';
 
@@ -31,6 +36,57 @@ type Props = {
 export default function Home(props: Props) {
   const { t } = useTranslation();
 
+  const images: ImageType[] = [
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    },
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    },
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    },
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    },
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    },
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    },
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    },
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    },
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    },
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    },
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    },
+    {
+      url: "https://via.placeholder.com/150",
+      alt: "Alt-Text"
+    }
+  ]
+
   return (
     <div>
       <Head>
@@ -39,15 +95,53 @@ export default function Home(props: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Page>
+      <Page
+        title={t('castleOfBenrath')}
+        subtitle={
+          <SbTitle />
+        }
+        headerButton={
+          <SbButton
+            buttonType={ButtonType.Primary}
+            href="https://schloss-benrath.de"
+            icon={
+              <SbIcon icon={IconNames.Back} />
+            }
+          >
+            {t('backToOfficalPage')}
+          </SbButton>
+        }
+        headerSlider={
+            <SbImageSlider images={images} />
+        }
+      >
+
+        <SbChapter
+          title={t('landingPage.intro.chapter1.title')}
+          text={t('landingPage.intro.chapter1.teaserText')}
+        >
+          <Image src={gameOverlay} alt="Test" width={480} />
+        </SbChapter>
+
+        <SbChapter
+          title={t('landingPage.intro.chapter2.title')}
+          text={t('landingPage.intro.chapter2.teaserText')}
+        />
+
+        <SbChapter
+          title={t('landingPage.intro.chapter3.title')}
+          text={t('landingPage.intro.chapter3.teaserText')}
+        />
+
         <SbButton
           buttonType={ButtonType.Primary}
-          onClick={() => console.log("Link")}
+          href='/register'
+          buttonSize="large"
           icon={
-            <SbIcon icon={IconNames.Back} />
+            <SbIcon icon={IconNames.Play} />
           }
         >
-          Zurück zur Website
+          { t('landingPage.startTour') }
         </SbButton>
         {props.ranking.map((rank) => (
 

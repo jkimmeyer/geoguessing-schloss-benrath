@@ -1,0 +1,29 @@
+.input:not(:last-child) {
+  margin-block-end: var(--spacing-4);
+}
+
+.input--field,
+.input--label {
+  display: block;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.input--field {
+  display: block;
+  inline-size: 100%;
+  border: 8px solid var(--color-background-neutral);
+  padding-block: var(--spacing-8);
+  padding-inline: var(--spacing-12);
+  font-family: var(--serif-font);
+}
+
+.input--field:focus,
+.input--field:hover,
+.input--field:active {
+  border-color: var(--color-primary-light);
+}
+
+.input--field::placeholder {
+  font-style: italic;
+}
