@@ -3,8 +3,12 @@ import SbButton from '../components/SbButton/SbButton';
 import SbIcon from '../components/SbIcon/SbIcon';
 import Page from '../layouts/Page';
 import { ButtonType, IconNames } from '../types';
+import '../config/i18n';
+import { useTranslation } from 'react-i18next';
 
 export default function Home() {
+  const { t } = useTranslation();
+
   return (
     <div>
       <Head>
