@@ -5,7 +5,6 @@ import Page from '../../layouts/Page';
 import SbChapter from '../../components/SbChapter/SbChapter';
 import SbButton from '../../components/SbButton/SbButton';
 import { ButtonType } from '../../types';
-import SbTitle from '../../components/SbTitle/SbTitle';
 import prisma from '../../config/prisma';
 import { GetServerSideProps } from 'next';
 import SbTable from '../../components/SbTable/SbTable';

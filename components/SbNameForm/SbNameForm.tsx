@@ -1,15 +1,17 @@
 
-import { ranking } from ".prisma/client";
 import { t } from "i18next";
 import React from "react";
 import { ButtonType } from "../../types";
 import SbButton from "../SbButton/SbButton";
 import SbInput from "../SbInput/SbInput";
 
-type State = ranking;
+type State = {
+  playerName: string,
+  score: number,
+};
 
-export class SbNameForm extends React.Component<State> {
-  state = { playerName: '', score: 250 };
+export class SbNameForm extends React.Component {
+  state: State = { playerName: '', score: 250 };
 
   handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
     this.setState({ playerName: event.currentTarget.value });
