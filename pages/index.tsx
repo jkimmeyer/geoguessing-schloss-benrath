@@ -5,8 +5,30 @@ import Page from '../layouts/Page';
 import { ButtonType, IconNames } from '../types';
 import '../config/i18n';
 import { useTranslation } from 'react-i18next';
+import prisma from '../config/prisma';
+import { GetServerSideProps } from 'next';
 
-export default function Home() {
+export const getServerSideProps: GetServerSideProps = async () => {
+  const ranking = await prisma.ranking.findMany();
+
+  return {
+    props: {
+      ranking
+    },
+  };
+};
+
+interface RankingProps {
+  id: string,
+  playerName: string,
+  score: number,
+}
+
+type Props = {
+  ranking: RankingProps[];
+};
+
+export default function Home(props: Props) {
   const { t } = useTranslation();
 
   return (
@@ -27,6 +49,13 @@ export default function Home() {
         >
           Zurück zur Website
         </SbButton>
+        {props.ranking.map((rank) => (
+
+          <div key={rank.id}>
+              {rank.playerName}
+          </div>
+
+        ))}
       </Page>
     </div>
   )
