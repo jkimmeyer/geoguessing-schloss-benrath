@@ -1,5 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const webpack = require('webpack');
+
 
 module.exports = {
   components: "./components/**/*.tsx",
@@ -10,6 +13,16 @@ module.exports = {
     path.join(__dirname, './styles/index.css')
   ],
   webpackConfig: {
+    plugins: [
+      new webpack.ProvidePlugin({
+        process: 'process/browser',
+      }),
+    ],
+    resolve: {
+      fallback: {
+        path: require.resolve("path-browserify")
+      }
+    },
     module: {
       rules: [
         {
