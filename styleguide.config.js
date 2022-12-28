@@ -1,8 +1,10 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path');
 
 module.exports = {
   components: "./components/**/*.tsx",
   ignore: ["./types"],
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   propsParser: require("react-docgen-typescript").parse,
   require: [
     path.join(__dirname, './styles/index.css')
@@ -17,7 +19,7 @@ module.exports = {
         },
         {
           test: /\.css$/,
-          use: ['style-loader','css-loader'],
+          use: ['style-loader', 'css-loader'],
         },
         {
           test: /\.ts?$/,
@@ -32,6 +34,6 @@ module.exports = {
           }]
         },
       ]
-    }
+    },
   }
 };

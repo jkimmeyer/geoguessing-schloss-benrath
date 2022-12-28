@@ -6,7 +6,7 @@ interface Props {
   children?: React.ReactNode;
 }
 
-const SbButton: React.FC<Props> = ({
+const SbChapter: React.FC<Props> = ({
   title,
   text,
   children,
@@ -22,4 +22,4 @@ const SbButton: React.FC<Props> = ({
   );
 }
 
-export default SbButton;
+export default SbChapter;
