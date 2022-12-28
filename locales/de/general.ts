@@ -3,7 +3,8 @@ const general = {
   castleOfBenrath: "Schloss Benrath",
   continue: "Weiter",
   backToOfficalPage: "Zurück zur Website",
-  playAgain: "Nochmal spielen"
+  playAgain: "Nochmal spielen",
+  addPlayerToScoreboard: "Player zu Scoreboard hinzufügen (DEV)"
 }
 
 export default general;

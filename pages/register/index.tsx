@@ -7,6 +7,7 @@ import SbInput from '../../components/SbInput/SbInput';
 import SbButton from '../../components/SbButton/SbButton';
 import { ButtonType } from '../../types';
 import SbTitle from '../../components/SbTitle/SbTitle';
+import { SbNameForm } from '../../components/SbNameForm/SbNameForm';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -26,7 +27,7 @@ export default function Home() {
         }
       >
         <SbChapter title={t('register.chooseName')} text={t('register.chooseNameHint')}>
-          <SbInput label={t('register.playerName')} placeholder={t('register.playerName')} type="text"/>
+          <SbNameForm />
         </SbChapter>
 
         <SbButton buttonType={ButtonType.Primary} href="/tour">{ t('continue') }</SbButton>

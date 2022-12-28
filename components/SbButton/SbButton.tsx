@@ -2,7 +2,7 @@ import buttonStyles from './SbButton.module.css';
 import { ButtonType } from '../../types';
 import Link from 'next/link';
 
-interface Props {
+interface Props extends React.ButtonHTMLAttributes < HTMLButtonElement > {
   buttonType?: ButtonType;
   buttonSize?: string;
   disabled?: boolean;
@@ -10,7 +10,6 @@ interface Props {
   icon?: React.ReactNode;
   forceReload?: boolean;
   href?: string;
-  onClick?: () => void;
 }
 
 const SbButton: React.FC<Props> = ({
@@ -18,9 +17,9 @@ const SbButton: React.FC<Props> = ({
   buttonType,
   children,
   disabled,
-  onClick,
   icon,
   href,
+  ...props
 }) => {
   if (href) {
     return (
@@ -43,8 +42,8 @@ const SbButton: React.FC<Props> = ({
       disabled={!!disabled}
       data-primary={buttonType === ButtonType.Primary}
       data-secondary={buttonType === ButtonType.Secondary}
-      onClick={onClick}
       data-size={buttonSize}
+      {...props}
     >
       {icon}
       <span>{children}</span>
