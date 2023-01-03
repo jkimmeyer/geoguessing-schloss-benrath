@@ -10,6 +10,7 @@ import '../config/i18n';
 import { useTranslation } from 'react-i18next';
 import gameOverlay from '../assets/images/GameOverlay_objectHovered.png'
 import SbTitle from '../components/SbTitle/SbTitle';
+import SbCommunication from '../components/SbCommunication/component';
 
 
 export default function Home() {
@@ -94,6 +95,7 @@ export default function Home() {
             <SbImageSlider images={images} />
         }
       >
+        <SbCommunication />
 
         <SbChapter
           title={t('landingPage.intro.chapter1.title')}
