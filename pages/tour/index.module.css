@@ -1,0 +1,82 @@
+@keyframes spinner2 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  inline-size: 100vw;
+  block-size: 100vh;
+  background-color: var(--color-background-neutral);
+}
+
+.spinner {
+  --size: 200px;
+  --color1: var(--color-primary);
+  --color2: var(--white);
+  --color3: var(--color-primary-light);
+  --animation-duration: 650ms;
+
+  position: relative;
+  inline-size: var(--size);
+  block-size: var(--size);
+}
+
+.spinner-item {
+  position: absolute;
+  inset-block-start: calc(50% - var(--item-size) / 2);
+  inset-inline-start: calc(50% - var(--item-size) / 2);
+  inline-size: var(--item-size);
+  block-size: var(--item-size);
+  border: 12px solid transparent;
+  border-inline-end: 12px solid var(--color-spinner);
+  border-inline-start: 12px solid var(--color-spinner);
+  border-radius: 50%;
+  animation: spinner2 var(--animation-duration) linear infinite;
+}
+
+.spinner-item:nth-of-type(1) {
+  --item-size: var(--size);
+  --color-spinner: var(--color1);
+
+  border-block-start: 12px solid var(--color1);
+}
+
+.spinner-item:nth-of-type(2) {
+  --item-size: calc(var(--size) - 15px);
+  --color-spinner: var(--color2);
+
+  border-block-end: 12px solid var(--color2);
+}
+
+.spinner-item:nth-of-type(3) {
+  --item-size: calc(var(--size) - 30px);
+  --color-spinner: var(--color3);
+
+  border-block-start: 12px solid var(--color3);
+}
+
+.spinner-text {
+  --fadein-duration: 3s;
+
+  animation: fadein var(--fadein-duration) ease-in-out infinite;
+}

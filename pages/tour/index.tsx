@@ -1,5 +1,6 @@
 import Head from "next/head"
 import Script from "next/script"
+import indexStyles from './index.module.css'
 
 export default function index() {
   return (
@@ -42,10 +43,13 @@ export default function index() {
 
       <div id="preloadContainer" className="fill-viewport preload-container-class">
         <div>
-          <div>
-            <span>
-              Loading virtual tour. Please wait...
-            </span>
+          <div className={indexStyles["center"]}>
+            <div className={indexStyles["spinner"]}>
+              <div className={indexStyles["spinner-item"]} />
+              <div className={indexStyles["spinner-item"]} />
+              <div className={indexStyles["spinner-item"]} />
+            </div>
+            <div className={indexStyles["spinner-text"]}>Tour wird geladen ...</div>
           </div>
         </div>
       </div>
