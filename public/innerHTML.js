@@ -1,4 +1,3 @@
-console.log("Executed first")
 var tour;
 var devicesUrl = { "general": "script_general.js" };
 
@@ -154,146 +153,146 @@ function disposePreloader() {
       video.pause();
       while (video.children.length)
           video.removeChild(video.children[0]);
-      }
-    }
-
-    function transitionEndEventName() {
-      var el = document.createElement('div');
-      var transitions = {
-        'transition': 'transitionend',
-        'OTransition': 'otransitionend',
-        'MozTransition': 'transitionend',
-        'WebkitTransition': 'webkitTransitionEnd'
-      };
-
-      var t;
-      for (t in transitions) {
-        if (el.style[t] !== undefined) {
-          return transitions[t];
-        }
-      }
-
-      return undefined;
     }
   }
 
-  function onBodyClick() {
-    document.body.removeEventListener("click", onBodyClick);
-    document.body.removeEventListener("touchend", onBodyClick);
+  function transitionEndEventName() {
+    var el = document.createElement('div');
+    var transitions = {
+      'transition': 'transitionend',
+      'OTransition': 'otransitionend',
+      'MozTransition': 'transitionend',
+      'WebkitTransition': 'webkitTransitionEnd'
+    };
 
+    var t;
+    for (t in transitions) {
+      if (el.style[t] !== undefined) {
+        return transitions[t];
+      }
+    }
+
+    return undefined;
+  }
+}
+
+function onBodyClick() {
+  document.body.removeEventListener("click", onBodyClick);
+  document.body.removeEventListener("touchend", onBodyClick);
+
+}
+
+function onLoad() {
+  if (/AppleWebKit/.test(navigator.userAgent) && /Mobile/.test(navigator.userAgent)) {
+    var onOrientationChange = function () {
+      document.documentElement.style.height = 'initial';
+      Array.from(document.querySelectorAll('.fill-viewport')).forEach(function (element) {
+        element.classList.toggle('landscape-right', window.orientation == -90);
+        element.classList.toggle('landscape-left', window.orientation == 90);
+      });
+      setTimeout(function () {
+        document.documentElement.style.height = '100%';
+      }, 500);
+    };
+    window.addEventListener('orientationchange', onOrientationChange);
+    onOrientationChange();
   }
 
-  function onLoad() {
-    if (/AppleWebKit/.test(navigator.userAgent) && /Mobile/.test(navigator.userAgent)) {
-      var onOrientationChange = function () {
-        document.documentElement.style.height = 'initial';
-        Array.from(document.querySelectorAll('.fill-viewport')).forEach(function (element) {
-          element.classList.toggle('landscape-right', window.orientation == -90);
-          element.classList.toggle('landscape-left', window.orientation == 90);
-        });
-        setTimeout(function () {
-          document.documentElement.style.height = '100%';
-        }, 500);
-      };
-      window.addEventListener('orientationchange', onOrientationChange);
-      onOrientationChange();
-    }
+  var params = getParams(location.search.substr(1));
 
-    var params = getParams(location.search.substr(1));
+  if (params.hasOwnProperty("skip-loading")) {
+    loadTour();
+    disposePreloader();
+    return;
+  }
 
-    if (params.hasOwnProperty("skip-loading")) {
-      loadTour();
-      disposePreloader();
-      return;
-    }
-
-    if (isOVRWeb()) {
-      showPreloader();
-      loadTour();
-      return;
-    }
-
+  if (isOVRWeb()) {
     showPreloader();
     loadTour();
+    return;
   }
 
+  showPreloader();
+  loadTour();
+}
 
 
-  function playVideo(video, autoplayMuted, clickComponent) {
-    function isSafariDesktopV11orGreater() {
-      return /^((?!chrome|android|crios|ipad|iphone).)*safari/i.test(navigator.userAgent) && parseFloat(/Version\/([0-9]+\.[0-9]+)/i.exec(navigator.userAgent)[1]) >= 11;
-    }
 
-    function hasAudio(video) {
-      return video.mozHasAudio ||
-        Boolean(video.webkitAudioDecodedByteCount) ||
-        Boolean(video.audioTracks && video.audioTracks.length);
-    }
+function playVideo(video, autoplayMuted, clickComponent) {
+  function isSafariDesktopV11orGreater() {
+    return /^((?!chrome|android|crios|ipad|iphone).)*safari/i.test(navigator.userAgent) && parseFloat(/Version\/([0-9]+\.[0-9]+)/i.exec(navigator.userAgent)[1]) >= 11;
+  }
 
-    function detectUserAction() {
-      var component = clickComponent || document.getElementById('preloadContainer');
-      var onVideoClick = function (e) {
-        if (video.paused) {
-          video.play();
-        }
-        video.muted = false;
-        if (hasAudio(video)) {
-          e.stopPropagation();
-          e.stopImmediatePropagation();
-          e.preventDefault();
-        }
+  function hasAudio(video) {
+    return video.mozHasAudio ||
+      Boolean(video.webkitAudioDecodedByteCount) ||
+      Boolean(video.audioTracks && video.audioTracks.length);
+  }
 
-        component.removeEventListener('click', onVideoClick);
-        component.removeEventListener('touchend', onVideoClick);
-
-        if (component == clickComponent) {
-          setComponentVisibility(false);
-        }
-      };
-      component.addEventListener("click", onVideoClick);
-      component.addEventListener("touchend", onVideoClick);
-    }
-
-    function setComponentVisibility(visible) {
-      clickComponent.style.visibility = visible ? 'visible' : 'hidden';
-    }
-
-    if (isSafariDesktopV11orGreater()) {
-      if (autoplayMuted) {
-        video.muted = true;
+  function detectUserAction() {
+    var component = clickComponent || document.getElementById('preloadContainer');
+    var onVideoClick = function (e) {
+      if (video.paused) {
         video.play();
       }
-    } else {
-      var canPlay = true;
-      var promise = video.play();
-      if (promise) {
-        promise.catch(function () {
-          if (clickComponent)
-            setComponentVisibility(true);
-          canPlay = false;
-          if (autoplayMuted) {
-            video.muted = true;
-            video.play();
-          }
-          detectUserAction();
-        });
-      } else {
-        canPlay = false;
+      video.muted = false;
+      if (hasAudio(video)) {
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        e.preventDefault();
       }
 
-      if (!canPlay || video.muted) {
-        detectUserAction();
-      } else if (clickComponent) {
+      component.removeEventListener('click', onVideoClick);
+      component.removeEventListener('touchend', onVideoClick);
+
+      if (component == clickComponent) {
         setComponentVisibility(false);
       }
+    };
+    component.addEventListener("click", onVideoClick);
+    component.addEventListener("touchend", onVideoClick);
+  }
+
+  function setComponentVisibility(visible) {
+    clickComponent.style.visibility = visible ? 'visible' : 'hidden';
+  }
+
+  if (isSafariDesktopV11orGreater()) {
+    if (autoplayMuted) {
+      video.muted = true;
+      video.play();
+    }
+  } else {
+    var canPlay = true;
+    var promise = video.play();
+    if (promise) {
+      promise.catch(function () {
+        if (clickComponent)
+          setComponentVisibility(true);
+        canPlay = false;
+        if (autoplayMuted) {
+          video.muted = true;
+          video.play();
+        }
+        detectUserAction();
+      });
+    } else {
+      canPlay = false;
+    }
+
+    if (!canPlay || video.muted) {
+      detectUserAction();
+    } else if (clickComponent) {
+      setComponentVisibility(false);
     }
   }
+}
 
-  function isOVRWeb() {
-    return window.location.hash.substring(1).split('&').indexOf('ovrweb') > -1;
-  }
+function isOVRWeb() {
+  return window.location.hash.substring(1).split('&').indexOf('ovrweb') > -1;
+}
 
-  function getParams(params) {
-    var queryDict = {}; params.split("&").forEach(function (item) { var k = item.split("=")[0], v = decodeURIComponent(item.split("=")[1]); queryDict[k.toLowerCase()] = v });
-    return queryDict;
-  }
+function getParams(params) {
+  var queryDict = {}; params.split("&").forEach(function (item) { var k = item.split("=")[0], v = decodeURIComponent(item.split("=")[1]); queryDict[k.toLowerCase()] = v });
+  return queryDict;
+}
