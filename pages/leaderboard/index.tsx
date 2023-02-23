@@ -8,6 +8,8 @@ import { ButtonType } from '../../types';
 import prisma from '../../config/prisma';
 import { GetServerSideProps } from 'next';
 import SbTable from '../../components/SbTable/SbTable';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const ranking = await prisma.ranking.findMany();
@@ -31,6 +33,16 @@ type Props = {
 
 export default function Home(props: Props) {
   const { t } = useTranslation();
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const router = useRouter()
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    if (window.tour) {
+      router.reload()
+    }
+  })
 
   return (
     <div>

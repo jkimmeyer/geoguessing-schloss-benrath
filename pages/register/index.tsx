@@ -7,9 +7,21 @@ import SbChapter from '../../components/SbChapter/SbChapter';
 import SbButton from '../../components/SbButton/SbButton';
 import SbTitle from '../../components/SbTitle/SbTitle';
 import { SbNameForm } from '../../components/SbNameForm/SbNameForm';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 export default function Home() {
   const { t } = useTranslation();
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const router = useRouter()
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    if (window.tour) {
+      router.reload()
+    }
+  })
 
   return (
     <div>

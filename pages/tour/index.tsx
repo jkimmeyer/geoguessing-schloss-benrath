@@ -24,11 +24,21 @@ export default function index() {
         <meta name="theme-color" content="#FFFFFF" />
       </Head>
 
-      <Script src="tdvquiz.js" strategy="beforeInteractive" />
-      <Script src="lib/tdvplayer.js" strategy="beforeInteractive" />
+      <Script src="lib/tdvplayer.js" onLoad={() => {
+        console.log('Player Script has loaded')
+      }} />
+      <Script src="tdvquiz.js" onLoad={() => {
+        console.log('Quiz Script has loaded')
+      }} />
 
-      <Script src="script.js" />
-      <Script id="3dvista" src="/innerHTML.js"/>
+      <Script src="script.js" strategy="lazyOnload" onLoad={() => {
+        console.log('Script Script has loaded')
+      }} />
+      <Script src="/innerHTML.js" strategy="lazyOnload" onLoad={() => {
+        whenAvailable('TDV', () => {
+          preTour()
+        })
+      }} />
 
       <div id="preloadContainer" className="fill-viewport preload-container-class">
         <div>
@@ -41,7 +51,6 @@ export default function index() {
       </div>
 
       <div id="viewer" className="fill-viewport viewer-class"></div>
-
     </div>
   )
 }

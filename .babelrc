@@ -3,5 +3,6 @@
     "next/babel",
     "@babel/preset-typescript"
   ],
-  "plugins": []
+  "plugins": [],
+  "compact": true
 }

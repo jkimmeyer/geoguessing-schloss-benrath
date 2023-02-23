@@ -3,6 +3,6 @@
 :root,
 ::before,
 ::after {
-  --sans-serif-font: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+  --sans-serif-font: 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
   --serif-font: 'Brygada 1918', 'Times New Roman', serif;
 }
