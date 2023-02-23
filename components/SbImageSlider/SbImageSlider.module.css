@@ -1,6 +1,40 @@
-.image-slider--list {
+.image-slider {
   display: flex;
-  overflow-x: scroll;
-  align-items: center;
-  gap: var(--spacing-2);
+  overflow-x: auto;
+  overflow-y: hidden;
+  block-size: auto;
+  margin-inline: auto;
+  scrollbar-color: var(--white) var(--color-primary);
+}
+
+.image-slider::-webkit-scrollbar {
+  block-size: 1rem;
+}
+
+.image-slider::-webkit-scrollbar-track {
+  background-color: var(--color-primary);
+}
+
+.image-slider::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  background-image: linear-gradient(var(--color-primary) 0, var(--color-primary) 0.25rem, var(--white) 0.25rem, var(--white) 0.75rem, var(--color-primary) 0.75rem);
+}
+
+.image-slider > * {
+  flex: 0 0 auto;
+}
+
+.image-slider > img {
+  flex-basis: auto;
+  inline-size: auto;
+  block-size: 100%;
+}
+
+/* stylelint-disable-next-line selector-max-combinators */
+.image-slider > * + * {
+  margin-inline-start: 1rem;
+}
+
+.image-slider.overflowing {
+  padding-block-end: 1rem;
 }

@@ -10,20 +10,18 @@ const SbImageSlider: React.FC<Props> = ({
   images
 }) => {
   return (
-    <div className={imageSliderStyles['image-slider']}>
-      <ul className={imageSliderStyles['image-slider--list']} role="list">
-        {images.map((image, index) => (
-          <li key={index}>
-            <Image
-              src={image.url}
-              alt={image.alt}
-              width={150}
-              height={150}
-            />
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ul className={imageSliderStyles['image-slider']} role="list">
+      {images.map((image, index) => (
+        <li key={index}>
+          <Image
+            src={image.url}
+            alt={image.alt}
+            width={320}
+            height={180}
+          />
+        </li>
+      ))}
+    </ul>
   );
 }
 

@@ -17,51 +17,51 @@ export default function Home() {
 
   const images: ImageType[] = [
     {
-      url: "https://via.placeholder.com/150",
+      url: "https://via.placeholder.com/320x180",
       alt: "Alt-Text"
     },
     {
-      url: "https://via.placeholder.com/150",
+      url: "https://via.placeholder.com/320x180",
       alt: "Alt-Text"
     },
     {
-      url: "https://via.placeholder.com/150",
+      url: "https://via.placeholder.com/320x180",
       alt: "Alt-Text"
     },
     {
-      url: "https://via.placeholder.com/150",
+      url: "https://via.placeholder.com/320x180",
       alt: "Alt-Text"
     },
     {
-      url: "https://via.placeholder.com/150",
+      url: "https://via.placeholder.com/320x180",
       alt: "Alt-Text"
     },
     {
-      url: "https://via.placeholder.com/150",
+      url: "https://via.placeholder.com/320x180",
       alt: "Alt-Text"
     },
     {
-      url: "https://via.placeholder.com/150",
+      url: "https://via.placeholder.com/320x180",
       alt: "Alt-Text"
     },
     {
-      url: "https://via.placeholder.com/150",
+      url: "https://via.placeholder.com/320x180",
       alt: "Alt-Text"
     },
     {
-      url: "https://via.placeholder.com/150",
+      url: "https://via.placeholder.com/320x180",
       alt: "Alt-Text"
     },
     {
-      url: "https://via.placeholder.com/150",
+      url: "https://via.placeholder.com/320x180",
       alt: "Alt-Text"
     },
     {
-      url: "https://via.placeholder.com/150",
+      url: "https://via.placeholder.com/320x180",
       alt: "Alt-Text"
     },
     {
-      url: "https://via.placeholder.com/150",
+      url: "https://via.placeholder.com/320x180",
       alt: "Alt-Text"
     }
   ]
@@ -99,7 +99,7 @@ export default function Home() {
           title={t('landingPage.intro.chapter1.title')}
           text={t('landingPage.intro.chapter1.teaserText')}
         >
-          <Image src={gameOverlay} alt="Test" width={480} />
+          <Image src={gameOverlay} alt="Test" width={1080} />
         </SbChapter>
 
         <SbChapter
