@@ -34,10 +34,10 @@ enum FriendlyId {
   Lake = "object_02_lake",
   Table = "object_03_table",  
   Sofa = "object_04_sofa",
-  Stuck = "object_05_stuck",
+  Stucco = "object_05_stuck",
   Poudreuse = "object_06_poudreuse",
-  Sessel = "object_08_sessel",
-  Uhr = "object_11_uhr",
+  Chair = "object_08_sessel",
+  Clock = "object_11_uhr",
   Desk = "object_16_desk",
   Fresco = "object_18_fresco",
 
@@ -110,7 +110,7 @@ const stuck: BenrathObject = {
   room: Room.BathEast,
   thumbnail: "",
   imageUrls: [],
-  friendlyId: FriendlyId.Stuck,
+  friendlyId: FriendlyId.Stucco,
 }
 
 const poudreuse: BenrathObject = {
@@ -140,7 +140,7 @@ const uhr: BenrathObject = {
   room: Room.EntranceHall,
   thumbnail: "",
   imageUrls: [],
-  friendlyId: FriendlyId.Uhr,
+  friendlyId: FriendlyId.Clock,
 }
 
 const desk: BenrathObject = {
