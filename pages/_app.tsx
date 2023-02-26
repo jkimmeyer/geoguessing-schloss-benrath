@@ -1,9 +1,9 @@
 import '../styles/index.css';
 
 import type { AppProps } from 'next/app'
+import { useEffect } from 'react';
 
 // Stack
-import "../compositions/stack/component"
 import "../compositions/stack/component.css"
 
 declare global {
@@ -18,7 +18,13 @@ declare global {
   }
 }
 
+
+
+
 export default function App({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    import("../compositions/stack/component.js");
+  });
 
   return (
     <>
