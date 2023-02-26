@@ -4,9 +4,19 @@
 @import 'variables/color';
 @import 'variables/sizes';
 @import 'variables/spacing';
+@import 'variables/z-index';
 
 /* Globals: Order is important */
 @import 'globals/fonts';
 @import 'globals/reset';
 @import 'globals/base';
 @import 'globals/utilities';
+
+/* Hide game overlay */
+/* stylelint-disable selector-max-id, declaration-no-important */
+[id='127'],
+[id='118'],
+[id='122'],
+[id='157'] {
+  display: none !important;
+}

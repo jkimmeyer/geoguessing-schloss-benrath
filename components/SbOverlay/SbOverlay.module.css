@@ -1,0 +1,5 @@
+.overlay {
+  position: fixed;
+  z-index: var(--z-default);
+  inset: 0;
+}
