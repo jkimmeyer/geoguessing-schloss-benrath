@@ -21,6 +21,7 @@
   --color-disabled: var(--light-grey);
   --color-text: var(--light-black);
   --color-background-neutral: var(--light-grey);
+  --color-background-dark: var(--light-black);
 }
 
 /* stylelint-enable no-duplicate-selectors */
