@@ -5,13 +5,13 @@ import SbIcon from '../components/SbIcon/SbIcon';
 import SbImageSlider from '../components/SbImageSlider/SbImageSlider';
 import Page from '../layouts/Page';
 import Image from 'next/image'
-import { ButtonType, IconNames, ImageType } from '../types';
+import { ButtonType, IconNames, ImageType, Room, FriendlyId } from '../types';
 import '../config/i18n';
 import { useTranslation } from 'react-i18next';
 import gameOverlay from '../assets/images/GameOverlay_objectHovered.png'
 import SbTitle from '../components/SbTitle/SbTitle';
 import SbCommunication from '../components/SbCommunication/component';
-
+import SbInfoCard from '../components/SbInfoCard/SbInfoCard';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -91,6 +91,22 @@ export default function Home() {
     }
   ]
 
+  const couch = {
+    title: "Muschelbett",
+    subtitle: "Schlafen, wie eine Herrscherin",
+    description: "Das Sofa wurde als Bett genutzt und ist von Elisabeth Augusta. Das Bett war Teil einer offenen Muschel, welche die gesamte Höhe der Bettnische einnahm. Dies geht aus Zeichnungen des Schlossarchitekten Nicolas de Pigage sowie aus Reisebereichten aus dem 18. Jahrhundert hervor.",
+    room: Room.HexagonRoomEast,
+    thumbnail: {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414819/detailshots/object_04_sofa/object_04_sofa_04_r7enky.jpg",
+      width: 1920,
+      height: 1080,
+      alt: "tets"
+    },
+    imageUrls: [
+    ],
+    friendlyId: FriendlyId.Sofa,
+  };
+
   return (
     <div>
       <Head>
@@ -148,6 +164,8 @@ export default function Home() {
         >
           { t('landingPage.startTour') }
         </SbButton>
+
+        <SbInfoCard benrathObject={couch} />
       </Page>
     </div>
   )
