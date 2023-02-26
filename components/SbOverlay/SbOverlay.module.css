@@ -1,0 +1,12 @@
+.overlay {
+  position: fixed;
+  z-index: var(--z-default);
+  inset: 0;
+  pointer-events: none;
+
+  &[data-variant='with-content'] {
+    background-color: hsla(0 0% 100% / 0.7);
+    backdrop-filter: blur(10px);
+    pointer-events: all;
+  }
+}

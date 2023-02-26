@@ -24,6 +24,7 @@
     "**/*.ts",
     "**/*.tsx",
     "public/innerHTML.js",
+    "postcss.config.json",
   ],
   "exclude": [
     "styleguide",
