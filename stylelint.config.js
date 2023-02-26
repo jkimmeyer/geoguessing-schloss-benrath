@@ -92,7 +92,6 @@ module.exports = {
       {
         "font-size": [
           "em",
-          "rem"
         ]
       },
       {
