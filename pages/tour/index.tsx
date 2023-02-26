@@ -57,7 +57,10 @@ export default function index() {
 
       <div id="viewer" className="fill-viewport viewer-class"></div>
       <SbOverlay>
-        <div>Hello!</div>
+        <stack-l>
+          <div>Hello!</div>
+          <div>Bro!</div>
+        </stack-l>
       </SbOverlay>
     </div>
   )

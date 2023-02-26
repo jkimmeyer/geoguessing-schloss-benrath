@@ -1,0 +1,18 @@
+switcher-l {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* stylelint-disable-next-line selector-no-qualifying-type */
+switcher-l.centered {
+  justify-content: center;
+  align-items: center;
+}
+
+switcher-l > * {
+  flex-basis: calc((600px - 100%) * 999);
+}
+
+switcher-l > *[data-state='current'] {
+  flex-basis: max-content;
+}
