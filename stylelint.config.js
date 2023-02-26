@@ -206,7 +206,7 @@ module.exports = {
     "selector-list-comma-space-before": null,
     "selector-max-attribute": 1,
     "selector-max-class": null,
-    "selector-max-combinators": 1,
+    "selector-max-combinators": 2,
     "selector-max-compound-selectors": 3,
     "selector-max-empty-lines": 0,
     "selector-max-id": 0,
@@ -239,7 +239,7 @@ module.exports = {
     "selector-type-no-unknown": [
       true,
       {
-        "ignoreFiles": ["compositions/**/*.css"]
+        "ignore": ["custom-elements"]
       }
     ],
     "shorthand-property-no-redundant-values": true,
