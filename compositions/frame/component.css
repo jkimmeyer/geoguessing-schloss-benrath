@@ -1,0 +1,14 @@
+frame-l {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 16 / 9;
+}
+
+frame-l > img,
+frame-l > video {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
