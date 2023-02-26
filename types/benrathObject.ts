@@ -1,10 +1,11 @@
+import { ImageType } from './index'
 export interface BenrathObject {
   title: string;
   subtitle: string;
   description: string;
   room: Room;
-  thumbnail: string;
-  imageUrls: string[];
+  thumbnail: ImageType;
+  imageUrls: ImageType[];
   friendlyId: string;
 }
 
