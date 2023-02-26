@@ -10,6 +10,7 @@ import '../config/i18n';
 import { useTranslation } from 'react-i18next';
 import gameOverlay from '../assets/images/GameOverlay_objectHovered.png'
 import SbTitle from '../components/SbTitle/SbTitle';
+import SbImage from '../components/SbImage/SbImage';
 
 
 export default function Home() {
