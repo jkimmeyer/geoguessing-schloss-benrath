@@ -13,11 +13,14 @@ export {
   ButtonType,
   IconNames,
   FriendlyId,
-  Room
+  Room,
   HeadingColor,
   HeadingLevel,
   HeadingSize,
   OverlayVariant,
 }
 
-export type { ImageType, BenrathObject}
+export type {
+  BenrathObject,
+  ImageType,
+}
