@@ -1,3 +1,5 @@
+import { HeadingLevel } from '../../types';
+import SbHeading from '../SbHeading/SbHeading';
 import chapterStyles from './SbChapter.module.css';
 
 interface Props {
@@ -12,8 +14,10 @@ const SbChapter: React.FC<Props> = ({
   children,
 }) => {
   return (
-    <section className={ chapterStyles['chapter'] }>
-      <h2 className={chapterStyles['chapter--title']}>{title}</h2>
+    <section className={chapterStyles['chapter']}>
+      <div className={chapterStyles['chapter--title']}>
+        <SbHeading level={HeadingLevel.h2} title={title} />
+      </div>
       <p className={chapterStyles['chapter--text']}>{text}</p>
       <div className={chapterStyles['chapter--content']}>
         {children}

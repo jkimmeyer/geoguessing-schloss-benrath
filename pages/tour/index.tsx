@@ -1,5 +1,6 @@
 import Head from "next/head"
 import Script from "next/script"
+import SbOverlay from "../../components/SbOverlay/SbOverlay"
 import indexStyles from './index.module.css'
 
 export default function index() {
@@ -55,6 +56,12 @@ export default function index() {
       </div>
 
       <div id="viewer" className="fill-viewport viewer-class"></div>
+      <SbOverlay>
+        <stack-l>
+          <div>Hello!</div>
+          <div>Bro!</div>
+        </stack-l>
+      </SbOverlay>
     </div>
   )
 }

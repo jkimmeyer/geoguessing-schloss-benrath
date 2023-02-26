@@ -1,0 +1,6 @@
+grid-l {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: var(--spacing-16);
+  align-content: start;
+}

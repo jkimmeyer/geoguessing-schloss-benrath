@@ -1,5 +1,5 @@
 import buttonStyles from './SbButton.module.css';
-import { ButtonType } from '../../types';
+import { ButtonSize, ButtonType } from '../../types';
 import Link from 'next/link';
 
 interface Props extends React.ButtonHTMLAttributes < HTMLButtonElement > {
@@ -13,8 +13,8 @@ interface Props extends React.ButtonHTMLAttributes < HTMLButtonElement > {
 }
 
 const SbButton: React.FC<Props> = ({
-  buttonSize,
-  buttonType,
+  buttonSize = ButtonSize.Medium,
+  buttonType = ButtonType.Primary,
   children,
   disabled,
   icon,
