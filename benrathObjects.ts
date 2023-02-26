@@ -48,8 +48,12 @@ const window: BenrathObject = {
   subtitle: "1965",
   description: "Am 25. Mai 1965 besuchte Elizabeth II Schloss Benrath. Sie stand flankiert von Ministerpräsident Franz Meyers und Prinz Philip und begrüßte Mitglieder der britischen Kolonie  auf der regennassen Südterrasse.",
   room: Room.WomansWing,
-  thumbnail: "",
-  imageUrls: [],
+  thumbnail: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414814/detailshots/object_01_window_01_evztq8.jpg",
+  imageUrls: [
+    "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414814/detailshots/object_01_window_01_evztq8.jpg",
+    "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414821/detailshots/object_01_window_03_trcz7n.jpg",
+    "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414820/detailshots/object_01_window_02_q9aezv.jpg"
+],
   friendlyId: FriendlyId.Window,
 }
 
@@ -98,8 +102,13 @@ const sofa: BenrathObject = {
   subtitle: "Schlafen, wie eine Herrscherin",
   description: "Das Sofa wurde als Bett genutzt und ist von Elisabeth Augusta. Das Bett war Teil einer offenen Muschel, welche die gesamte Höhe der Bettnische einnahm. Dies geht aus Zeichnungen des Schlossarchitekten Nicolas de Pigage sowie aus Reisebereichten aus dem 18. Jahrhundert hervor.",
   room: Room.HexagonRoomEast,
-  thumbnail: "",
-  imageUrls: [],
+  thumbnail: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414814/detailshots/object_04_sofa_01_ll9ayj.jpg",
+  imageUrls: [
+    "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414814/detailshots/object_04_sofa_01_ll9ayj.jpg",
+    "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414819/detailshots/object_04_sofa_02_wvukqb.jpg",
+    "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414819/detailshots/object_04_sofa_03_vwohef.jpg",
+    "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414819/detailshots/object_04_sofa_04_r7enky.jpg"
+  ],
   friendlyId: FriendlyId.Sofa,
 }
 
