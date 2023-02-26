@@ -1,10 +1,13 @@
 import { ButtonType } from './buttonType'
 import { IconNames } from './iconNames'
 import { ImageType } from './imageType'
+import { BenrathObject, FriendlyId, Room } from './benrathObject'
 
 export {
   ButtonType,
-  IconNames
+  IconNames,
+  FriendlyId,
+  Room
 }
 
-export type { ImageType }
+export type { ImageType, BenrathObject}
