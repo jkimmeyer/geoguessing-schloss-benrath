@@ -32,7 +32,29 @@ module.exports = {
         },
         {
           test: /\.css$/,
-          use: ['style-loader', 'css-loader'],
+          use: ['style-loader', 'css-loader', {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [
+                  "postcss-flexbugs-fixes",
+                  "postcss-nesting",
+                  [
+                    "postcss-preset-env",
+                    {
+                      "autoprefixer": {
+                        "flexbox": "no-2009"
+                      },
+                      "stage": 3,
+                      "features": {
+                        "custom-properties": false
+                      }
+                    }
+                  ]
+                ]
+              },
+            },
+          }],
         },
         {
           test: /\.ts?$/,
