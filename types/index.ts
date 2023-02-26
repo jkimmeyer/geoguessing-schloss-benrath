@@ -5,6 +5,7 @@ import { HeadingLevel } from './headingLevel'
 import { HeadingSize } from './headingSize'
 import { IconNames } from './iconNames'
 import { ImageType } from './imageType'
+import { OverlayVariant } from './overlayVariant'
 
 export {
   ButtonSize,
@@ -13,6 +14,7 @@ export {
   HeadingColor,
   HeadingLevel,
   HeadingSize,
+  OverlayVariant,
 }
 
 export type { ImageType }
