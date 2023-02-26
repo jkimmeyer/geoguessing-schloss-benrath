@@ -1,6 +1,14 @@
 .card {
   opacity: 0.7;
   padding: var(--spacing-16);
-  color: var(--white);
-  background-color: var(--color-background-dark);
+
+  &[data-variant='light'] {
+    color: var(--color-text);
+    background-color: var(--color-background-neutral);
+  }
+
+  &[data-variant='dark'] {
+    color: var(--white);
+    background-color: var(--color-background-dark);
+  }
 }
