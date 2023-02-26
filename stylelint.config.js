@@ -236,7 +236,12 @@ module.exports = {
     "selector-pseudo-element-disallowed-list": null,
     "selector-pseudo-element-no-unknown": true,
     "selector-type-case": "lower",
-    "selector-type-no-unknown": true,
+    "selector-type-no-unknown": [
+      true,
+      {
+        "ignoreFiles": ["compositions/**/*.css"]
+      }
+    ],
     "shorthand-property-no-redundant-values": true,
     "string-no-newline": true,
     "string-quotes": "single",
