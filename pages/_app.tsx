@@ -10,7 +10,6 @@ declare global {
         React.HTMLAttributes<HTMLElement>,
         HTMLElement
       >;
-
       'switcher-l': React.DetailedHTMLProps<
         React.HTMLAttributes<HTMLElement>,
         HTMLElement

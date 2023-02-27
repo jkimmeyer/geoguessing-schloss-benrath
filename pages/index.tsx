@@ -12,7 +12,6 @@ import gameOverlay from '../assets/images/GameOverlay_objectHovered.png'
 import SbTitle from '../components/SbTitle/SbTitle';
 import SbCommunication from '../components/SbCommunication/component';
 
-
 export default function Home() {
   const { t } = useTranslation();
 
