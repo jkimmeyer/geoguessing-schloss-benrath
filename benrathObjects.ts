@@ -5,11 +5,31 @@ const window: BenrathObject = {
   subtitle: "1965",
   description: "Am 25. Mai 1965 besuchte Elizabeth II Schloss Benrath. Sie stand flankiert von Ministerpräsident Franz Meyers und Prinz Philip und begrüßte Mitglieder der britischen Kolonie  auf der regennassen Südterrasse.",
   room: Room.WomansWing,
-  thumbnail: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414814/detailshots/object_01_window_01_evztq8.jpg",
+  thumbnail: {
+    url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414814/detailshots/object_01_window/object_01_window_01_evztq8.jpg",
+    alt: "Queen Elisabeth",
+    width: 925,
+    height: 857,
+  },
   imageUrls: [
-    "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414814/detailshots/object_01_window_01_evztq8.jpg",
-    "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414821/detailshots/object_01_window_03_trcz7n.jpg",
-    "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414820/detailshots/object_01_window_02_q9aezv.jpg"
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414814/detailshots/object_01_window/object_01_window_01_evztq8.jpg",
+      alt: "Queen Elisabeth beim Schloss Benrath",
+      width: 925,
+      height: 857
+    },
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414821/detailshots/object_01_window/object_01_window_03_trcz7n.jpg",
+      alt: "Front-Ansicht Schloss Benrath aus Entfernung",
+      width: 6000,
+      height: 4000,
+    },
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414820/detailshots/object_01_window/object_01_window_02_q9aezv.jpg",
+      alt: "Front-Ansicht Schloss Benrath",
+      width: 6000,
+      height: 4000,
+}
 ],
   friendlyId: FriendlyId.Window,
 }
