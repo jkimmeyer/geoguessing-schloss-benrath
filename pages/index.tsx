@@ -5,13 +5,12 @@ import SbIcon from '../components/SbIcon/SbIcon';
 import SbImageSlider from '../components/SbImageSlider/SbImageSlider';
 import Page from '../layouts/Page';
 import Image from 'next/image'
-import { ButtonType, IconNames, ImageType, Room, FriendlyId } from '../types';
+import { ButtonType, IconNames, ImageType } from '../types';
 import '../config/i18n';
 import { useTranslation } from 'react-i18next';
 import gameOverlay from '../assets/images/GameOverlay_objectHovered.png'
 import SbTitle from '../components/SbTitle/SbTitle';
 import SbCommunication from '../components/SbCommunication/component';
-import SbInfoCard from '../components/SbInfoCard/SbInfoCard';
 
 export default function Home() {
   const { t } = useTranslation();
