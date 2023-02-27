@@ -1,6 +1,8 @@
 import Head from "next/head"
 import Script from "next/script"
+import SbInstructionCard from "../../components/SbInstructionCard/SbInstructionCard"
 import SbOverlay from "../../components/SbOverlay/SbOverlay"
+import SbTourFrame from "../../components/SbTourFrame/SbTourFrame"
 import indexStyles from './index.module.css'
 
 export default function index() {
@@ -57,10 +59,9 @@ export default function index() {
 
       <div id="viewer" className="fill-viewport viewer-class"></div>
       <SbOverlay>
-        <stack-l>
-          <div>Hello!</div>
-          <div>Bro!</div>
-        </stack-l>
+        <SbTourFrame>
+          <SbInstructionCard title="Title" description="Content" step={3} totalSteps={5} />
+        </SbTourFrame>
       </SbOverlay>
     </div>
   )
