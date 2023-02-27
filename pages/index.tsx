@@ -91,22 +91,6 @@ export default function Home() {
     }
   ]
 
-  const couch = {
-    title: "Muschelbett",
-    subtitle: "Schlafen, wie eine Herrscherin",
-    description: "Das Sofa wurde als Bett genutzt und ist von Elisabeth Augusta. Das Bett war Teil einer offenen Muschel, welche die gesamte Höhe der Bettnische einnahm. Dies geht aus Zeichnungen des Schlossarchitekten Nicolas de Pigage sowie aus Reisebereichten aus dem 18. Jahrhundert hervor.",
-    room: Room.HexagonRoomEast,
-    thumbnail: {
-      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414819/detailshots/object_04_sofa/object_04_sofa_04_r7enky.jpg",
-      width: 1920,
-      height: 1080,
-      alt: "tets"
-    },
-    imageUrls: [
-    ],
-    friendlyId: FriendlyId.Sofa,
-  };
-
   return (
     <div>
       <Head>
@@ -164,8 +148,6 @@ export default function Home() {
         >
           { t('landingPage.startTour') }
         </SbButton>
-
-        <SbInfoCard benrathObject={couch} />
       </Page>
     </div>
   )
