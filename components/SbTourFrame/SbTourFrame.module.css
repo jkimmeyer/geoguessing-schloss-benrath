@@ -6,7 +6,11 @@
   inset-block-start: 50%;
   inline-size: 80vw;
   max-inline-size: 1024px;
-  block-size: 75vh;
+  block-size: 60vh;
   margin: auto;
   transform: translateY(-50%);
+
+  & > * {
+    flex: 1;
+  }
 }
