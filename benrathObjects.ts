@@ -19,8 +19,26 @@ const wineglass: BenrathObject = {
   subtitle: "",
   description: "Die Getränkeausgabe war nicht in der Küche, sondern in der Nähe der Festtafel positioniert, und so konnten beim Öffnen von Champagnerflaschen oder beim Anzapfen von Bierfässern die Inhalte gelegentlich fontänenartig gegen die gefassten Wandpaneelen und Türen spritzen. Nicht selten entstanden dabei auch Flecken auf den Parkettböden. Während der Empfänge im Kuppelsaal stellten die Gäste ihre Gläser auf den Kamin simsen, Konsoltischen und auf die Stuckmarmorsockel der Putten mit Füllhörnern ab, was nachträglich an den sich abzeichnenden Ringen auf den kostbaren Oberflächen zu erkennen war. Zum Schutz dieser Flächen wurden ab 1963 passgenaue Glasplatten aufgelegt, wovon je doch die Puttensockel ausgenommen waren. Diese zeigen noch heute zahlreiche Ringe, die von Gläsern und Kaffee tassen herrühren.",
   room: Room.DomeHall,
-  thumbnail: "",
-  imageUrls: [],
+  thumbnail: {
+    url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677421657/detailshots/object_02_wineglass/object_02_wineglass_02_dxhjpq.jpg",
+    alt: "Weinglass abdruck im Kuppelsaal",
+    width: 6000,
+    height: 4000,
+  },
+  imageUrls: [
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677421657/detailshots/object_02_wineglass/object_02_wineglass_02_dxhjpq.jpg",
+      alt: "Weinglass abdruck im Kuppelsaal",
+      width: 6000,
+      height: 4000,
+    },
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677421657/detailshots/object_02_wineglass/object_02_wineglass_01_h4neps.jpg",
+      alt: "Weinglass abdruck im Kuppelsaal",
+      width: 6000,
+      height: 4000,
+    },
+  ],
   friendlyId: FriendlyId.Wineglass,
 }
 
