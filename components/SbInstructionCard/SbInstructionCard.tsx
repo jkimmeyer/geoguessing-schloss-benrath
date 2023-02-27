@@ -1,4 +1,5 @@
 import { CardVariant, HeadingColor, HeadingLevel } from '../../types';
+import SbButton from '../SbButton/SbButton';
 import SbCard from '../SbCard/SbCard';
 import SbHeading from '../SbHeading/SbHeading';
 import instructionCardStyles from './SbInstructionCard.module.css'
@@ -6,14 +7,16 @@ import instructionCardStyles from './SbInstructionCard.module.css'
 interface Props {
   title: string;
   description: string;
-  footer?: React.ReactNode;
+  step: number,
+  totalSteps: number,
 }
 
 
 const SbInstructionCard: React.FC<Props> = ({
   title,
   description,
-  footer
+  step,
+  totalSteps,
 }) => {
   return (
     <SbCard variant={CardVariant.Dark}>
@@ -21,11 +24,15 @@ const SbInstructionCard: React.FC<Props> = ({
 
       <p className={instructionCardStyles["instruction-card--description"]}>{description}</p>
 
-      {footer &&
-        <div className={instructionCardStyles["instruction-card--footer"]}>
-          {footer}
+      <div className={instructionCardStyles["instruction-card--footer"]}>
+        <div>{step + " von " + totalSteps}</div>
+        <div>
+          <switcher-l>
+            <SbButton>Zurück</SbButton>
+            <SbButton>Weiter</SbButton>
+          </switcher-l>
         </div>
-      }
+      </div>
     </SbCard>
   );
 }

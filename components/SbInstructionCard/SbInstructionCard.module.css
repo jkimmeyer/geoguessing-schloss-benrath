@@ -1,5 +1,6 @@
 .instruction-card--description {
-  font-family: var(--font-serif);
+  flex: 1;
+  font-family: var(--serif-font);
 }
 
 .instruction-card--footer {

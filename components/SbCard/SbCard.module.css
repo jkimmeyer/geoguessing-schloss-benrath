@@ -1,14 +1,17 @@
 .card {
-  opacity: 0.7;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-block-size: 300px;
   padding: var(--spacing-16);
 
   &[data-variant='light'] {
     color: var(--color-text);
-    background-color: var(--color-background-neutral);
+    background-color: var(--color-background-light-transparent);
   }
 
   &[data-variant='dark'] {
     color: var(--white);
-    background-color: var(--color-background-dark);
+    background-color: var(--color-background-dark-transparent);
   }
 }
