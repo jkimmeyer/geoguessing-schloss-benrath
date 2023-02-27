@@ -21,20 +21,20 @@ const wineglass: BenrathObject = {
   room: Room.DomeHall,
   thumbnail: {
     url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677421657/detailshots/object_02_wineglass/object_02_wineglass_02_dxhjpq.jpg",
-    alt: "Weinglass abdruck im Kuppelsaal",
+    alt: "Weinglasabdruck im Kuppelsaal",
     width: 6000,
     height: 4000,
   },
   imageUrls: [
     {
       url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677421657/detailshots/object_02_wineglass/object_02_wineglass_02_dxhjpq.jpg",
-      alt: "Weinglass abdruck im Kuppelsaal",
+      alt: "Weinglasabdruck im Kuppelsaal",
       width: 6000,
       height: 4000,
     },
     {
       url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677421657/detailshots/object_02_wineglass/object_02_wineglass_01_h4neps.jpg",
-      alt: "Weinglass abdruck im Kuppelsaal",
+      alt: "Weinglasabdruck im Kuppelsaal",
       width: 6000,
       height: 4000,
     },
