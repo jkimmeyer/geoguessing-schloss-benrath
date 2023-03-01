@@ -1,9 +1,57 @@
 import Head from "next/head"
 import Script from "next/script"
 import SbInstructionCard from "../../components/SbInstructionCard/SbInstructionCard"
+import SbMenuFrame from "../../components/SbMenuFrame/SbMenuFrame"
 import SbOverlay from "../../components/SbOverlay/SbOverlay"
 import SbTourFrame from "../../components/SbTourFrame/SbTourFrame"
 import indexStyles from './index.module.css'
+import { useStopwatch } from 'react-timer-hook';
+import { format } from 'date-fns';
+import SbTitle from "../../components/SbTitle/SbTitle"
+import {useState } from "react"
+
+const Overlay = () => {
+  const [overlayOpen, setOverlayOpen] = useState(false);
+
+  const buttonHandler = () => {
+    setOverlayOpen(current => !current)
+  }
+
+  return (
+    <SbOverlay withContent={overlayOpen}>
+      <SbTourFrame>
+        <SbInstructionCard title="Title" description="Content" step={3} totalSteps={5} />
+      </SbTourFrame>
+
+      <SbMenuFrame
+        timer={<MyStopwatch />}
+        points={"0"}
+        progress={"0 von 50"}
+        logo="360§ Tour"
+        // stopwatchPause={pause}
+        closeOverlay={buttonHandler}
+      />
+    </SbOverlay>
+  )
+}
+
+const MyStopwatch = () => {
+  const {
+    seconds,
+    minutes,
+    hours,
+    isRunning,
+    start,
+    pause,
+    reset
+  } = useStopwatch({ autoStart: false });
+
+  return (
+    <div>
+      <span>{format(hours, 'kk')}</span>:<span>{format(minutes, 'mm')}</span>:<span>{format(seconds, 'ss')}</span>
+    </div>
+  )
+}
 
 export default function index() {
   return (
@@ -57,12 +105,9 @@ export default function index() {
         </div>
       </div>
 
-      <div id="viewer" className="fill-viewport viewer-class"></div>
-      <SbOverlay>
-        <SbTourFrame>
-          <SbInstructionCard title="Title" description="Content" step={3} totalSteps={5} />
-        </SbTourFrame>
-      </SbOverlay>
+      <div id="viewer" className="fill-viewport viewer-class">
+        <Overlay />
+      </div>
     </div>
   )
 }
