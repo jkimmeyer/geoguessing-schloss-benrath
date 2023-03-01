@@ -1,0 +1,127 @@
+.menu-frame {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.menu-frame--container {
+  position: relative;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.menu-frame--timer,
+.menu-frame--logo,
+.menu-frame--points,
+.menu-frame--progress {
+  display: inline-block;
+  position: absolute;
+  min-inline-size: 150px;
+  padding-block: var(--spacing-8);
+  padding-inline: var(--spacing-32);
+  text-align: center;
+  background-color: var(--white);
+}
+
+.menu-frame--logo,
+.menu-frame--points {
+  padding-inline-start: var(--spacing-64);
+}
+
+.menu-frame--timer,
+.menu-frame--progress {
+  padding-inline-end: var(--spacing-64);
+}
+
+.menu-frame--timer {
+  clip-path: polygon(0 0, 100% 0%, 100% 0%, 75% 100%, 0% 100%);
+  inset-block-start: 0;
+  inset-inline-start: 0;
+}
+
+.menu-frame--logo {
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 25% 100%, 0% 0%);
+  inset-block-start: 0;
+  inset-inline-end: 0;
+}
+
+.menu-frame--points {
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%, 25% 0%);
+  inset-inline-end: 0;
+  inset-block-end: 0;
+}
+
+.menu-frame--progress {
+  clip-path: polygon(0 0, 75% 0%, 100% 100%, 0% 100%, 0% 0%);
+  inset-block-end: 0;
+  inset-inline-start: 0;
+}
+
+.menu-frame--help,
+.menu-frame--map,
+.menu-frame--menu {
+  pointer-events: all;
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: var(--color-primary-light);
+  }
+}
+
+.menu-frame--help {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-start: 50%;
+  block-size: 40px;
+  padding-inline: var(--spacing-64);
+  transform: translateX(-50%);
+  font-size: 32px;
+  background-color: var(--white);
+}
+
+.menu-frame--map {
+  clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 75%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: 0;
+  inline-size: 40px;
+  padding-block: var(--spacing-64);
+  transform: translateY(-50%);
+  font-size: 32px;
+  background-color: var(--white);
+}
+
+.menu-frame--menu {
+  clip-path: polygon(0 0, 100% 25%, 100% 75%, 0% 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inline-size: 40px;
+  padding-block: var(--spacing-64);
+  font-size: 32px;
+  background-color: var(--white);
+}
+
+.menu-frame--overlay-menu {
+  z-index: 10000;
+  inline-size: 80vw;
+  block-size: 100vh;
+  background-color: var(--white);
+}
+
+.menu-frame--menu-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  inset-block-start: 50%;
+  inset-inline-start: 0;
+  transform: translateY(-50%);
+}
