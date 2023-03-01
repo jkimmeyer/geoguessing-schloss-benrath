@@ -25,6 +25,7 @@
     "@types/react-dom": "18.0.9",
     "babel-loader": "^9.1.0",
     "css-loader": "^6.7.2",
+    "date-fns": "^2.29.3",
     "eslint-config-next": "13.0.5",
     "i18next": "^22.4.5",
     "next": "13.0.5",
@@ -38,6 +39,7 @@
     "react-dom": "18.2.0",
     "react-i18next": "^12.1.1",
     "react-styleguidist": "^13.0.0",
+    "react-timer-hook": "^3.0.5",
     "style-loader": "^3.3.1",
     "stylelint": "^14.16.0",
     "stylelint-order": "^5.0.0",
@@ -53,6 +55,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-typescript": "^3.5.2",
     "eslint-plugin-prettier": "^4.2.1",
+    "postcss-loader": "^7.0.2",
     "prettier": "^2.8.1",
     "prisma": "^4.8.0"
   }

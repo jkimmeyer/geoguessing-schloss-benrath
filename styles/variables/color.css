@@ -8,7 +8,9 @@
   --peach-blossom-lighter: hsl(2 100% 90%);
   --light-grey: hsl(0 0% 95%);
   --white: hsl(0 0% 100%);
+  --white-transparent: hsl(0 0% 100% / 0.6);
   --light-black: hsl(0 0% 20%);
+  --light-black-transparent: hsl(0 0% 20% / 0.6);
   --black: hsl(0 0% 0%);
 }
 
@@ -22,6 +24,8 @@
   --color-text: var(--light-black);
   --color-background-neutral: var(--light-grey);
   --color-background-dark: var(--light-black);
+  --color-background-light-transparent: var(--white-transparent);
+  --color-background-dark-transparent: var(--light-black-transparent);
 }
 
 /* stylelint-enable no-duplicate-selectors */

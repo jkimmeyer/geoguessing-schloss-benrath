@@ -1,0 +1,10 @@
+.instruction-card--description {
+  flex: 1;
+  font-family: var(--serif-font);
+}
+
+.instruction-card--footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
