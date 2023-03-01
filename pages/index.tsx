@@ -19,51 +19,75 @@ export default function Home() {
   const images: ImageType[] = [
     {
       url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text"
+      alt: "Alt-Text",
+      width: 320,
+      height: 180,
     },
     {
       url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text"
+      alt: "Alt-Text",
+      width: 320,
+      height: 180,
     },
     {
       url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text"
+      alt: "Alt-Text",
+      width: 320,
+      height: 180,
     },
     {
       url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text"
+      alt: "Alt-Text",
+      width: 320,
+      height: 180,
     },
     {
       url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text"
+      alt: "Alt-Text",
+      width: 320,
+      height: 180,
     },
     {
       url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text"
+      alt: "Alt-Text",
+      width: 320,
+      height: 180,
     },
     {
       url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text"
+      alt: "Alt-Text",
+      width: 320,
+      height: 180,
     },
     {
       url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text"
+      alt: "Alt-Text",
+      width: 320,
+      height: 180,
     },
     {
       url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text"
+      alt: "Alt-Text",
+      width: 320,
+      height: 180,
     },
     {
       url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text"
+      alt: "Alt-Text",
+      width: 320,
+      height: 180,
     },
     {
       url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text"
+      alt: "Alt-Text",
+      width: 320,
+      height: 180,
     },
     {
       url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text"
+      alt: "Alt-Text",
+      width: 320,
+      height: 180,
     }
   ]
 

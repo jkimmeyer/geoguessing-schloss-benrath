@@ -10,7 +10,8 @@ module.exports = {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   propsParser: require("react-docgen-typescript").parse,
   require: [
-    path.join(__dirname, './styles/index.css')
+    path.join(__dirname, './styles/index.css'),
+    path.join(__dirname, './compositions/compositions.js')
   ],
   webpackConfig: {
     plugins: [

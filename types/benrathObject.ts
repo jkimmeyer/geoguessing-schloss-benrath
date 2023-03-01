@@ -1,10 +1,11 @@
+import { ImageType } from './index'
 export interface BenrathObject {
   title: string;
   subtitle?: string;
   description: string;
   room: Room;
-  thumbnail: string;
-  imageUrls: string[];
+  thumbnail: ImageType;
+  imageUrls: ImageType[];
   friendlyId: string;
 }
 
@@ -40,4 +41,6 @@ export enum FriendlyId {
   Clock = "object_11_uhr",
   Desk = "object_16_desk",
   Fresco = "object_18_fresco",
+  TableclockLeft = "object_18_tableclock-left",
+  TableclockRight = "object_18_tableclock-right"
 }
