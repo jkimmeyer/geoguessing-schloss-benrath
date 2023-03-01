@@ -29,6 +29,7 @@ quizTimeout_7199F8E7_2BD9_1EB6_41A5_806D471F4D11.score = View Score
 
 ### Tooltip
 HotspotMapOverlayArea_AF4040A2_9667_C0EA_41D3_B11A5FADFD78.toolTip = Damenzimmer
+HotspotMapOverlayArea_ABC66E16_9623_C3AB_41E2_0AAF57C24E3B.toolTip = Eingangshalle
 HotspotMapOverlayArea_ADF3B635_9662_43EE_41CC_AE45B1F9A0D1.toolTip = Herrenzimmer
 HotspotMapOverlayArea_AE9C4044_9662_5FAE_41E2_2A45D6AA1B37.toolTip = Kuppelsaal
 HotspotMapOverlayArea_ABC8A08F_9622_40BA_41DB_7C89CA783A09.toolTip = Westliches Schlafzimmer
@@ -39,145 +40,51 @@ HotspotMapOverlayArea_ADF0536C_9625_C07E_41D3_8B25D379BCEC.toolTip = Östliches 
 ### Floorplan
 
 ### Image
-imlevel_B26FB529_BF0F_ECB0_41C9_B4AFB463472F.url = media/map_ADF00183_967F_C0A9_41BA_65F6E3BD8FA3_de_0.png
-imlevel_B26FC529_BF0F_ECB0_41DB_0FEBED60679B.url = media/map_ADF00183_967F_C0A9_41BA_65F6E3BD8FA3_de_1.png
-imlevel_B26FE529_BF0F_ECB0_41D8_D912AC521A97.url = media/map_ADF00183_967F_C0A9_41BA_65F6E3BD8FA3_de_2.png
+imlevel_B7C01655_92BD_6827_41B0_328A5333DD35.url = media/map_ADF00183_967F_C0A9_41BA_65F6E3BD8FA3_de_0.png
+imlevel_B7C02655_92BD_6827_41E0_C7BBE58D50D1.url = media/map_ADF00183_967F_C0A9_41BA_65F6E3BD8FA3_de_1.png
+imlevel_B7C03655_92BD_6827_41D4_34293B1343DC.url = media/map_ADF00183_967F_C0A9_41BA_65F6E3BD8FA3_de_2.png
 
 ### Titel
-panorama_FADC1266_EC1A_8838_41D6_538F04C27173.label = PIC_2022_11_07_10_14_19
-panorama_F8EF9A6A_EC1A_B80B_41DB_1F216C737C35.label = PIC_2022_11_07_10_18_26
-panorama_F8EFE27F_EC1A_8808_41EA_9795517C63E6.label = PIC_2022_11_07_10_20_20
-panorama_F8EF022B_EC1A_8808_41E1_86FCACEBCB5B.label = PIC_2022_11_07_10_25_06
-panorama_F8EFD9FD_EC05_7809_41D3_4CC2B50B6B12.label = PIC_2022_11_07_10_31_23
-panorama_F8EF6A0E_EC05_9808_41CA_4677C42E9359.label = PIC_2022_11_07_10_38_18
+panorama_81357BD9_927F_281E_41D1_C6A5D2FA29A1.label = PIC_2022_11_07_10_14_19
+panorama_8335CEAF_927F_2832_41E1_489CD162BD6C.label = PIC_2022_11_07_10_18_26
+panorama_836B36D8_9278_F81E_41DA_4EA120670CEB.label = PIC_2022_11_07_10_20_20
+panorama_836BEEB6_9279_6812_41DC_E5860ED27549.label = PIC_2022_11_07_10_25_06
+panorama_836F291B_9279_2812_41D1_022D4523DE13.label = PIC_2022_11_07_10_31_23
+panorama_83751C71_9279_E811_41D2_44385878ABDE.label = PIC_2022_11_07_10_38_18
 panorama_F8EF51F6_EC05_8818_41A7_7266446B230F.label = PIC_2022_11_07_10_42_14
-panorama_F8EC149B_EC05_8808_41CC_54B5525B32A8.label = PIC_2022_11_07_10_46_01
-panorama_F8EF7C89_EC05_B808_41D2_5B50B24DC5D7.label = PIC_2022_11_07_10_47_31
-panorama_F8EEB46D_EC05_8808_41E1_EB194792ADC9.label = PIC_2022_11_07_10_51_57
-panorama_F8EF4C76_EC05_9818_41C9_6CF10C438124.label = PIC_2022_11_07_10_56_44
-panorama_F8EE8478_EC05_8808_41E6_A9DD428C77A2.label = PIC_2022_11_07_10_58_17
-panorama_F8EF6C41_EC05_F879_41E6_F039B16B2A3B.label = PIC_2022_11_07_10_59_17
-panorama_F8EEB415_EC05_8818_41E5_78F2863B5C1C.label = PIC_2022_11_07_11_00_25
-panorama_F8EE9BF5_EC05_9818_41D0_1601DF926D80.label = PIC_2022_11_07_11_02_33
-panorama_F8EEB391_EC05_8819_41E0_8CB39C47B9D1.label = PIC_2022_11_07_11_05_54
-panorama_F8EEBB5D_EC05_B809_41DC_CA04030C6A1F.label = PIC_2022_11_07_11_07_00
-panorama_F8EE52FF_EC05_8809_41CA_C75BE8B886F5.label = PIC_2022_11_07_11_09_16
-panorama_F8EE6AD3_EC05_9818_41D5_DD762376FA09.label = PIC_2022_11_07_11_10_48
-panorama_F8EE126D_EC05_8808_41EC_A9EB6187BA9E.label = PIC_2022_11_07_11_12_19
-panorama_F8EE3A4A_EC05_780B_41ED_5A26BA755B9A.label = PIC_2022_11_07_11_14_43
-panorama_F8EDE200_EC06_8BF8_41E4_E965827D76D2.label = PIC_2022_11_07_11_16_11
-panorama_F8EDC9DF_EC06_9809_41DB_8F430941E3E0.label = PIC_2022_11_07_11_19_19
-panorama_F8EA01CA_EC06_8808_41E1_EDE80F3E12CC.label = PIC_2022_11_07_11_21_25
-panorama_F8EA1171_EC06_8818_41CF_69B3B82E88B6.label = PIC_2022_11_07_11_23_38
-panorama_F8EA395D_EC06_9808_41DA_74A7A148311E.label = PIC_2022_11_07_11_25_49
-panorama_F8EA711C_EC06_880F_41B7_256169250DE8.label = PIC_2022_11_07_11_27_43
-panorama_F8EA20D0_EC06_8818_41D4_5B4A0DBC92E1.label = PIC_2022_11_07_11_30_26
-panorama_F8EA089F_EC06_9808_41CD_0BC46032540D.label = PIC_2022_11_07_11_31_59
-panorama_F8EAC06D_EC06_8809_41CD_16111A7EC983.label = PIC_2022_11_07_11_33_11
-panorama_F8EA082C_EC06_B808_41DC_817C632EC0CF.label = PIC_2022_11_07_11_34_23
-panorama_F8EAF020_EC06_8837_41D9_DC87B42AB81D.label = PIC_2022_11_07_11_35_46
-panorama_F8EA180B_EC06_9808_41B7_6B84969B8BC8.label = PIC_2022_11_07_11_38_15
-panorama_F8EAAFCE_EC06_9808_41C6_6639A98FECC1.label = PIC_2022_11_07_11_40_19
-panorama_F8EAC7B2_EC06_8818_41D9_18F169CA8B09.label = PIC_2022_11_07_11_52_06
-panorama_F8EB7FC2_EC07_7878_41EB_A77B4FD9CB5A.label = PIC_2022_11_07_11_57_03
-panorama_F8EA578F_EC07_8809_41E7_7BE41660A7F7.label = PIC_2022_11_07_11_57_47
-panorama_F8E88403_EC07_8FF9_41BB_941762E97BE1.label = PIC_2022_11_07_11_59_33
-panorama_F8EA4BB4_EC07_B818_41DE_2C67F9515CBE.label = PIC_2022_11_07_12_00_32
-panorama_F8EA5345_EC07_8878_41CA_39691213FE1A.label = PIC_2022_11_07_12_02_23
-panorama_C4DE7588_EC3A_88F7_41CA_B101A0A02B5C.label = PIC_2022_11_07_12_07_56
-panorama_F8EBF2EC_EC07_880F_41DB_A93B7AC42306.label = PIC_2022_11_07_12_09_53
-panorama_F8EB9AD0_EC07_F818_41B0_0E10E3DD6277.label = PIC_2022_11_07_12_11_05
-panorama_F8EB92AC_EC07_8808_41E3_52F9CA90CC1E.label = PIC_2022_11_07_12_12_04
-panorama_F8EB9A6F_EC07_9809_41E5_8195DADDF382.label = PIC_2022_11_07_12_12_59
-panorama_F8EB6266_EC07_8838_41DF_89A5EBCB1A10.label = PIC_2022_11_07_12_18_53
-panorama_F8EB5A3E_EC07_B80B_415D_FBA1C0893394.label = PIC_2022_11_07_12_19_45
-panorama_F8EB21FE_EC07_8808_41E8_A9204117A90B.label = PIC_2022_11_07_12_36_08
-panorama_F8EB49E5_EC07_9839_41E1_656D7AB8D139.label = PIC_2022_11_07_12_37_23
-panorama_F8EB21D7_EC07_8818_41C9_ABBFF51F4D53.label = PIC_2022_11_07_12_45_30
-panorama_F8EB5980_EC07_78F7_41CC_568AC0686B5C.label = PIC_2022_11_07_12_47_05
-panorama_F8E900FC_EC06_8808_41ED_14EF042E5A70.label = PIC_2022_11_07_12_57_53
-panorama_F8EAE8BC_EC06_980F_41D3_1C699A16B298.label = PIC_2022_11_07_13_00_29
-panorama_F8E9308E_EC06_8808_4197_2F9687B50E5A.label = PIC_2022_11_07_13_02_08
-panorama_F8EAE887_EC06_B8F8_41E4_AF914CBF3DFB.label = PIC_2022_11_07_13_05_03
-panorama_F8E9105E_EC06_880B_41D7_14DB0923697E.label = PIC_2022_11_07_13_06_09
-panorama_F8E9181C_EC06_9808_41DB_62221FE557BB.label = PIC_2022_11_07_13_07_46
-panorama_F8E9B006_EC06_87F8_41B9_A5930F0F4AFB.label = PIC_2022_11_07_13_08_55
-panorama_F8E977CA_EC06_8808_41D2_553F7AEFE9ED.label = PIC_2022_11_07_13_10_30
-panorama_F8E99FA7_EC06_F839_41DE_3CF42F8DE54A.label = PIC_2022_11_07_13_12_23
-panorama_F8E9C77D_EC06_8808_41CC_49B7B25AA5A5.label = PIC_2022_11_07_13_13_54
-panorama_F8E99F52_EC06_9818_41C3_1A778863CF97.label = PIC_2022_11_07_13_16_07
-panorama_F8E9D738_EC06_8808_41E2_7564969CAA76.label = PIC_2022_11_07_13_18_30
-panorama_F8E9FEF2_EC06_B81B_41E5_9F3916C4937A.label = PIC_2022_11_07_13_19_56
-panorama_F8E9C6B3_EC06_8819_41D6_B33CF424767B.label = PIC_2022_11_07_13_20_41
-panorama_F8E99E62_EC06_983B_41E9_FBEB0FE6DEA8.label = PIC_2022_11_07_13_21_24
-panorama_F8E9A631_EC06_8818_41E2_2850B99FACAA.label = PIC_2022_11_07_13_22_13
-panorama_F8E87E0D_EC05_7808_41E3_7E0AD04D9038.label = PIC_2022_11_07_13_22_46
-panorama_F8E975CE_EC05_880B_41D1_69FEC527EC07.label = PIC_2022_11_07_13_30_08
-panorama_F8E8AD8C_EC05_980F_41E6_389534E19B3E.label = PIC_2022_11_07_13_32_04
+panorama_80103230_927B_382E_41C3_5A610171F62D.label = PIC_2022_11_07_10_46_01
+panorama_838D6A22_9278_E832_41D6_D03AE9134006.label = PIC_2022_11_07_10_47_31
+panorama_83513144_9279_1876_41C0_5A79E3275284.label = PIC_2022_11_07_10_51_57
+panorama_83258667_9279_3832_41BA_A643B73ADD67.label = PIC_2022_11_07_10_56_44
+panorama_83B9DD32_9278_E813_41D7_4AE7DDA6E5E6.label = PIC_2022_11_07_10_58_17
+panorama_83AC5345_9287_1871_41D5_8923F7CF10C2.label = PIC_2022_11_07_10_59_17
+panorama_83A21748_9287_187E_41AB_DF9239F03384.label = PIC_2022_11_07_11_00_25
+panorama_83B9A45B_9287_1812_419F_6076E52D150F.label = PIC_2022_11_07_11_02_33
+panorama_83B2F4DC_9287_7816_41AC_F140652CD42E.label = PIC_2022_11_07_11_05_54
+panorama_83BE1C88_9288_E8FE_41C5_8C34DF25AABB.label = PIC_2022_11_07_11_07_00
+panorama_83BE485F_9289_6811_41DF_9E8CBC9ADA2B.label = PIC_2022_11_07_11_09_16
+panorama_83B2708D_9289_F8F6_41C8_AA3F5C5819B8.label = PIC_2022_11_07_11_10_48
+panorama_80BA1583_928F_78F2_41DE_996DCCBC6A23.label = PIC_2022_11_07_11_12_19
+panorama_83BECF01_928F_29F1_41CB_66C93EC0BE64.label = PIC_2022_11_07_11_14_43
+panorama_83D5BDC3_9289_2872_41A0_8F430EEA2863.label = PIC_2022_11_07_11_16_11
+panorama_83BC9790_9289_18EE_41D2_3206DD13A058.label = PIC_2022_11_07_11_19_19
+panorama_83BC75D8_9289_F81F_41D8_F32706CEF713.label = PIC_2022_11_07_11_21_25
+panorama_83B0B1BB_9289_1812_41DD_FC7A1C139CC3.label = PIC_2022_11_07_11_23_38
+panorama_803ACB72_9288_E812_41D4_DA8E25F55AD8.label = PIC_2022_11_07_11_25_49
+panorama_83C60ECC_9289_6876_41B5_25828B04CF0C.label = PIC_2022_11_07_11_27_43
+panorama_83AD160E_9289_3BF2_41CF_6D270B871B26.label = PIC_2022_11_07_11_31_59
+panorama_83C404C1_9289_386E_41CB_D616CD67F73C.label = PIC_2022_11_07_11_33_11
+panorama_81E9C8F0_9299_682E_41DE_EBBDFCDC9495.label = PIC_2022_11_07_11_34_23
+panorama_83B13DCA_9299_2872_41C6_2FAE457C34ED.label = PIC_2022_11_07_11_35_46
+panorama_83B9E483_9299_18F2_41D7_25E434F7BA10.label = PIC_2022_11_07_11_38_15
+panorama_83A05416_9299_1813_41C6_DB119356514E.label = PIC_2022_11_07_11_40_19
+panorama_83BBF7E6_9299_1833_41BB_DCD861ED866F.label = PIC_2022_11_07_12_07_56
+panorama_83B87B83_9298_E8F2_41E1_EBFED2F8219C.label = PIC_2022_11_07_12_09_53
+panorama_83B074FD_929B_3816_41D2_3D88F0B544C3.label = PIC_2022_11_07_12_11_05
+panorama_83BACB66_929B_6832_41E0_9365EC33C144.label = PIC_2022_11_07_12_12_04
+panorama_83BB42FB_929B_1812_41A9_267CBD17E803.label = PIC_2022_11_07_12_12_59
+panorama_83B35941_929B_286E_41DE_083222F1DFD1.label = PIC_2022_11_07_12_19_45
 map_ADF00183_967F_C0A9_41BA_65F6E3BD8FA3.label = floorplan
-
-
-## Skin
-
-### Button
-Button_66DC2013_2BA9_0D6D_4182_2A832EADFE17.label = EINSTELLUNGEN
-Button_6DADD483_2A6B_156D_41AF_64CF34A3D9D6.label = SPIEL BEENDEN
-Button_7B90DDB3_2BAB_16AE_41C1_94D14F6B5CF2.label = WEITERSPIELEN
-Button_B66B5ACA_97E2_40BA_41B8_730913DFA19E.label = Weiter erkunden
-Button_890E04C3_97E2_40A9_41B7_C2941A784070.label = Weiter erkunden
-Button_B6401F66_97E6_C06A_41DB_54A557C912AB.label = Weiter erkunden
-Button_B010533F_962E_41DA_41DA_1D8C22A135DA.label = Weiter erkunden
-Button_B1291366_9623_C06A_41C6_6C8D8F93603D.label = Weiter erkunden
-Button_8A2E246A_9622_407B_41E0_84E2C2000FED.label = Weiter erkunden
-Button_BEB83397_963E_C0AA_41B0_69CCBC832EB4.label = Weiter erkunden
-Button_B97F6388_962E_40A6_41D9_FE058795F770.label = Weiter erkunden
-Button_B7DF4825_97EF_CFEE_41DB_B91B93E85225.label = Weiter erkunden
-Button_B6F875B0_97E2_C0E6_41BC_2171BB9B84A8.label = Weiter erkunden
-Button_B21C80C4_9622_40AE_41DA_CE957658A96A.label = Weiter erkunden
-Button_66DC2013_2BA9_0D6D_4182_2A832EADFE17.pressedLabel = ZURÜCKSETZEN
-Button_07B6F21A_2ABF_0D9E_41C0_36D8CC9295D4.label = ZURÜCKSETZEN
-Button_6DADD483_2A6B_156D_41AF_64CF34A3D9D6.pressedLabel = ZURÜCKSETZEN
-Button_07B6F21A_2ABF_0D9E_41C0_36D8CC9295D4.pressedLabel = ZURÜCKSETZEN
-Button_7B90DDB3_2BAB_16AE_41C1_94D14F6B5CF2.pressedLabel = ZURÜCKSETZEN
-
-### Image
-Image_1953A631_2AD9_15AA_41B3_3A7E3DDAC4A4.url = skin/Image_1953A631_2AD9_15AA_41B3_3A7E3DDAC4A4_de.png
-Image_6DAA4484_2A6B_156B_419E_4C4EBD45BE01.url = skin/Image_6DAA4484_2A6B_156B_419E_4C4EBD45BE01_de.png
-Image_890F44C4_97E2_40AF_41E0_379612C7C75E.url = skin/Image_890F44C4_97E2_40AF_41E0_379612C7C75E_de.png
-Image_8A28E46C_9622_407F_41BF_7AA378550CFE.url = skin/Image_8A28E46C_9622_407F_41BF_7AA378550CFE_de.png
-Image_B0113345_962E_41AE_41E1_1D04370EC62E.url = skin/Image_B0113345_962E_41AE_41E1_1D04370EC62E_de.png
-Image_B12A1367_9623_C06A_41A7_0D7DC0CC7512.url = skin/Image_B12A1367_9623_C06A_41A7_0D7DC0CC7512_de.png
-Image_B21D90C5_9622_40AE_41DB_14DB28577A77.url = skin/Image_B21D90C5_9622_40AE_41DB_14DB28577A77_de.png
-Image_B6455F67_97E6_C06A_41D3_A74D0EF86662.url = skin/Image_B6455F67_97E6_C06A_41D3_A74D0EF86662_de.jpg
-Image_B66D2ACB_97E2_40B9_41D8_612F778C57ED.url = skin/Image_B66D2ACB_97E2_40B9_41D8_612F778C57ED_de.png
-Image_B6FAB5B1_97E2_C0E6_41D7_CA33F13E2556.url = skin/Image_B6FAB5B1_97E2_C0E6_41D7_CA33F13E2556_de.png
-Image_B7DAF82B_97EF_CFFA_41C7_980F62ECB226.url = skin/Image_B7DAF82B_97EF_CFFA_41C7_980F62ECB226_de.png
-Image_B97E3389_962E_40A6_41E2_1046D28DC616.url = skin/Image_B97E3389_962E_40A6_41E2_1046D28DC616_de.png
-Image_BEB89398_963E_C0A6_41E1_BF50CE907E64.url = skin/Image_BEB89398_963E_C0A6_41E1_BF50CE907E64_de.png
-
-### Label
-Label_0B2920E7_2A5B_0EB6_41A9_DCB95E9E0222.text = 00:01:12
-Label_0E3356C5_2A6F_12EA_418F_3AB631139E69.text = 100125 Punkte
-Label_0B990504_2A69_176A_41C2_E7B8B8B8370A.text = 12 von 34
-Label_6DAFD482_2A6B_156F_416D_3AAA8EA862A2.text = SPIEL PAUSIERT
-Label_003281C8_2AA9_0EFA_4180_7507520AF88A.text = SPIEL PAUSIERT
-
-### Multiline Text
-HTMLText_8901F5AF_97E2_C0FA_41C9_A70BD2FAFBFE.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;font-size:2.3958333333333326vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#fe9b96;font-size:2.4vw;font-family:'Segoe UI';"><B>Badezimmer</B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:1.3541666666666652vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:1.35vw;font-family:'Segoe UI';"><B>Subtitle</B></SPAN></SPAN></DIV><p STYLE="margin:0; line-height:0.62vw;"><BR STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-size:0.62vw;font-family:Arial, Helvetica, sans-serif;"/></p><DIV STYLE="text-align:justify;font-size:1.0718789407313996vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-line;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#333333;font-size:1.07vw;font-family:'Segoe UI';">Die Bäder manifestieren einmal mehr, dass die Raumökonomie des kurfürstlichen Landschlosses rationalen. An Sprüchen folgte, was ihrer luxuriösen Ausstattung jedoch keinen Abbruch tat. Beide Bäder bestehen aus großen Nischen, die unmittelbar an den Hof angrenzen. Die Wände zieren künstlerisch großartige Stuckdekorationen: Im Bad des Kurfürsten bildet der Stuck eine Eichenlaub Grotte, in deren Zentrum zwei Satyrputten eine Amphora halten, unter der die Wanne platziert werden sollte. Im Bad der Kurfürstin bildet eine stuckierte Tropfstein wand den unteren Bereich. Zwei weibliche Hermen tragen ein gebauschtes Tuch, das den oberen Bereich verdeckt.</SPAN></SPAN></DIV></div>
-HTMLText_BEBBD396_963E_C0AA_41D0_7D5981B04575.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;font-size:2.3958333333333326vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#fe9b96;font-size:2.4vw;font-family:'Segoe UI';"><B>Deckenfresco</B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:1.354166666666664vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:1.35vw;font-family:'Segoe UI';"><B>Subtitle</B></SPAN></SPAN></DIV><p STYLE="margin:0; line-height:0.62vw;"><BR STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-size:0.62vw;font-family:Arial, Helvetica, sans-serif;"/></p><DIV STYLE="text-align:justify;font-size:1.0718789407313996vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-line;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#333333;font-size:1.07vw;font-family:'Segoe UI';">Das Deckenfresco zeigt eine Stilisierung der vier Jahreszeiten in Form von Engelsfiguren.</SPAN></SPAN></DIV></div>
-HTMLText_8936B4C3_97E2_40A9_41DC_451074FBD839.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;font-size:2.3958333333333326vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#fe9b96;font-size:2.4vw;font-family:'Segoe UI';"><B>Deckengemälde</B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:1.3541666666666652vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:1.35vw;font-family:'Segoe UI';"><B>Subtitle</B></SPAN></SPAN></DIV><p STYLE="margin:0; line-height:0.62vw;"><BR STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-size:0.62vw;font-family:Arial, Helvetica, sans-serif;"/></p><DIV STYLE="text-align:justify;font-size:1.0718789407313996vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-line;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#333333;font-size:1.07vw;font-family:'Segoe UI';">Das Deckengemälde des Künstlers, Wilm Lambert, zeigt Diane, die Göttin der Jagd und des Mondes aus der römischen Mythologie. Bei Mondschein bricht sie hier zur Jagd auf und wird dabei von ihren Gefährtinnen begleitet. Diana sitzt auf einer Kutsche, die von weißen Hirschkühen gezogen wird. Die dargestellte Jagdgesellschaft ist ausgestattet mit Pfeil und Bogen, sowie schweren Jagdhörnern. Damit sind übrigens auch schon ein paar Erkennungsmerkmale genannt, mit der man die Jacke gut erkennen kann. Auch im Stuck an den Wänden des Kursaals lassen sich viele Jagdmotive entdecken.</SPAN></SPAN></DIV></div>
-HTMLText_B66BEACA_97E2_40BA_41C7_06C40B32B7D9.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;font-size:2.3958333333333326vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#fe9b96;font-size:2.4vw;font-family:'Segoe UI';"><B>Empfang mit Queen Elizabeth 2</B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:1.3541666666666652vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:1.35vw;font-family:'Segoe UI';"><B>1965</B></SPAN></SPAN></DIV><p STYLE="margin:0; line-height:0.62vw;"><BR STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-size:0.62vw;font-family:Arial, Helvetica, sans-serif;"/></p><DIV STYLE="text-align:justify;font-size:1.0718789407313996vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-line;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#333333;font-size:1.07vw;font-family:'Segoe UI';">Am 25. Mai 1965 besuchte Elizabeth II Schloss Benrath. Sie stand flankiert von Ministerpräsident Franz Meyers und Prinz Philip und begrüßte Mitglieder der britischen Kolonie  auf der regennassen Südterrasse.</SPAN></SPAN></DIV></div>
-HTMLText_8A31A46A_9622_407B_41D9_943ABA9C0BD2.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;font-size:2.3958333333333326vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#fe9b96;font-size:2.4vw;font-family:'Segoe UI';"><B>Konsolentisch</B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:1.3541666666666652vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:1.35vw;font-family:'Segoe UI';"><B>Subtitle</B></SPAN></SPAN></DIV><p STYLE="margin:0; line-height:0.62vw;"><BR STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-size:0.62vw;font-family:Arial, Helvetica, sans-serif;"/></p><DIV STYLE="text-align:justify;font-size:1.0718789407313996vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-line;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#333333;font-size:1.07vw;font-family:'Segoe UI';">Klimatisch bedingte Schände entwickeln sich durch Quell- und Schwindprozesse der unterschiedlichen verbauten Materialien langsam, dafür jedoch in einem beträchtlichen Ausmaß. Erst mit der Zeit wurden Rissbildungen und Verformungen an den Parketthölzern sichtbar, zu deren Entstehung auch die Beheizung mancher Kellerräume beitrug. Vergleichbare Schadensphänomene zeigten sich an den Wandvertäfelungen – aufstehende und sich ablösende Fassungsschichten deuteten auf Bereiche des Holzträgers hin, die Risse und geöffnete Fugen aufwiesen. Aufbrechende und sich lösende Fassungsschichten waren zudem an den mit Polimentvergoldung versehenen Zierleisten, Rahmen und Konsoltischen zu verzeichnen.</SPAN></SPAN></DIV></div>
-HTMLText_B010E33E_962E_41DA_41CC_A4F8B70C9D3E.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;font-size:2.3958333333333326vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#fe9b96;font-size:2.4vw;font-family:'Segoe UI';"><B>Schreibschrank</B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:1.354166666666664vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:1.35vw;font-family:'Segoe UI';"><B>Subtitle</B></SPAN></SPAN></DIV><p STYLE="margin:0; line-height:0.62vw;"><BR STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-size:0.62vw;font-family:Arial, Helvetica, sans-serif;"/></p><DIV STYLE="text-align:justify;font-size:1.0718789407313996vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-line;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#333333;font-size:1.07vw;font-family:'Segoe UI';">Dieser Schreibschrank wurde zur selben Zeit, wie das Schloss gefertigt, also um 1770. Er wurde für das Kurfürstenpaar Elisabeth Auguste und Karl Theodor in einer Mannheimer Werkstatt gefertigt. Ein Hinweis darauf findet man auf den beiden Vordertüren. Sie sind sehr kunstvoll mit den Porträts der beiden geschmückt. Dies ist übrigens das einzige Möbelstück, das existiert, das die Porträts so kunstvoll zeigt.</SPAN></SPAN></DIV></div>
-HTMLText_B21C50BD_9622_40DE_41DE_691437B81378.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;font-size:2.3958333333333326vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#fe9b96;font-size:2.4vw;font-family:'Segoe UI';"><B>Sessel mit Seidenbezug</B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:1.354166666666665vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:1.35vw;font-family:'Segoe UI';"><B>Subtitle</B></SPAN></SPAN></DIV><p STYLE="margin:0; line-height:0.62vw;"><BR STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-size:0.62vw;font-family:Arial, Helvetica, sans-serif;"/></p><DIV STYLE="text-align:justify;font-size:1.0718789407313996vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-line;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#333333;font-size:1.07vw;font-family:'Segoe UI';">Sessel mit gelbem Seidenbezug aus erster Ausstattungsphase um ca. 1770. Muster passend zur Tapete</SPAN></SPAN></DIV></div>
-HTMLText_B7D5E824_97EF_CFEE_41AB_F41BA6637A5B.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;font-size:2.3958333333333326vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#fe9b96;font-size:2.4vw;font-family:'Segoe UI';"><B>Sofa</B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:1.3541666666666652vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:1.35vw;font-family:'Segoe UI';"><B>Subtitle</B></SPAN></SPAN></DIV><p STYLE="margin:0; line-height:0.62vw;"><BR STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-size:0.62vw;font-family:Arial, Helvetica, sans-serif;"/></p><DIV STYLE="text-align:justify;font-size:1.0718789407313996vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-line;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#333333;font-size:1.07vw;font-family:'Segoe UI';">Das Sofa wurde als Bett genutzt.</SPAN></SPAN></DIV></div>
-HTMLText_B65FAF5F_97E6_C05A_41E0_027C10CBEAAC.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;font-size:2.3958333333333326vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#fe9b96;font-size:2.4vw;font-family:'Segoe UI';"><B>Spiegelweiher</B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:1.3541666666666652vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:1.35vw;font-family:'Segoe UI';"><B>Subtitle</B></SPAN></SPAN></DIV><p STYLE="margin:0; line-height:0.62vw;"><BR STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-size:0.62vw;font-family:Arial, Helvetica, sans-serif;"/></p><DIV STYLE="text-align:justify;font-size:1.0718789407313996vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-line;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#333333;font-size:1.07vw;font-family:'Segoe UI';">Der 470 Meter lange Spiegelweiher bildet die Hauptachse und entspricht der im Gebäude  liegenden Mittelachse mit Vestibül und Kuppelsaal. Der Weiher wird von  Rasenstreifen und hohen Bäumen gesäumt.</SPAN></SPAN></DIV><DIV STYLE="text-align:justify;font-size:1.0718789407313996vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-line;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#333333;font-size:1.07vw;font-family:'Segoe UI';">Sein reflektierender Wasserspiegel verstärkt den Lichteinfall in die Räume des Schlosses, welches sich wiederum von ferne gesehen in der ruhigen Wasserfläche spiegelt.</SPAN></SPAN></DIV></div>
-HTMLText_B1296366_9623_C06A_41CE_EFE25282B915.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;font-size:2.3958333333333326vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#fe9b96;font-size:2.4vw;font-family:'Segoe UI';"><B>Uhren</B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:1.3541666666666643vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:1.35vw;font-family:'Segoe UI';"><B>Subtitle</B></SPAN></SPAN></DIV><p STYLE="margin:0; line-height:0.62vw;"><BR STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-size:0.62vw;font-family:Arial, Helvetica, sans-serif;"/></p><DIV STYLE="text-align:justify;font-size:1.0718789407313996vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-line;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#333333;font-size:1.07vw;font-family:'Segoe UI';">In vielen Räumen des Schlossen findet man heute noch historische Uhren. Viele stehen auf Kaminsimsen und Möblen oder hängen an den Seidentapenten. Noch heute verfügt das Schloss über drei fest verbaute Uhren, von denen zwei in Jahre 1771 hergestellt wurden. Viele Wand- und Kaminuhren aus der Urspruchgsausstattung gingen durch veränderte Besitzverhätnisse verloren. Seit 1945 wurde immer mehr Aufmerksamkeit auf die ergäzung der Sammlung gelegt. Vor kurzem wurde eine sehr besondere Tischpendeluhr, die der kurpfälzische Uhrmacher Guillaume Cornille um 1770 in Düsseldorf für das Schloss Benrath anfertigte, erworben.</SPAN></SPAN></DIV></div>
-HTMLText_B97F2387_962E_40AA_41D9_A115018DA560.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;font-size:2.3958333333333326vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#fe9b96;font-size:2.4vw;font-family:'Segoe UI';"><B>Weinglasabdruck</B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:1.354166666666665vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:1.35vw;font-family:'Segoe UI';"><B>Subtitle</B></SPAN></SPAN></DIV><p STYLE="margin:0; line-height:0.62vw;"><BR STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-wrap;color:#000000;font-size:0.62vw;font-family:Arial, Helvetica, sans-serif;"/></p><DIV STYLE="text-align:justify;font-size:1.0718789407313996vw;"><SPAN STYLE="display:inline-block; letter-spacing:0vw; white-space:pre-line;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#333333;font-size:1.07vw;font-family:'Segoe UI';">Die Getränkeausgabe war nicht in der Küche, sondern in der Nähe der Festtafel positioniert, und so konnten beim Öffnen von Champagnerflaschen oder beim Anzapfen von Bierfässern die Inhalte gelegentlich fontänenartig gegen die gefassten Wandpaneelen und Türen spritzen. Nicht selten entstanden dabei auch Flecken auf den Parkettböden. Während der Empfänge im Kuppelsaal stellten die Gäste ihre Gläser auf den Kamin simsen, Konsoltischen und auf die Stuckmarmorsockel der Putten mit Füllhörnern ab, was nachträglich an den sich abzeichnenden Ringen auf den kostbaren Oberflächen zu erkennen war. Zum Schutz dieser Flächen wurden ab 1963 passgenaue Glasplatten aufgelegt, wovon je doch die Puttensockel ausgenommen waren. Diese zeigen noch heute zahlreiche Ringe, die von Gläsern und Kaffee tassen herrühren.</SPAN></SPAN></DIV></div>
-
-### Tooltip
-Container_031AE533_2A57_17AE_41C4_0AED968DEF9B.toolTip = Klick
-Container_012A637F_2A6F_3396_41B8_FA0A8791DC48.toolTip = Klick
 
 ## Tour
 

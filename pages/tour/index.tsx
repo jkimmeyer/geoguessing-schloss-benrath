@@ -57,7 +57,7 @@ export default function index() {
   return (
     <div>
       <Head>
-        <title>3D Vista in Next.js</title>
+        <title>Schloss Benrath - 360 Tour</title>
         <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" id="metaViewport"
           content="user-scalable=no, initial-scale=1, width=device-width, viewport-fit=cover"
