@@ -11,3 +11,9 @@
 @import 'globals/reset';
 @import 'globals/base';
 @import 'globals/utilities';
+
+/* Hide game overlay */
+/* stylelint-disable selector-max-id, declaration-no-important */
+[id='7'] {
+  display: none !important;
+}

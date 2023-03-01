@@ -74,54 +74,94 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  inset-block-end: 0;
-  inset-inline-start: 50%;
   block-size: 40px;
   padding-inline: var(--spacing-64);
-  transform: translateX(-50%);
+  font-size: 32px;
+  background-color: var(--white);
+}
+
+.menu-frame--map,
+.menu-frame--menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset-block-start: 50%;
+  inline-size: 40px;
+  padding-block: var(--spacing-64);
+  transform: translateY(-50%);
   font-size: 32px;
   background-color: var(--white);
 }
 
 .menu-frame--map {
   clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 75%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  inset-block-start: 50%;
-  inset-inline-end: 0;
-  inline-size: 40px;
-  padding-block: var(--spacing-64);
-  transform: translateY(-50%);
-  font-size: 32px;
-  background-color: var(--white);
 }
 
 .menu-frame--menu {
   clip-path: polygon(0 0, 100% 25%, 100% 75%, 0% 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  inline-size: 40px;
-  padding-block: var(--spacing-64);
-  font-size: 32px;
-  background-color: var(--white);
 }
 
 .menu-frame--overlay-menu {
-  z-index: 10000;
+  z-index: 15;
   inline-size: 80vw;
   block-size: 100vh;
   background-color: var(--white);
+  pointer-events: all;
+
+  .menu-frame--menu-container[data-quest] & {
+    inline-size: 100vw;
+    block-size: 75vh;
+  }
 }
 
 .menu-frame--menu-container {
-  display: flex;
-  align-items: center;
   position: relative;
-  inset-block-start: 50%;
-  inset-inline-start: 0;
-  transform: translateY(-50%);
+
+  &[data-menu],
+  &[data-map] {
+    display: flex;
+    align-items: center;
+    inset-block-start: 50%;
+    transform: translateY(-50%);
+  }
+
+  &[data-menu] {
+    inset-inline-start: 0;
+  }
+
+  &[data-map] {
+    justify-content: flex-end;
+    inset-inline-end: 0;
+  }
+
+  &[data-quest] {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    inset-inline: 0;
+    inset-block-start: 100%;
+  }
+}
+
+.menu-frame--menu-container-box {
+  display: flex;
+  position: absolute;
+
+  .menu-frame--menu-container[data-menu] &,
+  .menu-frame--menu-container[data-map] &, {
+    align-items: center;
+  }
+
+  .menu-frame--menu-container[data-quest] & {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.fixed-container {
+  overflow: scroll;
+  z-index: 10000;
+  inline-size: 100%;
+  block-size: 100%;
 }
