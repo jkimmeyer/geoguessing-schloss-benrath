@@ -1,6 +1,6 @@
 export interface BenrathObject {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   description: string;
   room: Room;
   thumbnail: string;
