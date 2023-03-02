@@ -8,6 +8,7 @@ import { IconNames } from './iconNames'
 import { ImageType } from './imageType'
 import { BenrathObject, FriendlyId, Room } from './benrathObject'
 import { OverlayVariant } from './overlayVariant'
+import { Step } from './Step'
 
 export {
   ButtonSize,
@@ -25,4 +26,5 @@ export {
 export type {
   BenrathObject,
   ImageType,
+  Step
 }

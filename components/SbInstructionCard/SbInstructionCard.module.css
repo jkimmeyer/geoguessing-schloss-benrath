@@ -1,3 +1,13 @@
+.instruction-card {
+  pointer-events: all;
+}
+
+.instruction-card--header,
+.instruction-card--description,
+.instruction-card--footer {
+  padding: var(--spacing-16);
+}
+
 .instruction-card--description {
   flex: 1;
   font-family: var(--serif-font);

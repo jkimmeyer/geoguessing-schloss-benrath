@@ -12,7 +12,6 @@ declare global {
     interface IntrinsicElements {
       ['stack-l']: WonderfulCustomElement<Stack>;
       ['switcher-l']: WonderfulCustomElement<Switcher>;
-
     }
   }
 }

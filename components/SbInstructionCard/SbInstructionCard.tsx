@@ -1,39 +1,55 @@
-import { CardVariant, HeadingColor, HeadingLevel } from '../../types';
+import { CardVariant, HeadingColor, HeadingLevel, Step } from '../../types';
 import SbButton from '../SbButton/SbButton';
 import SbCard from '../SbCard/SbCard';
 import SbHeading from '../SbHeading/SbHeading';
 import instructionCardStyles from './SbInstructionCard.module.css'
 
 interface Props {
-  title: string;
-  description: string;
-  step: number,
-  totalSteps: number,
+  step: Step;
+  totalSteps: number;
+  nextStep: () => void;
+  previousStep: () => void;
+  toggleOnboarding: () => void;
 }
 
 
 const SbInstructionCard: React.FC<Props> = ({
-  title,
-  description,
   step,
   totalSteps,
+  nextStep,
+  previousStep,
+  toggleOnboarding
 }) => {
   return (
+    <div className={instructionCardStyles["instruction-card"]}>
     <SbCard variant={CardVariant.Dark}>
-      <SbHeading title={title} level={HeadingLevel.h3} color={HeadingColor.Light} />
+      <div className={instructionCardStyles["instruction-card--header"]}>
+        <SbHeading title={step.title} level={HeadingLevel.h3} color={HeadingColor.Light} />
+      </div>
 
-      <p className={instructionCardStyles["instruction-card--description"]}>{description}</p>
+      <p className={instructionCardStyles["instruction-card--description"]}>{step.description}</p>
 
       <div className={instructionCardStyles["instruction-card--footer"]}>
-        <div>{step + " von " + totalSteps}</div>
+        <div>{step.id + " von " + totalSteps}</div>
         <div>
           <switcher-l>
-            <SbButton>Zurück</SbButton>
-            <SbButton>Weiter</SbButton>
+              {
+                step.id > 1 &&
+                  <SbButton onClick={() => previousStep()}>Zurück</SbButton>
+              }
+              {
+                step.id < totalSteps &&
+                <SbButton onClick={() => nextStep()}>Weiter</SbButton>
+              }
+              {
+                step.id === totalSteps &&
+                <SbButton onClick={() => toggleOnboarding()}>Loslegen</SbButton>
+              }
           </switcher-l>
         </div>
       </div>
-    </SbCard>
+      </SbCard>
+    </div>
   );
 }
 
