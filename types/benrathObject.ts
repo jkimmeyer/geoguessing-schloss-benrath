@@ -7,6 +7,7 @@ export interface BenrathObject {
   thumbnail: ImageType;
   imageUrls: ImageType[];
   friendlyId: string;
+  id?: number;
 }
 
 export enum Room {

@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { useCommunication } from '../../hooks/useCommunication';
+import { BenrathObject } from '../../types';
 import SbInfoCard from '../SbInfoCard/SbInfoCard';
 import { SbMapOverlay } from '../SbMapOverlay/SbMapOverlay';
 import { SbMenuOverlay } from '../SbMenuOverlay/SbMenuOverlay';
@@ -11,22 +12,24 @@ import sbMenuFrameStyles from './SbMenuFrame.module.css'
 interface Props {
   timer?: ReactNode;
   logo?: ReactNode;
-  progress?: ReactNode;
-  points?: ReactNode;
   onboarding: boolean;
   toggleOnboarding: () => void;
+  hiddenItems: BenrathObject[];
+  foundItems: BenrathObject[];
+  score: number;
 }
+
 
 const SbMenuFrame: React.FC<Props> = ({
   timer,
   logo,
-  progress,
-  points,
   onboarding,
-  toggleOnboarding
+  toggleOnboarding,
+  hiddenItems,
+  foundItems,
+  score
 }) => {
   const { currentObjectOverlayOpen, currentBenrathObject, toggleObjectOverlay } = useCommunication();
-
 
   const buttonHandler = () => toggleObjectOverlay();
 
@@ -48,17 +51,17 @@ const SbMenuFrame: React.FC<Props> = ({
       </div>
 
       <div className={sbMenuFrameStyles['menu-frame--progress']}>
-        {progress}
+        {'1 von 50'}
       </div>
 
       <div className={sbMenuFrameStyles['menu-frame--points']}>
-        {points}
+        {score.toString()}
       </div>
 
       <div className={sbMenuFrameStyles["menu-frame--container"]}>
         <SbMenuOverlay />
         <SbMapOverlay />
-        <SbQuestItemsOverlay />
+        <SbQuestItemsOverlay hiddenItems={hiddenItems} foundItems={foundItems} />
       </div>
 
       { !onboarding &&

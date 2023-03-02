@@ -7,6 +7,7 @@ import { useEffect, useState } from "react"
 import SbTitle from "../../components/SbTitle/SbTitle"
 import { MyStopwatch } from "../../components/SbStopwatch/SbStopwatch"
 import { publish, subscribe, unsubscribe } from "../../lib/events"
+import { useGame } from "../../hooks/useGame"
 
 const Overlay = () => {
   const [overlayOpen, setOverlayOpen] = useState(false);
@@ -14,6 +15,8 @@ const Overlay = () => {
   const buttonHandler = () => {
     setOverlayOpen(current => !current)
   }
+
+  const {foundItems, hiddenItems, score} = useGame()
 
   useEffect(() => {
     subscribe("game:paused", buttonHandler)
@@ -36,11 +39,12 @@ const Overlay = () => {
         timer={
           <MyStopwatch />
         }
-        points={"0"}
-        progress={"0 von 50"}
         logo={<SbTitle />}
         onboarding={onboardingCompleted}
         toggleOnboarding={toggleOnboarding}
+        hiddenItems={hiddenItems}
+        foundItems={foundItems}
+        score={score}
       />
     </SbOverlay>
   )

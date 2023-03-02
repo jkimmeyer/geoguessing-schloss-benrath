@@ -1,11 +1,16 @@
 import { useState } from "react";
-import { IconNames } from "../../types";
+import { BenrathObject, IconNames } from "../../types";
 import SbIcon from "../SbIcon/SbIcon";
 import SbQuestItems from "../SbQuestItems/SbQuestItems";
 import sbMenuFrameStyles from '../SbMenuFrame/SbMenuFrame.module.css'
 import { publish } from "../../lib/events";
 
-export const SbQuestItemsOverlay = () => {
+interface Props {
+  hiddenItems: BenrathObject[];
+  foundItems: BenrathObject[];
+}
+
+export const SbQuestItemsOverlay = (props: Props) => {
   const [questItemsOpen, setQuestItemsOpen] = useState(false);
 
   const toggleQuestItemsOpen = () => {
@@ -27,7 +32,7 @@ export const SbQuestItemsOverlay = () => {
 
         {questItemsOpen &&
           <div className={sbMenuFrameStyles["menu-frame--overlay-menu"]}>
-            <SbQuestItems />
+            <SbQuestItems hiddenItems={props.hiddenItems} foundItems={props.foundItems} />
           </div>
         }
       </div>
