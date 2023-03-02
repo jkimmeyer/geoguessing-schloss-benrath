@@ -15,11 +15,13 @@ export const MyStopwatch = () => {
   useEffect(() => {
     subscribe('game:started', start)
     subscribe('game:paused', pause)
+    subscribe('game:resume', start)
     subscribe('game:reset', reset)
 
     return () => {
       unsubscribe('game:started', start)
-      subscribe('game:paused', pause)
+      unsubscribe('game:paused', pause)
+      unsubscribe('game:resume', start)
       unsubscribe('game:reset', reset)
       reset
     }

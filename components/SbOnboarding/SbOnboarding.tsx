@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import SbInstructionCard from '../SbInstructionCard/SbInstructionCard';
 import SbTourFrame from '../SbTourFrame/SbTourFrame';
-import onboardingStyles from './SbOnboarding.module.css'
 
 interface Props {
   toggleOnboarding: () => void;
