@@ -202,17 +202,17 @@ const stuck: BenrathObject = {
   description: "Die Bäder manifestieren einmal mehr, dass die Raumökonomie des kurfürstlichen Landschlosses rationalen. An Sprüchen folgte, was ihrer luxuriösen Ausstattung jedoch keinen Abbruch tat. Beide Bäder bestehen aus großen Nischen, die unmittelbar an den Hof angrenzen. Die Wände zieren künstlerisch großartige Stuckdekorationen: Im Bad des Kurfürsten bildet der Stuck eine Eichenlaub Grotte, in deren Zentrum zwei Satyrputten eine Amphora halten, unter der die Wanne platziert werden sollte. Im Bad der Kurfürstin bildet eine stuckierte Tropfstein wand den unteren Bereich. Zwei weibliche Hermen tragen ein gebauschtes Tuch, das den oberen Bereich verdeckt.",
   room: Room.BathEast,
   thumbnail: {
-    url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677690669/detailshots/object_05_stuck/object_05_stuck-01_a6favb.jpg",
+    url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677753477/detailshots/object_05_stuck/object_05_stuck-01_a6favb.jpg",
     alt: "Stuckverzierte Wand eines Badezimmers",
-    width: 6000,
-    height: 4000,
+    width: 2958,
+    height: 1972,
   },
   imageUrls: [
     {
-      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677690669/detailshots/object_05_stuck/object_05_stuck-01_a6favb.jpg",
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677753477/detailshots/object_05_stuck/object_05_stuck-01_a6favb.jpg",
       alt: "Stuckverzierte Wand eines Badezimmers",
-      width: 6000,
-      height: 4000,
+      width: 2958,
+      height: 1972,
     },
     {
       url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677690669/detailshots/object_05_stuck/object_05_stuck-02_pehjgc.jpg",
