@@ -1,3 +1,16 @@
+.info-card {
+  pointer-events: all;
+}
+
+.info-card--content {
+  padding: var(--spacing-16);
+}
+
 .info-card--description {
   font-family: var(--font-serif);
+}
+
+.info-card--image {
+  inline-size: auto;
+  max-block-size: 300px;
 }

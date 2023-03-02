@@ -1,0 +1,8 @@
+.tour-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-32);
+  block-size: 100%;
+}

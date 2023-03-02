@@ -1,7 +1,11 @@
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactNode, useState } from 'react';
+import { useCommunication } from '../../hooks/useCommunication';
 import { IconNames } from '../../types';
 import SbIcon from '../SbIcon/SbIcon';
+import SbInfoCard from '../SbInfoCard/SbInfoCard';
 import SbQuestItems from '../SbQuestItems/SbQuestItems';
+import SbTourFrame from '../SbTourFrame/SbTourFrame';
+import SbTourMenu from '../SbTourMenu/SbTourMenu';
 import sbMenuFrameStyles from './SbMenuFrame.module.css'
 
 interface Props {
@@ -92,14 +96,26 @@ const SbMenuFrame: React.FC<Props> = ({
   points,
   closeOverlay,
 }) => {
+  const { currentObjectOverlayOpen, currentBenrathObject, toggleObjectOverlay } = useCommunication();
+
+
+  const buttonHandler = () => toggleObjectOverlay();
+
   return (
     <div className={sbMenuFrameStyles['menu-frame']}>
       <div className={sbMenuFrameStyles['menu-frame--timer']} onClick={() => closeOverlay()}>
         { timer }
       </div>
 
+      { currentObjectOverlayOpen &&
+          <SbTourFrame>
+            <SbInfoCard benrathObject={currentBenrathObject} buttonHandler={buttonHandler} />
+          </SbTourFrame>
+      }
+
+
       <div className={sbMenuFrameStyles['menu-frame--logo']}>
-        { logo }
+        {logo}
       </div>
 
       <div className={sbMenuFrameStyles['menu-frame--progress']}>
