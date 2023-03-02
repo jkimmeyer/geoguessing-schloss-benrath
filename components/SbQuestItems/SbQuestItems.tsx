@@ -5,14 +5,7 @@ import SbHeading from '../SbHeading/SbHeading';
 import questItemsStyles from './SbQuestItems.module.css';
 import SbQuestItem from '../SbQuestItem/SbQuestItem';
 
-interface Props {
-  color?: string,
-}
-
-
-
-const SbQuestItems: React.FC<Props> = ({
-}) => {
+const SbQuestItems: React.FC = () => {
   const { nextQuestItems, foundQuestItems } = useGame();
 
   return (
