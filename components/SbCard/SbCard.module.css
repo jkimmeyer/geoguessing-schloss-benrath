@@ -3,7 +3,6 @@
   flex-direction: column;
   position: relative;
   min-block-size: 300px;
-  padding: var(--spacing-16);
 
   &[data-variant='light'] {
     color: var(--color-text);

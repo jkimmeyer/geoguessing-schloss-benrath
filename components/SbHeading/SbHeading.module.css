@@ -1,4 +1,6 @@
 .heading {
+  margin-block-end: 1em;
+
   &[data-color='primary'] {
     color: var(--color-primary);
   }

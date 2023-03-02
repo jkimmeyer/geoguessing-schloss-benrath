@@ -1,3 +1,22 @@
+.info-card {
+  pointer-events: all;
+}
+
+.info-card--text {
+  flex-grow: 1;
+}
+
+.info-card--content {
+  align-items: start;
+  gap: var(--spacing-64);
+  padding: var(--spacing-16);
+}
+
 .info-card--description {
   font-family: var(--font-serif);
+}
+
+.info-card--image {
+  inline-size: auto;
+  max-block-size: 300px;
 }

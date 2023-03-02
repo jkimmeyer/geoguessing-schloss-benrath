@@ -1,9 +1,30 @@
 .quest-items {
   display: flex;
-  gap: 168px;
+  overflow-y: scroll;
+  justify-content: center;
+  gap: var(--spacing-64);
+  position: relative;
+  block-size: 100%;
   padding: var(--spacing-32);
 
   & > * {
     flex-basis: 50%;
   }
+}
+
+.quest-items--grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(300px, max-content);
+  gap: var(--spacing-32);
+}
+
+.quest-items--current,
+.quest-items--next {
+  padding: var(--spacing-32);
+  text-align: center;
+}
+
+.quest-items--list {
+  align-items: center;
 }
