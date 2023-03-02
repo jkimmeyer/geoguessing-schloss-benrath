@@ -9,6 +9,8 @@
  * (i.e. regardless of nesting level)
  * @property {number} splitAfter=null The element after which to _split_
  * the stack with an auto margin
+ * @property {string} class='' The element after which to _split_
+ * the stack with an auto margin
  */
 export default class Stack extends HTMLElement {
   constructor() {
@@ -45,6 +47,14 @@ export default class Stack extends HTMLElement {
 
   set space(val) {
     return this.setAttribute('space', val);
+  }
+
+  get class() {
+    return this.getAttribute('class') || '';
+  }
+
+  set class(val) {
+    return this.setAttribute('class', val);
   }
 
   get recursive() {
