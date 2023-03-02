@@ -4,25 +4,30 @@ import { BenrathObject } from '../../types';
 import questItemStyles from './SbQuestItem.module.css';
 
 interface Props {
-  benrathObject: BenrathObject
-  isNext?: boolean
+  questItem: BenrathObject
+  isNext?: boolean,
+  inGrid?: boolean,
 }
 
 
 const SbQuestItem: React.FC<Props> = ({
-  benrathObject,
-  isNext = false
+  questItem,
+  isNext = false,
+  inGrid = false,
 }) => {
   return (
-    <div className={questItemStyles["quest-item"]} data-active={isNext}>
+    <div className={questItemStyles["quest-item"]} data-active={isNext} data-grid={inGrid}>
       <Image
-        src={benrathObject.thumbnail.url}
-        alt={benrathObject.thumbnail.alt}
-        width={benrathObject.thumbnail.width}
-        height={benrathObject.thumbnail.height}
+        className={questItemStyles["quest-item--image"]}
+        src={questItem.thumbnail.url}
+        alt={questItem.thumbnail.alt}
+        width={questItem.thumbnail.width}
+        height={questItem.thumbnail.height}
       />
 
-      { benrathObject.title }
+      <div className="quest-item--title">
+        {questItem.title}
+      </div>
     </div>
   );
 }

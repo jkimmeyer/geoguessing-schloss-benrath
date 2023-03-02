@@ -447,7 +447,7 @@ const tableclockRight: BenrathObject = {
   friendlyId: FriendlyId.TableclockRight,
 }
 
-export {
+export const benrathObjects: BenrathObject[] = [
   table,
   window,
   wineglass,
@@ -462,4 +462,4 @@ export {
   fresco,
   tableclockLeft,
   tableclockRight
-}
+];

@@ -23,7 +23,7 @@ const Menu = () => {
 
         {menuOpen &&
           <div className={sbMenuFrameStyles["menu-frame--overlay-menu"]}>
-            <TourMenu />
+            <SbTourMenu />
           </div>
         }
 
