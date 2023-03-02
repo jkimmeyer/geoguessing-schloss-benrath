@@ -1,5 +1,6 @@
 # **Geoguessing Schloss Benrath**
 
+---
 
 # Introduction
 The 360° Search Tour through Benrath Palace is a student project that was developed in the context of the subject "360° Videos" in cooperation with the University of Applied Sciences Düsseldorf and Benrath Palace.
@@ -57,3 +58,15 @@ The actual communication between the two sub-applications works via events that 
 
 ## Documentation of 3DVista Events
 The events thrown in 3DVista are documented in the [Github Wiki](https://github.com/jkimmeyer/geoguessing-schloss-benrath/wiki) of this repository
+
+---
+
+# Changelog
+**Version 1.0.0** *(Planned for 14.03.2023)*
+First official release of Geoguessing Schloss Benrath
+
+---
+
+# Get in Contact
+- [jkimmeyer](https://github.com/jkimmeyer)
+- [toec3182](https://github.com/toec3182)
