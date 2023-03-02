@@ -6,17 +6,17 @@ const window: BenrathObject = {
   description: "Am 25. Mai 1965 besuchte Elizabeth II Schloss Benrath. Sie stand flankiert von Ministerpräsident Franz Meyers und Prinz Philip und begrüßte Mitglieder der britischen Kolonie  auf der regennassen Südterrasse.",
   room: Room.WomansWing,
   thumbnail: {
-    url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414814/detailshots/object_01_window/object_01_window_01_evztq8.jpg",
+    url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677748909/detailshots/object_01_window/object_01_window_01_evztq8.jpg",
     alt: "Queen Elisabeth",
-    width: 925,
-    height: 857,
+    width: 924,
+    height: 616,
   },
   imageUrls: [
     {
-      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414814/detailshots/object_01_window/object_01_window_01_evztq8.jpg",
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677748909/detailshots/object_01_window/object_01_window_01_evztq8.jpg",
       alt: "Queen Elisabeth beim Schloss Benrath",
-      width: 925,
-      height: 857
+      width: 924,
+      height: 616
     },
     {
       url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414821/detailshots/object_01_window/object_01_window_03_trcz7n.jpg",
@@ -103,20 +103,19 @@ const domeHallFresco: BenrathObject = {
 
 const lake: BenrathObject = {
   title: "Spiegelweiher",
-  subtitle: "",
   description: "Der 470 Meter lange Spiegelweiher bildet die Hauptachse und entspricht der im Gebäude  liegenden Mittelachse mit Vestibül und Kuppelsaal. Der Weiher wird von  Rasenstreifen und hohen Bäumen gesäumt. Sein reflektierender Wasserspiegel verstärkt den Lichteinfall in die Räume des Schlosses, welches sich wiederum von ferne gesehen in der ruhigen Wasserfläche spiegelt.",
   room: Room.WomansWing,
   thumbnail: {
-    url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677421440/detailshots/object_02_lake/object_02_lake_01_sjvfnb.jpg",
+    url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677749083/detailshots/object_02_lake/object_02_lake_01_sjvfnb.jpg",
     alt: "Spiegelweiher mit Schloss im Hintergrund",
-    width: 717,
+    width: 672,
     height: 448,
   },
   imageUrls: [
     {
-      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677421440/detailshots/object_02_lake/object_02_lake_01_sjvfnb.jpg",
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677749083/detailshots/object_02_lake/object_02_lake_01_sjvfnb.jpg",
       alt: "Spiegelweiher mit Schloss im Hintergrund",
-      width: 717,
+      width: 672,
       height: 448,
     },
     {
@@ -163,17 +162,17 @@ const sofa: BenrathObject = {
   description: "Das Sofa wurde als Bett genutzt und ist von Elisabeth Augusta. Das Bett war Teil einer offenen Muschel, welche die gesamte Höhe der Bettnische einnahm. Dies geht aus Zeichnungen des Schlossarchitekten Nicolas de Pigage sowie aus Reisebereichten aus dem 18. Jahrhundert hervor.",
   room: Room.HexagonRoomEast,
   thumbnail: {
-    url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414814/detailshots/object_04_sofa/object_04_sofa_01_ll9ayj.jpg",
+    url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677749171/detailshots/object_04_sofa/object_04_sofa_01_ll9ayj.jpg",
     alt: "Raum mit eingezeichnetem Muschelbett",
     width: 1551,
-    height: 1080,
+    height: 1034,
   },
   imageUrls: [
     {
-      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414814/detailshots/object_04_sofa/object_04_sofa_01_ll9ayj.jpg",
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677749171/detailshots/object_04_sofa/object_04_sofa_01_ll9ayj.jpg",
       alt: "Raum mit eingezeichnetem Muschelbett",
       width: 1551,
-      height: 1080,
+      height: 1034,
     },
     {
       url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677414819/detailshots/object_04_sofa/object_04_sofa_02_wvukqb.jpg",
