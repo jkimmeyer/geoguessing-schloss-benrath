@@ -17,17 +17,16 @@ const SbQuestItem: React.FC<Props> = ({
 }) => {
   return (
     <div className={questItemStyles["quest-item"]} data-active={isNext} data-grid={inGrid}>
-      <div className={questItemStyles["quest-item--image"]}>
       <Image
+        className={questItemStyles["quest-item--image"]}
         src={questItem.thumbnail.url}
         alt={questItem.thumbnail.alt}
         width={questItem.thumbnail.width}
         height={questItem.thumbnail.height}
       />
 
-      <div className="quest-item--title">
-        {questItem.title}
-        </div>
+    <div className="quest-item--title">
+      {questItem.title}
       </div>
     </div>
   );
