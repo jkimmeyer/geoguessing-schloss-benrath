@@ -9,6 +9,8 @@
  * @property {string} space=var(--spacing-16) A CSS `margin` value
  * @property {integer} limit=4 A number representing the maximum number of items permitted
  *  for a horizontal layout
+ * @property {string} class="" A number representing the maximum number of items permitted
+ *  for a horizontal layout
  */
 
 export default class Switcher extends HTMLElement {
@@ -61,6 +63,14 @@ export default class Switcher extends HTMLElement {
 
   set limit(val) {
     return this.setAttribute('limit', val);
+  }
+
+  get class() {
+    return this.getAttribute('class') || '';
+  }
+
+  set class(val) {
+    return this.setAttribute('class', val);
   }
 
   static get observedAttributes() {

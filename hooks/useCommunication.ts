@@ -2,10 +2,6 @@ import { useEffect, useState } from "react";
 import { benrathObjects } from "../benrathObjects";
 import { subscribe, unsubscribe } from "../lib/events";
 
-const gameStart = () => {
-  alert("Game started!")
-}
-
 const findBenrathObject = (id: string) => {
   return benrathObjects.find(benrathObject => {
     return benrathObject.friendlyId === id
@@ -30,11 +26,9 @@ export const useCommunication = () => {
       toggleObjectOverlay();
     }
 
-    subscribe('game:started', gameStart)
     subscribe('game:objectFound', objectFound)
 
     return () => {
-      unsubscribe('game:start', gameStart)
       unsubscribe('game:objectFound', objectFound)
     }
   });
