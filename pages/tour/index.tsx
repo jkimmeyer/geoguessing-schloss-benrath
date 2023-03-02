@@ -1,14 +1,12 @@
 import Head from "next/head"
 import Script from "next/script"
-import SbInstructionCard from "../../components/SbInstructionCard/SbInstructionCard"
 import SbMenuFrame from "../../components/SbMenuFrame/SbMenuFrame"
 import SbOverlay from "../../components/SbOverlay/SbOverlay"
-import SbTourFrame from "../../components/SbTourFrame/SbTourFrame"
 import indexStyles from './index.module.css'
 import { useStopwatch } from 'react-timer-hook';
 import { format } from 'date-fns';
-import SbTitle from "../../components/SbTitle/SbTitle"
-import {useState } from "react"
+import { useState } from "react"
+import SbCommunication from '../../components/SbCommunication/component';
 
 const Overlay = () => {
   const [overlayOpen, setOverlayOpen] = useState(false);
@@ -19,9 +17,9 @@ const Overlay = () => {
 
   return (
     <SbOverlay withContent={overlayOpen}>
-      <SbTourFrame>
+      {/* <SbTourFrame>
         <SbInstructionCard title="Title" description="Content" step={3} totalSteps={5} />
-      </SbTourFrame>
+      </SbTourFrame> */}
 
       <SbMenuFrame
         timer={<MyStopwatch />}
@@ -108,6 +106,8 @@ export default function index() {
       <div id="viewer" className="fill-viewport viewer-class">
         <Overlay />
       </div>
+      <SbCommunication />
+
     </div>
   )
 }

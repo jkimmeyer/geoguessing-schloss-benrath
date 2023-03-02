@@ -1,6 +1,7 @@
 import { ReactNode, useEffect, useState } from 'react';
 import { IconNames } from '../../types';
 import SbIcon from '../SbIcon/SbIcon';
+import SbQuestItems from '../SbQuestItems/SbQuestItems';
 import sbMenuFrameStyles from './SbMenuFrame.module.css'
 
 interface Props {
@@ -22,7 +23,7 @@ const Menu = () => {
 
         {menuOpen &&
           <div className={sbMenuFrameStyles["menu-frame--overlay-menu"]}>
-            Hello
+            <TourMenu />
           </div>
         }
 
@@ -48,7 +49,7 @@ const QuestItems = () => {
 
         {questItemsOpen &&
           <div className={sbMenuFrameStyles["menu-frame--overlay-menu"]}>
-            Hello
+            <SbQuestItems />
           </div>
         }
       </div>

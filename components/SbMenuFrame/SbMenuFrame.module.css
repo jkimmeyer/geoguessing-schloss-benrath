@@ -116,6 +116,7 @@
 
 .menu-frame--menu-container {
   position: relative;
+  z-index: 300;
 
   &[data-menu],
   &[data-map] {

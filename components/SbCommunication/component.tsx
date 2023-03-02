@@ -8,7 +8,8 @@ const gameStart = () => {
 class SbCommunication extends Component {
 
   componentDidMount() {
-    subscribe('game:start', gameStart )
+    subscribe('game:start', gameStart)
+    subscribe('game:objectFound', gameStart)
   }
 
   componentWillUnmount() {

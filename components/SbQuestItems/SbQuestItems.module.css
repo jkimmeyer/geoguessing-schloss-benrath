@@ -1,0 +1,9 @@
+.quest-items {
+  display: flex;
+  gap: 168px;
+  padding: var(--spacing-32);
+
+  & > * {
+    flex-basis: 50%;
+  }
+}
