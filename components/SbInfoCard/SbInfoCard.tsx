@@ -25,16 +25,20 @@ const SbInfoCard: React.FC<Props> = ({
         </SbButton>
 
 
-        <div className={infoCardStyles["info-card--content"]}>
-          <switcher-l>
-            <Image className={infoCardStyles["info-card--image"]} src={benrathObject.thumbnail.url} alt={benrathObject.title} width={benrathObject.thumbnail.width} height={benrathObject.thumbnail.width} />
+        <switcher-l threshold="500px" class={infoCardStyles["info-card--content"]}>
+          <Image
+            className={infoCardStyles["info-card--image"]}
+            src={benrathObject.thumbnail.url}
+            alt={benrathObject.title}
+            width={benrathObject.thumbnail.width}
+            height={benrathObject.thumbnail.width}
+          />
 
-            <stack-l>
+            <stack-l class={infoCardStyles["info-card--text"]}>
               <SbHeading title={benrathObject.title} subtitle={benrathObject.subtitle} level={HeadingLevel.h3} />
               <p className={infoCardStyles["info-card--description"]}>{benrathObject.description}</p>
             </stack-l>
           </switcher-l>
-        </div>
       </SbCard>
     </div>
   );

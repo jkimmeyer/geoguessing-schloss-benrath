@@ -2,7 +2,13 @@
   pointer-events: all;
 }
 
+.info-card--text {
+  flex-grow: 1;
+}
+
 .info-card--content {
+  align-items: start;
+  gap: var(--spacing-64);
   padding: var(--spacing-16);
 }
 
