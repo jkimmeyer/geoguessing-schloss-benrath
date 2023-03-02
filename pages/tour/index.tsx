@@ -14,15 +14,23 @@ const Overlay = () => {
     setOverlayOpen(current => !current)
   }
 
+  const [onboardingCompleted, toggleOnboardingCompleted] = useState(false);
+
+  const toggleOnboarding = () => {
+    toggleOnboardingCompleted(current => !current)
+  }
   return (
     <SbOverlay withContent={overlayOpen}>
       <SbMenuFrame
-        timer={<MyStopwatch />}
+        timer={
+          <MyStopwatch />
+        }
         points={"0"}
         progress={"0 von 50"}
         logo={<SbTitle />}
-        // stopwatchPause={pause}
         closeOverlay={buttonHandler}
+        onboarding={onboardingCompleted}
+        toggleOnboarding={toggleOnboarding}
       />
     </SbOverlay>
   )
@@ -83,7 +91,6 @@ export default function index() {
       <div id="viewer" className="fill-viewport viewer-class">
         <Overlay />
       </div>
-
     </div>
   )
 }

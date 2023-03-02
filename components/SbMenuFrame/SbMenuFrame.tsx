@@ -3,17 +3,20 @@ import { useCommunication } from '../../hooks/useCommunication';
 import { IconNames } from '../../types';
 import SbIcon from '../SbIcon/SbIcon';
 import SbInfoCard from '../SbInfoCard/SbInfoCard';
+import SbOnboarding from '../SbOnboarding/SbOnboarding';
 import SbQuestItems from '../SbQuestItems/SbQuestItems';
 import SbTourFrame from '../SbTourFrame/SbTourFrame';
 import SbTourMenu from '../SbTourMenu/SbTourMenu';
 import sbMenuFrameStyles from './SbMenuFrame.module.css'
 
 interface Props {
-  timer?: ReactNode,
-  logo?: ReactNode,
-  progress?: ReactNode,
-  points?: ReactNode,
+  timer?: ReactNode;
+  logo?: ReactNode;
+  progress?: ReactNode;
+  points?: ReactNode;
   closeOverlay: () => void;
+  onboarding: boolean;
+  toggleOnboarding: () => void;
 }
 
 const Menu = () => {
@@ -95,6 +98,8 @@ const SbMenuFrame: React.FC<Props> = ({
   progress,
   points,
   closeOverlay,
+  onboarding,
+  toggleOnboarding
 }) => {
   const { currentObjectOverlayOpen, currentBenrathObject, toggleObjectOverlay } = useCommunication();
 
@@ -131,6 +136,10 @@ const SbMenuFrame: React.FC<Props> = ({
         <Map />
         <QuestItems />
       </div>
+
+      { !onboarding &&
+        <SbOnboarding toggleOnboarding={toggleOnboarding}></SbOnboarding>
+      }
     </div>
   );
 }
