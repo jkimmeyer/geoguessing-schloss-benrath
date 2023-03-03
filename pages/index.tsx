@@ -8,7 +8,9 @@ import Image from 'next/image'
 import { ButtonType, IconNames, ImageType } from '../types';
 import '../config/i18n';
 import { useTranslation } from 'react-i18next';
-import gameOverlay from '../assets/images/GameOverlay_objectHovered.png'
+import gameOverlay from '../assets/images/GameOverlay_objectHovered.png';
+import queenVisit from '../assets/images/Queen_Visit.jpg'
+import angelSculptures from '../assets/images/Angel_Sculptures.jpg'
 import SbTitle from '../components/SbTitle/SbTitle';
 import { landingPageImages } from '../landingPageImages';
 import landingPageStyles from '../assets/stylesheets/landing-page.module.css';
@@ -51,17 +53,26 @@ export default function Home() {
           title={t('landingPage.intro.chapter1.title')}
           text={t('landingPage.intro.chapter1.teaserText')}
         >
-          <Image className={landingPageStyles['landing-page-image']} src={gameOverlay} alt="Test" width={1080} />
+          <Image className={landingPageStyles['landing-page-image']} src={gameOverlay} alt="Simulierter Einblick in das Spiel" width={1080} />
         </SbChapter>
 
         <SbChapter
           title={t('landingPage.intro.chapter2.title')}
-          text={t('landingPage.intro.chapter2.teaserText')}
-        />
+          text={t('landingPage.intro.chapter2.teaserText')} 
+        >
+          <Image className={landingPageStyles['landing-page-image']} src={angelSculptures} alt="Puttenfiguren im Kuppelsaal des Schlosses" width={924} />
+        </SbChapter>
 
         <SbChapter
           title={t('landingPage.intro.chapter3.title')}
           text={t('landingPage.intro.chapter3.teaserText')}
+        >
+          <Image className={landingPageStyles['landing-page-image']} src={queenVisit} alt="Queen Elizabeth die zweite auf dem Schlossbalkon" width={924} />
+        </SbChapter>
+
+        <SbChapter
+          title={t('landingPage.intro.chapter4.title')}
+          text={t('landingPage.intro.chapter4.teaserText')} 
         />
 
         <SbButton
