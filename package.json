@@ -10,6 +10,8 @@
     "styleguide": "npx styleguidist server",
     "styleguide:build": "npx styleguidist build",
     "stylelint": "stylelint --config stylelint.config.js '**/*.css'",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:db:push": "prisma db push",
     "tsc": "tsc"
   },
   "dependencies": {
