@@ -1,0 +1,16 @@
+.thumbnail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thumbnail--image {
+  inline-size: 500px;
+  block-size: auto;
+  margin-inline: auto;
+}
+
+.thumbnail--navigation {
+  flex: 1;
+  margin-block-start: var(--spacing-32);
+}
