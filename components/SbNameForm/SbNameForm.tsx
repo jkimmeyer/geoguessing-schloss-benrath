@@ -1,8 +1,6 @@
 
 import { t } from "i18next";
 import React from "react";
-import { ButtonType } from "../../types";
-import SbButton from "../SbButton/SbButton";
 import SbInput from "../SbInput/SbInput";
 
 type State = {
@@ -43,13 +41,6 @@ export class SbNameForm extends React.Component {
           value={this.state.playerName}
           onChange={this.handleChange}
         />
-
-        <SbButton
-          buttonType={ButtonType.Primary}
-          type="submit"
-        >
-          {t('addPlayerToScoreboard')}
-        </SbButton>
       </form>
     );
   }

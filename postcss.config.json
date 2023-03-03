@@ -1,5 +1,13 @@
 {
   "plugins": [
+    [
+      "@csstools/postcss-global-data",
+      {
+        "files": [
+          "styles/variables/viewports.css"
+        ]
+      }
+    ],
     "postcss-flexbugs-fixes",
     "postcss-nesting",
     [
@@ -10,9 +18,12 @@
         },
         "stage": 3,
         "features": {
-          "custom-properties": false
+          "custom-properties": false,
+          "logical-properties-and-values": false,
+          "nesting-rules": false
         }
       }
-    ]
+    ],
+    "postcss-custom-media"
   ]
 }

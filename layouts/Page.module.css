@@ -1,5 +1,32 @@
 .page {
-  padding-block: var(--spacing-8) var(--spacing-64);
+  padding-block-end: var(--spacing-64);
+}
+
+.page--teaser {
+  position: relative;
+  inline-size: 100%;
+  block-size: 100%;
+
+  &::after {
+    content: '';
+    opacity: 0.2;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-color: var(--white);
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-image: url('../assets/images/Schloss_Benrath.jpg');
+    background-position: center;
+    filter: blur(var(--spacing-4));
+  }
 }
 
 .page--header {
@@ -8,6 +35,7 @@
   align-items: baseline;
   gap: var(--spacing-8);
   inline-size: 100%;
+  max-inline-size: 1600px;
   margin-inline: auto;
   margin-block-end: var(--spacing-12);
   padding-inline: var(--spacing-8);
@@ -17,19 +45,61 @@
 .page--subtitle {
   display: block;
   margin-block-end: var(--spacing-32);
-}
-
-.page--title {
-  font-size: 96px;
-}
-
-.page--subtitle {
-  font-size: 80px;
-  line-height: 1.15;
+  padding: var(--spacing-32);
+  text-align: center;
+  color: var(--white);
 }
 
 .page--main {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (--large-viewport), (--xlarge-viewport) {
+  .page--teaser {
+    padding-block-start: var(--spacing-64);
+  }
+
+  .page--title {
+    font-size: 96px;
+    line-height: 1.25;
+  }
+
+  .page--subtitle {
+    font-size: 80px;
+    line-height: 1.15;
+  }
+}
+
+@media (--medium-viewport) {
+  .page--teaser {
+    padding-block-start: var(--spacing-16);
+  }
+
+  .page--title {
+    font-size: 64px;
+    line-height: 1.25;
+  }
+
+  .page--subtitle {
+    font-size: 48px;
+    line-height: 1.15;
+  }
+}
+
+@media (--small-viewport) {
+  .page--teaser {
+    padding-block-start: var(--spacing-8);
+  }
+
+  .page--title {
+    font-size: 48px;
+    line-height: 1.25;
+  }
+
+  .page--subtitle {
+    font-size: 36px;
+    line-height: 1.15;
+  }
 }

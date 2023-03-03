@@ -10,84 +10,13 @@ import '../config/i18n';
 import { useTranslation } from 'react-i18next';
 import gameOverlay from '../assets/images/GameOverlay_objectHovered.png'
 import SbTitle from '../components/SbTitle/SbTitle';
+import { landingPageImages } from '../landingPageImages';
+import landingPageStyles from '../assets/stylesheets/landing-page.module.css';
 
 export default function Home() {
   const { t } = useTranslation();
 
-  const images: ImageType[] = [
-    {
-      url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text",
-      width: 320,
-      height: 180,
-    },
-    {
-      url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text",
-      width: 320,
-      height: 180,
-    },
-    {
-      url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text",
-      width: 320,
-      height: 180,
-    },
-    {
-      url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text",
-      width: 320,
-      height: 180,
-    },
-    {
-      url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text",
-      width: 320,
-      height: 180,
-    },
-    {
-      url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text",
-      width: 320,
-      height: 180,
-    },
-    {
-      url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text",
-      width: 320,
-      height: 180,
-    },
-    {
-      url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text",
-      width: 320,
-      height: 180,
-    },
-    {
-      url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text",
-      width: 320,
-      height: 180,
-    },
-    {
-      url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text",
-      width: 320,
-      height: 180,
-    },
-    {
-      url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text",
-      width: 320,
-      height: 180,
-    },
-    {
-      url: "https://via.placeholder.com/320x180",
-      alt: "Alt-Text",
-      width: 320,
-      height: 180,
-    }
-  ]
+  const images: ImageType[] = landingPageImages;
 
   return (
     <div>
@@ -122,7 +51,7 @@ export default function Home() {
           title={t('landingPage.intro.chapter1.title')}
           text={t('landingPage.intro.chapter1.teaserText')}
         >
-          <Image src={gameOverlay} alt="Test" width={1080} />
+          <Image className={landingPageStyles['landing-page-image']} src={gameOverlay} alt="Test" width={1080} />
         </SbChapter>
 
         <SbChapter
