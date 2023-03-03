@@ -6,7 +6,7 @@ const landingPage = {
     },
     chapter2: {
       title: "Vom 17. Jahrhundert …",
-      teaserText: "Die Tour erstreckt sich von der Zeit der französischen Besatzungsmächte …"
+      teaserText: "Die Tour erstreckt sich von der Zeit der französischen Besatzungsmächte."
     },
     chapter3: {
       title: "… bis in die Gegenwart",
