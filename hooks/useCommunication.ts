@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { benrathObjects } from "../benrathObjects";
-import { subscribe, unsubscribe } from "../lib/events";
+import { publish, subscribe, unsubscribe } from "../lib/events";
 
 const findBenrathObject = (id: string) => {
   return benrathObjects.find(benrathObject => {
@@ -12,7 +12,15 @@ export const useCommunication = () => {
   const [currentBenrathObject, setCurrentBenrathObject] = useState(benrathObjects[0]);
   const [currentObjectOverlayOpen, setCurrentObjectOverlayOpen] = useState(false);
 
-  const toggleObjectOverlay = () => setCurrentObjectOverlayOpen(current => !current);
+  const toggleObjectOverlay = () => {
+    if (currentObjectOverlayOpen) {
+      publish('game:resume', {})
+    } else {
+      publish('game:paused', {})
+    }
+
+    setCurrentObjectOverlayOpen(current => !current);
+  }
 
 
   useEffect(() => {

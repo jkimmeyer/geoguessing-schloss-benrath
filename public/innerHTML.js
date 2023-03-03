@@ -16,7 +16,7 @@ function preTour() {
   var deviceType = ['general'];
   if (TDV.PlayerAPI?.mobile)
     deviceType.unshift('mobile');
-  if (TDV.PlayerAPI?.device == TDV.PlayerAPI.DEVICE_IPAD)
+  if (TDV.PlayerAPI?.device == TDV.PlayerAPI?.DEVICE_IPAD)
     deviceType.unshift('ipad');
   var url;
   for (var i = 0; i < deviceType.length; ++i) {

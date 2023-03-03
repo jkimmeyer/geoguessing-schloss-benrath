@@ -3,9 +3,11 @@ import Script from "next/script"
 import SbMenuFrame from "../../components/SbMenuFrame/SbMenuFrame"
 import SbOverlay from "../../components/SbOverlay/SbOverlay"
 import indexStyles from './index.module.css'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import SbTitle from "../../components/SbTitle/SbTitle"
 import { MyStopwatch } from "../../components/SbStopwatch/SbStopwatch"
+import { publish, subscribe, unsubscribe } from "../../lib/events"
+import { useGame } from "../../hooks/useGame"
 
 const Overlay = () => {
   const [overlayOpen, setOverlayOpen] = useState(false);
@@ -14,10 +16,22 @@ const Overlay = () => {
     setOverlayOpen(current => !current)
   }
 
+  const {foundItems, hiddenItems, score} = useGame()
+
+  useEffect(() => {
+    subscribe("game:paused", buttonHandler)
+    subscribe("game:resume", buttonHandler)
+
+    return () => {
+      unsubscribe("game:paused", buttonHandler)
+    }
+  })
+
   const [onboardingCompleted, toggleOnboardingCompleted] = useState(false);
 
   const toggleOnboarding = () => {
     toggleOnboardingCompleted(current => !current)
+    publish("game:started", {})
   }
   return (
     <SbOverlay withContent={overlayOpen}>
@@ -25,12 +39,12 @@ const Overlay = () => {
         timer={
           <MyStopwatch />
         }
-        points={"0"}
-        progress={"0 von 50"}
         logo={<SbTitle />}
-        closeOverlay={buttonHandler}
         onboarding={onboardingCompleted}
         toggleOnboarding={toggleOnboarding}
+        hiddenItems={hiddenItems}
+        foundItems={foundItems}
+        score={score}
       />
     </SbOverlay>
   )

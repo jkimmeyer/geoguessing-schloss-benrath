@@ -1,19 +1,15 @@
 
-import { HeadingColor, HeadingLevel, HeadingSize } from '../../types';
-import { useGame } from '../../hooks/useGame';
+import { BenrathObject, HeadingColor, HeadingLevel, HeadingSize } from '../../types';
 import SbHeading from '../SbHeading/SbHeading';
 import questItemsStyles from './SbQuestItems.module.css';
 import SbQuestItem from '../SbQuestItem/SbQuestItem';
 
 interface Props {
-  color?: string,
+  hiddenItems: BenrathObject[];
+  foundItems: BenrathObject[];
 }
 
-
-
-const SbQuestItems: React.FC<Props> = ({
-}) => {
-  const { nextQuestItems, foundQuestItems } = useGame();
+const SbQuestItems: React.FC<Props> = ({hiddenItems, foundItems}) => {
 
   return (
     <div className={questItemsStyles["quest-items"]}>
@@ -21,7 +17,7 @@ const SbQuestItems: React.FC<Props> = ({
         <SbHeading color={HeadingColor.Dark} level={HeadingLevel.h2} size={HeadingSize.Large} title="Suche diese Gegenstände" />
 
         <stack-l class={questItemsStyles["quest-items--list"]}>
-          {nextQuestItems.map((questItem, i) => {
+          {hiddenItems.sort((a, b) => (a.id || 0) - (b.id || 0)).map((questItem, i) => {
             return <SbQuestItem questItem={questItem} key={i} />;
           })}
         </stack-l>
@@ -31,7 +27,7 @@ const SbQuestItems: React.FC<Props> = ({
         <SbHeading color={HeadingColor.Dark} level={HeadingLevel.h2} size={HeadingSize.Large} title="Gefundene Gegenstände" />
 
         <div className={questItemsStyles["quest-items--grid"]}>
-          {foundQuestItems.map((questItem, i) => {
+          {foundItems.sort((a, b) => (a.id || 0) - (b.id || 0)).map((questItem, i) => {
             return <SbQuestItem questItem={questItem} key={i} inGrid={true} />;
           })}
         </div>

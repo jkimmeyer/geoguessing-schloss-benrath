@@ -1,114 +1,41 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode } from 'react';
 import { useCommunication } from '../../hooks/useCommunication';
-import { IconNames } from '../../types';
-import SbIcon from '../SbIcon/SbIcon';
+import { BenrathObject } from '../../types';
 import SbInfoCard from '../SbInfoCard/SbInfoCard';
+import { SbMapOverlay } from '../SbMapOverlay/SbMapOverlay';
+import { SbMenuOverlay } from '../SbMenuOverlay/SbMenuOverlay';
 import SbOnboarding from '../SbOnboarding/SbOnboarding';
-import SbQuestItems from '../SbQuestItems/SbQuestItems';
+import { SbQuestItemsOverlay } from '../SbQuestItemsOverlay/SbQuestItemsOverlay';
 import SbTourFrame from '../SbTourFrame/SbTourFrame';
-import SbTourMenu from '../SbTourMenu/SbTourMenu';
 import sbMenuFrameStyles from './SbMenuFrame.module.css'
 
 interface Props {
   timer?: ReactNode;
   logo?: ReactNode;
-  progress?: ReactNode;
-  points?: ReactNode;
-  closeOverlay: () => void;
   onboarding: boolean;
   toggleOnboarding: () => void;
+  hiddenItems: BenrathObject[];
+  foundItems: BenrathObject[];
+  score: number;
 }
 
-const Menu = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => setMenuOpen(current => !current);
-
-  return (
-    <div className={sbMenuFrameStyles['menu-frame--menu-container']} data-menu>
-      <div className={sbMenuFrameStyles['menu-frame--menu-container-box']}>
-
-        {menuOpen &&
-          <div className={sbMenuFrameStyles["menu-frame--overlay-menu"]}>
-            <SbTourMenu />
-          </div>
-        }
-
-        <button className={sbMenuFrameStyles['menu-frame--menu']} onClick={() => toggleMenu()}>
-          <SbIcon icon={IconNames.Menu}></SbIcon>
-        </button>
-      </div>
-    </div>
-  )
-}
-
-const QuestItems = () => {
-  const [questItemsOpen, setQuestItemsOpen] = useState(false);
-
-  const toggleQuestItemsOpen = () => setQuestItemsOpen(current => !current);
-
-  return (
-    <div className={sbMenuFrameStyles['menu-frame--menu-container']} data-quest>
-      <div className={sbMenuFrameStyles['menu-frame--menu-container-box']}>
-        <button className={sbMenuFrameStyles['menu-frame--help']} onClick={() => toggleQuestItemsOpen()}>
-          <SbIcon icon={IconNames.CurrentObjects}></SbIcon>
-        </button>
-
-        {questItemsOpen &&
-          <div className={sbMenuFrameStyles["menu-frame--overlay-menu"]}>
-            <SbQuestItems />
-          </div>
-        }
-      </div>
-    </div>
-  )
-}
-
-const Map = () => {
-  const [mapOpen, setMapOpen] = useState(false);
-  const [mapHtml, setMapHtml] = useState("")
-
-  const toggleMap = () => {
-    setMapHtml(document.getElementById("7")?.outerHTML.toString() || "")
-    setMapOpen(current => !current);
-  }
-
-  return (
-    <div className={sbMenuFrameStyles['menu-frame--menu-container']} data-map>
-      <div className={sbMenuFrameStyles['menu-frame--menu-container-box']}>
-        <button className={sbMenuFrameStyles['menu-frame--map']} onClick={() => toggleMap()}>
-          <SbIcon icon={IconNames.Map}></SbIcon>
-        </button>
-
-        {mapOpen &&
-          <div className={sbMenuFrameStyles["menu-frame--overlay-menu"]}>
-            <div className="fixed-container" dangerouslySetInnerHTML={{
-              __html: mapHtml
-            }}/>
-          </div>
-        }
-      </div>
-    </div>
-  )
-}
 
 const SbMenuFrame: React.FC<Props> = ({
   timer,
   logo,
-  progress,
-  points,
-  closeOverlay,
   onboarding,
-  toggleOnboarding
+  toggleOnboarding,
+  hiddenItems,
+  foundItems,
+  score
 }) => {
   const { currentObjectOverlayOpen, currentBenrathObject, toggleObjectOverlay } = useCommunication();
-
 
   const buttonHandler = () => toggleObjectOverlay();
 
   return (
     <div className={sbMenuFrameStyles['menu-frame']}>
-      <div className={sbMenuFrameStyles['menu-frame--timer']} onClick={() => closeOverlay()}>
+      <div className={sbMenuFrameStyles['menu-frame--timer']}>
         { timer }
       </div>
 
@@ -124,17 +51,17 @@ const SbMenuFrame: React.FC<Props> = ({
       </div>
 
       <div className={sbMenuFrameStyles['menu-frame--progress']}>
-        {progress}
+        {'1 von 50'}
       </div>
 
       <div className={sbMenuFrameStyles['menu-frame--points']}>
-        {points}
+        {score.toString()}
       </div>
 
       <div className={sbMenuFrameStyles["menu-frame--container"]}>
-        <Menu />
-        <Map />
-        <QuestItems />
+        <SbMenuOverlay />
+        <SbMapOverlay />
+        <SbQuestItemsOverlay hiddenItems={hiddenItems} foundItems={foundItems} />
       </div>
 
       { !onboarding &&

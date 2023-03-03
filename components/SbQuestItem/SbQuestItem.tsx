@@ -25,8 +25,8 @@ const SbQuestItem: React.FC<Props> = ({
         height={questItem.thumbnail.height}
       />
 
-      <div className="quest-item--title">
-        {questItem.title}
+    <div className="quest-item--title">
+      {questItem.title}
       </div>
     </div>
   );
