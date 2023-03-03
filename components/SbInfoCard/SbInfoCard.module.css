@@ -8,7 +8,7 @@
 
 .info-card--content {
   align-items: start;
-  gap: var(--spacing-64);
+  gap: var(--spacing-32);
   padding: var(--spacing-16);
 }
 
