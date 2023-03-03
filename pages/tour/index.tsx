@@ -10,7 +10,7 @@ import { publish, subscribe, unsubscribe } from "../../lib/events"
 import { useGame } from "../../hooks/useGame"
 
 const Overlay = () => {
-  const [overlayOpen, setOverlayOpen] = useState(false);
+  const [overlayOpen, setOverlayOpen] = useState(true);
 
   const buttonHandler = () => {
     setOverlayOpen(current => !current)
@@ -30,6 +30,12 @@ const Overlay = () => {
   const [onboardingCompleted, toggleOnboardingCompleted] = useState(false);
 
   const toggleOnboarding = () => {
+    if (onboardingCompleted) {
+      publish('game:resume', {})
+    } else {
+      publish('game:paused', {})
+    }
+
     toggleOnboardingCompleted(current => !current)
     publish("game:started", {})
   }

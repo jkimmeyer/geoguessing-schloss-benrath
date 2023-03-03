@@ -1,4 +1,15 @@
-(function(){
+function whenAvailable(name, callback) {
+  var interval = 100; // ms
+  window.setTimeout(function() {
+      if (window[name]) {
+          callback(window[name]);
+      } else {
+          whenAvailable(name, callback);
+      }
+  }, interval);
+}
+
+whenAvailable('TDV', () => {
 var translateObjs = {};
 function trans(a, b) {
     var c = arguments['length'] === 0x1 ? [arguments[0x0]] : Array['apply'](null, arguments);
@@ -245,5 +256,5 @@ script['data']['createQuizConfig'] = function () {
 };
 TDV['PlayerAPI']['defineScript'](script);
 //# sourceMappingURL=script_device_v2022.2.0.js.map
-})();
+});
 //Generated with v2022.2.0, Mon Feb 27 2023
