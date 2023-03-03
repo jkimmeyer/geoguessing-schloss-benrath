@@ -4,6 +4,7 @@
 @import 'variables/color';
 @import 'variables/sizes';
 @import 'variables/spacing';
+@import 'variables/viewports';
 @import 'variables/z-index';
 
 /* Globals: Order is important */

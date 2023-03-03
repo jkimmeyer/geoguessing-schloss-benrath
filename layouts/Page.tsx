@@ -17,19 +17,20 @@ const Page: React.FC<Props> = ({
 }) => {
   return (
     <div className={pageStyles['page']}>
-      <header className={pageStyles['page--header']}>
-        {headerButton}
-        {headerSlider}
-      </header>
-
       <main className={pageStyles['page--main']}>
-        <h1 className={pageStyles['page--title']}>
-          {title}
-          {!!subtitle &&
-            <span className={pageStyles['page--subtitle']}>{subtitle}</span>
-          }
-        </h1>
+        <div className={pageStyles['page--teaser']}>
+          <header className={pageStyles['page--header']}>
+            {headerButton}
+            {headerSlider}
+          </header>
 
+          <h1 className={pageStyles['page--title']}>
+            {title}
+            {!!subtitle &&
+              <span className={pageStyles['page--subtitle']}>{subtitle}</span>
+            }
+          </h1>
+        </div>
         {children}
       </main>
     </div>

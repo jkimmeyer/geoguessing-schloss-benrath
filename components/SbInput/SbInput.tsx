@@ -1,4 +1,4 @@
-import { ChangeEventHandler } from 'react';
+import { ChangeEventHandler, FocusEventHandler } from 'react';
 import inputStyles from './SbInput.module.css';
 
 interface Props {
@@ -6,7 +6,9 @@ interface Props {
   placeholder: string,
   type: string,
   value: string,
+  required: boolean,
   onChange: ChangeEventHandler,
+  onBlur?: FocusEventHandler,
 }
 
 const SbInput: React.FC<Props> = ({
@@ -14,7 +16,9 @@ const SbInput: React.FC<Props> = ({
   placeholder,
   type,
   value,
-  onChange
+  required,
+  onChange,
+  onBlur
 }) => {
   return (
     <div className={inputStyles["input"]}>
@@ -24,7 +28,10 @@ const SbInput: React.FC<Props> = ({
         placeholder={placeholder}
         value={value}
         type={type}
-        onChange={onChange} />
+        required={required}
+        onChange={onChange}
+        onBlur={onBlur}
+      />
     </div>
   );
 }
