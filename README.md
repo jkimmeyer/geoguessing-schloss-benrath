@@ -1,34 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# **Geoguessing Schloss Benrath**
 
-## Getting Started
+---
 
-First, run the development server:
+# Introduction
+The 360° Search Tour through Benrath Palace is a student project that was developed in the context of the subject "360° Videos" in cooperation with the University of Applied Sciences Düsseldorf and Benrath Palace.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Result of the project
+The project result is a basic executable version of *Geoguessing Schloss Benrath*. To improve the usability, the stability and the scope of the game further iterations are planned.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Structure of the project
+The project consists of a web application built in [3DVista](https://www.3dvista.com/) and a front-end application built using [Next.js](https://nextjs.org/).
+For external data storage, we use the CDN service provided by [Cloudinary](https://cloudinary.com/).
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+## Goal of the game
+Inspired by the browser-based online game [GeoGuessr](https://www.geoguessr.com/), *Geoguessing Schloss Benrath* is about searching for various historical objects in the castle in a race against time. The objects can be discovered by navigating through the rooms and uncovering them by clicking on them. To help the player, preview images of the objects to be found can be displayed. If an object is found successfully, the stopwatch is paused and the player has the possibility to view an information text and further detailed pictures of the object.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Technical information
+In the following section you will find information that is of interest for development work.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Start test environment
+To view the latest development status it is necessary to perform the following steps:
+1. clone project via Git
+2. run `npm install
+3. to start the development instance `npm run dev` must be executed
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Creating a Production Build
+To create a production build follow the instructions below:
+1. clone project via Git
+2. run `npm install
+3. `npm run build` to create the production build
+4. `npm run start` to start the previously created production build
+
+
+## How it works: 3DVista and Next.js
+3DVista was used to:
+- enable navigation between 360° shots
+- the clickable minimap function
+
+Next.js was used to:
+- create the index page
+- create the player name input
+- create the timer and point logic
+- render individual parts of the HUD
+
+
+## Communication: 3DVista and Next.js
+The 3DVista application was embedded in a Next.js application so that there are better specialization options when designing the front end. The design options in 3DVista are very limited and little to no responsive.
+The actual communication between the two sub-applications works via events that are triggered in 3DVista and to which the Next.js application then reacts.
+
+
+## Documentation of 3DVista Events
+The events thrown in 3DVista are documented in the [Github Wiki](https://github.com/jkimmeyer/geoguessing-schloss-benrath/wiki) of this repository
+
+---
+
+# Changelog
+**Version 1.0.0** *(Planned for 14.03.2023)*
+First official release of Geoguessing Schloss Benrath
+
+---
+
+# Get in Contact
+- [jkimmeyer](https://github.com/jkimmeyer)
+- [toec3182](https://github.com/toec3182)
