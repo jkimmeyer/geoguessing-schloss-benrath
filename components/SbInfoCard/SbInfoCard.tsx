@@ -5,6 +5,7 @@ import infoCardStyles from './SbInfoCard.module.css';
 import Image from 'next/image'
 import SbButton from '../SbButton/SbButton';
 import SbIcon from '../SbIcon/SbIcon';
+import { SbThumbnailGallery } from '../SbThumbnailGallery/SbThumbnailGallery';
 
 interface Props {
   benrathObject: BenrathObject;
@@ -25,20 +26,14 @@ const SbInfoCard: React.FC<Props> = ({
         </SbButton>
 
 
-        <switcher-l threshold="500px" class={infoCardStyles["info-card--content"]}>
-          <Image
-            className={infoCardStyles["info-card--image"]}
-            src={benrathObject.thumbnail.url}
-            alt={benrathObject.title}
-            width={benrathObject.thumbnail.width}
-            height={benrathObject.thumbnail.width}
-          />
+        <stack-l class={infoCardStyles["info-card--content"]}>
+          <SbThumbnailGallery images={benrathObject.imageUrls}/>
 
-            <stack-l class={infoCardStyles["info-card--text"]}>
-              <SbHeading title={benrathObject.title} subtitle={benrathObject.subtitle} level={HeadingLevel.h3} />
-              <p className={infoCardStyles["info-card--description"]}>{benrathObject.description}</p>
-            </stack-l>
-          </switcher-l>
+          <stack-l class={infoCardStyles["info-card--text"]}>
+            <SbHeading title={benrathObject.title} subtitle={benrathObject.subtitle} level={HeadingLevel.h3} />
+            <p className={infoCardStyles["info-card--description"]}>{benrathObject.description}</p>
+          </stack-l>
+        </stack-l>
       </SbCard>
     </div>
   );
