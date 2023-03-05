@@ -1,27 +1,24 @@
 
 import { t } from "i18next";
-import React from "react";
+import React, { useContext, useState } from "react";
+import { UserContext } from "../../context/userContext";
+import { UserContextType } from "../../types";
 import SbInput from "../SbInput/SbInput";
 import sbNameFormStyles from './SbNameForm.module.css'
 
-type State = {
-  playerName: string,
-  score: number,
-  result: string | undefined,
-};
+export const SbNameForm = () => {
+  const [playerName, setPlayername] = useState('');
+  const [result, setResult] = useState('')
 
-export class SbNameForm extends React.Component {
-  state: State = { playerName: '', score: 250, result: undefined };
+  const { setCurrentUser } = useContext(UserContext) as UserContextType
 
-  handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
-    this.setState({ playerName: event.currentTarget.value });
+  const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
+    setPlayername(event.currentTarget.value);
   };
 
-  handleSubmit: React.FocusEventHandler<HTMLFormElement> = async () => {
-    const playerName = this.state.playerName;
-
+  const handleSubmit: React.FocusEventHandler<HTMLFormElement> = async () => {
     if (!playerName || playerName === '') {
-      this.setState({result: "Bitte geben Sie Ihren Namen ein."})
+      setResult("Bitte geben Sie Ihren Namen ein.")
       return
     }
 
@@ -33,35 +30,35 @@ export class SbNameForm extends React.Component {
         })
         return response.json()
       } catch (error: unknown) {
-        this.setState({ result: error?.toString() })
+        setResult(error?.toString() || '')
       }
     }
 
     postData().then((result) => {
       if (result === null) {
-        this.setState({ result: "Name verfügbar" })
+        setResult("Name verfügbar")
+        setCurrentUser({playerName})
       } else {
-        this.setState({ result: "Der Name ist leider schon vergeben." })
+        setCurrentUser({playerName: ""})
+        setResult("Der Name ist leider schon vergeben.")
       }
     });
   };
 
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <SbInput
-          label={t('register.playerName')}
-          placeholder={t('register.playerName')}
-          type="text"
-          required={true}
-          value={this.state.playerName}
-          onChange={this.handleChange}
-          onBlur={this.handleSubmit}
-        />
-        {(this.state.result != '' || this.state.result !== undefined) &&
-          <p className={sbNameFormStyles['name-form--error']}>{this.state.result}</p>
-        }
-      </form>
-    );
-  }
+  return (
+    <form onSubmit={handleSubmit}>
+      <SbInput
+        label={t('register.playerName')}
+        placeholder={t('register.playerName')}
+        type="text"
+        required={true}
+        value={playerName}
+        onChange={handleChange}
+        onBlur={handleSubmit}
+      />
+      {(result != '' || result !== undefined) &&
+        <p className={sbNameFormStyles['name-form--error']}>{result}</p>
+      }
+    </form>
+  );
 }

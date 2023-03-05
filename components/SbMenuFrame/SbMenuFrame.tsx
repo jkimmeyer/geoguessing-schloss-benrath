@@ -51,7 +51,7 @@ const SbMenuFrame: React.FC<Props> = ({
       </div>
 
       <div className={sbMenuFrameStyles['menu-frame--progress']}>
-        {'1 von 50'}
+        {`${foundItems.length} von ${foundItems.length + hiddenItems.length}`}
       </div>
 
       <div className={sbMenuFrameStyles['menu-frame--points']}>

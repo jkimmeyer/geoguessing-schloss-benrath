@@ -24,7 +24,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 interface RankingProps {
   id: string,
   playerName: string,
-  score: number,
+  score?: number,
 }
 
 type Props = {

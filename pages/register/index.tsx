@@ -1,20 +1,47 @@
 import Head from 'next/head'
 import '../../config/i18n';
 import { useTranslation } from 'react-i18next';
-import { ButtonType } from '../../types';
+import { ButtonType, UserContextType } from '../../types';
 import Page from '../../layouts/Page';
 import SbChapter from '../../components/SbChapter/SbChapter';
 import SbButton from '../../components/SbButton/SbButton';
 import SbTitle from '../../components/SbTitle/SbTitle';
 import { SbNameForm } from '../../components/SbNameForm/SbNameForm';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
+import { UserContext } from '../../context/userContext';
 
 export default function Home() {
   const { t } = useTranslation();
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const router = useRouter()
+
+  const { currentUser, hasPlayerName } = useContext(UserContext) as UserContextType
+
+  const postData = async () => {
+    try {
+      const body = { playerName: currentUser?.playerName };
+      const response = await fetch(`/api/rankings`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      return response.json()
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  const handleClick = () => {
+    postData().then(() => {
+      if (hasPlayerName()) {
+        router.push("/tour")
+      } else {
+        console.log("Interner Fehler.")
+      }
+    })
+  }
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
@@ -41,7 +68,13 @@ export default function Home() {
           <SbNameForm />
         </SbChapter>
 
-        <SbButton buttonType={ButtonType.Primary} href="/tour">{ t('continue') }</SbButton>
+        <SbButton
+          buttonType={ButtonType.Primary}
+          onClick={() => handleClick()}
+          disabled={!hasPlayerName()}
+        >
+          {t('continue')}
+        </SbButton>
       </Page>
     </div>
   )

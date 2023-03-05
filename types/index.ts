@@ -9,6 +9,10 @@ import { ImageType } from './imageType'
 import { BenrathObject, FriendlyId, Room } from './benrathObject'
 import { OverlayVariant } from './overlayVariant'
 import { Step } from './step'
+import {
+  UserContextType, UserType
+} from './user'
+import { GameContextType, GameType } from './game'
 
 export {
   ButtonSize,
@@ -26,5 +30,9 @@ export {
 export type {
   BenrathObject,
   ImageType,
-  Step
+  GameContextType,
+  GameType,
+  Step,
+  UserContextType,
+  UserType
 }

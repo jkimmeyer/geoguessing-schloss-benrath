@@ -21,6 +21,7 @@ import '../compositions/switcher/component.css';
 import '../compositions/stack/component.css';
 import Stack from '../compositions/stack/component';
 import Switcher from '../compositions/switcher/component';
+import UserProvider from '../context/userContext';
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -29,7 +30,9 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <Component {...pageProps} />
+      <UserProvider>
+        <Component {...pageProps} />
+      </UserProvider>
     </>
   )
 }

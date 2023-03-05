@@ -50,9 +50,36 @@ export function useGame() {
     publish("game:addScore", {})
   }
 
+  interface Time {
+    seconds: number,
+    minutes: number,
+    hours: number,
+  }
+
   const addScoreCallback = (event: CustomEvent) => {
-    // TODO: Score calculations
-    setScore(current => current + 10)
+    const SECONDS_TO_FIND_OBJECTS = 180
+    const timeForLast: Time = event.detail.timeForLast;
+    const currentTime: Time = event.detail.currentTime;
+    let duration = 0;
+
+    for (const [key, value] of Object.entries(currentTime)) {
+      // Duration per Key
+      const durationPerKey = value - timeForLast[key];
+
+      if (key === 'seconds') {
+        duration += durationPerKey
+      } else if (key === 'minutes') {
+        duration += (durationPerKey) * 60;
+      } else {
+        duration += durationPerKey * 3600;
+      }
+    }
+
+    if (duration >= SECONDS_TO_FIND_OBJECTS || duration === 0) {
+      setScore(current => current + 0)
+    } else {
+      setScore(current => (current + SECONDS_TO_FIND_OBJECTS - duration))
+    }
   }
 
 
