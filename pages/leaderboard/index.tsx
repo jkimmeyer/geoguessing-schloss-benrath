@@ -60,7 +60,7 @@ export default function Home(props: Props) {
             t('leaderboard.playerName'),
             t('leaderboard.score'),
           ]}>
-            {props.ranking.sort((a, b) => b.score - a.score).map((rank, index) => (
+            {props.ranking.sort((a, b) => (b?.score || 0) - (a?.score || 0)).map((rank, index) => (
               <tr key={rank.id}>
                 <td>
                   {index + 1}

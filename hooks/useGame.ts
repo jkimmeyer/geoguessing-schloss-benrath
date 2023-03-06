@@ -50,10 +50,9 @@ export function useGame() {
     publish("game:addScore", {})
   }
 
+
   interface Time {
-    seconds: number,
-    minutes: number,
-    hours: number,
+    [time: string]: number;
   }
 
   const addScoreCallback = (event: CustomEvent) => {
@@ -65,7 +64,6 @@ export function useGame() {
     for (const [key, value] of Object.entries(currentTime)) {
       // Duration per Key
       const durationPerKey = value - timeForLast[key];
-
       if (key === 'seconds') {
         duration += durationPerKey
       } else if (key === 'minutes') {
