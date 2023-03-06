@@ -90,8 +90,8 @@ export default function index() {
         console.log('Script Script has loaded')
       }} />
       <Script src="/innerHTML.js" strategy="lazyOnload" onLoad={() => {
-        whenAvailable('TDVTour', () => {
-          preTour()
+        whenAvailable('TDV', () => {
+          window.setTimeout(() => preTour(), 600)
         })
       }} />
 
