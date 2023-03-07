@@ -6,6 +6,7 @@ interface Props {
   placeholder: string,
   type: string,
   value: string,
+  withLoader?: boolean,
   required: boolean,
   onChange: ChangeEventHandler,
   onBlur?: FocusEventHandler,
@@ -16,6 +17,7 @@ const SbInput: React.FC<Props> = ({
   placeholder,
   type,
   value,
+  withLoader = false,
   required,
   onChange,
   onBlur
@@ -25,6 +27,7 @@ const SbInput: React.FC<Props> = ({
       <label className={inputStyles["input--label"] + " | sr-only"} >{label}</label>
       <input
         className={inputStyles["input--field"]}
+        data-with-loader={withLoader ? "" : null}
         placeholder={placeholder}
         value={value}
         type={type}

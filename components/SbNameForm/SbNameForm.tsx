@@ -2,13 +2,15 @@
 import { t } from "i18next";
 import React, { useContext, useState } from "react";
 import { UserContext } from "../../context/userContext";
-import { UserContextType } from "../../types";
+import { IconNames, UserContextType } from "../../types";
+import SbIcon from "../SbIcon/SbIcon";
 import SbInput from "../SbInput/SbInput";
 import sbNameFormStyles from './SbNameForm.module.css'
 
 export const SbNameForm = () => {
   const [playerName, setPlayername] = useState('');
   const [result, setResult] = useState('')
+  const [loading, setLoading] = useState(false)
 
   const { setCurrentUser } = useContext(UserContext) as UserContextType
 
@@ -34,7 +36,11 @@ export const SbNameForm = () => {
       }
     }
 
+    setLoading(true)
+
     postData().then((result) => {
+      setLoading(false)
+
       if (result === null) {
         setResult("Name verfügbar")
         setCurrentUser({playerName})
@@ -47,15 +53,31 @@ export const SbNameForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <SbInput
-        label={t('register.playerName')}
-        placeholder={t('register.playerName')}
-        type="text"
-        required={true}
-        value={playerName}
-        onChange={handleChange}
-        onBlur={handleSubmit}
-      />
+      <div className={sbNameFormStyles['name-form--input']}>
+        <SbInput
+          label={t('register.playerName')}
+          placeholder={t('register.playerName')}
+          type="text"
+          withLoader={true}
+          required={true}
+          value={playerName}
+          onChange={handleChange}
+          onBlur={handleSubmit}
+        />
+
+        {loading &&
+          <div className={sbNameFormStyles['name-form--icon']}>
+            <span className={sbNameFormStyles['name-form--loader']} />
+          </div>
+        }
+
+        {!loading &&
+          <div className={sbNameFormStyles['name-form--icon'] + ' ' + sbNameFormStyles['name-form--person-icon']}>
+            <SbIcon icon={ IconNames.Person}></SbIcon>
+          </div>
+        }
+      </div>
+
       {(result != '' || result !== undefined) &&
         <p className={sbNameFormStyles['name-form--error']}>{result}</p>
       }

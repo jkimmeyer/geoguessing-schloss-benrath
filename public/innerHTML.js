@@ -94,6 +94,7 @@ function onVirtualTourInit() {
 
 function onVirtualTourLoaded() {
   disposePreloader();
+  document.getElementById("7").style.display = "none";
 }
 
 function onVirtualTourEnded() {

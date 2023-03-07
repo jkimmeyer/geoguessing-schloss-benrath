@@ -8,7 +8,7 @@ import SbButton from '../../components/SbButton/SbButton';
 import SbTitle from '../../components/SbTitle/SbTitle';
 import { SbNameForm } from '../../components/SbNameForm/SbNameForm';
 import { useRouter } from 'next/router';
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../context/userContext';
 
 export default function Home() {

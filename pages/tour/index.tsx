@@ -12,8 +12,12 @@ import { useGame } from "../../hooks/useGame"
 const Overlay = () => {
   const [overlayOpen, setOverlayOpen] = useState(true);
 
-  const buttonHandler = () => {
-    setOverlayOpen(current => !current)
+  const buttonHandler = (event: CustomEvent) => {
+    if (event.detail.noOverlay) {
+      return
+    } else {
+      setOverlayOpen(current => !current)
+    }
   }
 
   const {foundItems, hiddenItems, score} = useGame()

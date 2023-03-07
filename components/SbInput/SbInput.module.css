@@ -16,6 +16,10 @@
   padding-block: var(--spacing-8);
   padding-inline: var(--spacing-12);
   font-family: var(--serif-font);
+
+  &[data-with-loader] {
+    padding-inline-start: var(--spacing-48);
+  }
 }
 
 .input--field:focus,

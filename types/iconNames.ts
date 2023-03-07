@@ -6,4 +6,5 @@ export enum IconNames {
   CurrentObjects = 'fluent:scan-object-24-filled',
   Map = 'fluent:map-20-filled',
   Menu = 'fluent:line-horizontal-3-20-filled',
+  Person = 'fluent:person-accounts-24-filled'
 }
