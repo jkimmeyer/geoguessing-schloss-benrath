@@ -14,6 +14,7 @@ import angelSculptures from '../assets/images/Angel_Sculptures.jpg'
 import SbTitle from '../components/SbTitle/SbTitle';
 import { landingPageImages } from '../landingPageImages';
 import landingPageStyles from '../assets/stylesheets/landing-page.module.css';
+import SbFooter from '../components/SbFooter/SbFooter';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -85,6 +86,7 @@ export default function Home() {
         >
           { t('landingPage.startTour') }
         </SbButton>
+        <SbFooter></SbFooter>
       </Page>
     </div>
   )
