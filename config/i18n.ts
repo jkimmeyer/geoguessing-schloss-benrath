@@ -4,6 +4,7 @@ import general from "../locales/de/general";
 import landingPage from "../locales/de/landingPage";
 import register from "../locales/de/register";
 import leaderboard from "../locales/de/leaderboard";
+import footer from "../locales/de/footer";
 
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
@@ -15,6 +16,7 @@ i18n
           landingPage,
           register,
           leaderboard,
+          footer
         }
       }
     },

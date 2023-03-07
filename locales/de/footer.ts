@@ -1,6 +1,7 @@
 const footer = {
     imprint: 'Impressum',
-    privacy: 'Datenschutz'
+    privacy: 'Datenschutz',
+    tac: 'AGB'
 }
 
 export default footer;
