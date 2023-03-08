@@ -86,8 +86,8 @@ export default function Home() {
         >
           { t('landingPage.startTour') }
         </SbButton>
-        <SbFooter></SbFooter>
       </Page>
+      <SbFooter></SbFooter>
     </div>
   )
 }
