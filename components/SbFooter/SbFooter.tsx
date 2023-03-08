@@ -11,19 +11,19 @@ const SbFooter: React.FC = () => {
       <div className={footerStyles['second-row']}>
         <div className={footerStyles['link-wrapper']}>
           <Link
-            href={'/imprint'}
+            href={'https://www.schloss-benrath.de/impressum'}
           >
             { t('footer.imprint') }
           </Link>
           <p>|</p>
           <Link
-            href={'/privacy'}
+            href={'https://www.schloss-benrath.de/datenschutzerklärung'}
           >
             { t('footer.privacy') }
           </Link>
           <p>|</p>
           <Link
-            href={'/tac'}
+            href={'https://www.schloss-benrath.de/agb'}
           >
             { t('footer.tac') }
           </Link>
