@@ -10,6 +10,7 @@ import { SbNameForm } from '../../components/SbNameForm/SbNameForm';
 import { useRouter } from 'next/router';
 import { useContext, useEffect } from 'react';
 import { UserContext } from '../../context/userContext';
+import SbFooter from '../../components/SbFooter/SbFooter';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -76,6 +77,7 @@ export default function Home() {
           {t('continue')}
         </SbButton>
       </Page>
+      <SbFooter></SbFooter>
     </div>
   )
 }
