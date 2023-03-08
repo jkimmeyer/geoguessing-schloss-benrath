@@ -1,3 +1,4 @@
+import Router from "next/router";
 import { useEffect, useState } from "react";
 import { benrathObjects } from "../benrathObjects";
 import { publish, subscribe, unsubscribe } from "../lib/events";
@@ -48,6 +49,10 @@ export function useGame() {
     setFoundItems((foundItems) => [...foundItems, benrathObject])
     setCurrentItemId(current => current + 1)
     publish("game:addScore", {})
+
+    if (hiddenItems.length === 0) {
+      Router.push('/leaderboard')
+    }
   }
 
 
