@@ -10,5 +10,5 @@ datasource geoguessingBenrath {
 model ranking {
   id         String @id @default(auto()) @map("_id") @geoguessingBenrath.ObjectId
   playerName String @unique
-  score      Float?
+  score      Float? @default(0)
 }

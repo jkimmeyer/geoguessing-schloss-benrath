@@ -24,7 +24,7 @@ export const SbMenuOverlay = () => {
 
         {menuOpen &&
           <div className={sbMenuFrameStyles["menu-frame--overlay-menu"]}>
-            <SbTourMenu />
+            <SbTourMenu toggleMenu={toggleMenu} />
           </div>
         }
 
