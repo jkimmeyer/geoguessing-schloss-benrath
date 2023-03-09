@@ -19,18 +19,24 @@ const SbInfoCard: React.FC<Props> = ({
   return (
     <div className={infoCardStyles["info-card"]}>
       <SbCard>
-        <SbButton onClick={() => buttonHandler()}>
-          <SbIcon icon={IconNames.Back}></SbIcon>
+        <SbButton
+          icon={
+            <SbIcon icon={IconNames.Back}></SbIcon>
+          }
+          onClick={() => buttonHandler()}
+        >
+          Zurück
         </SbButton>
 
 
         <stack-l class={infoCardStyles["info-card--content"]}>
-          <SbThumbnailGallery images={benrathObject.imageUrls}/>
 
           <stack-l class={infoCardStyles["info-card--text"]}>
             <SbHeading title={benrathObject.title} subtitle={benrathObject.subtitle} level={HeadingLevel.h3} />
             <p className={infoCardStyles["info-card--description"]}>{benrathObject.description}</p>
           </stack-l>
+
+          <SbThumbnailGallery images={benrathObject.imageUrls} />
         </stack-l>
       </SbCard>
     </div>
