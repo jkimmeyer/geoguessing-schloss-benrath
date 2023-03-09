@@ -389,10 +389,10 @@ const tableclock: BenrathObject = {
       height: 4000,
     },
     {
-      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677690820/detailshots/object_07_tableclock/object_07_tableclock-03_zh1zzf.jpg",
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678395751/detailshots/object_07_tableclock/object_07_tableclock-03_zh1zzf.jpg",
       alt: "Totalaufnahme der Portaluhr",
-      width: 6000,
-      height: 4000,
+      width: 3999,
+      height: 2666,
     }
   ],
   friendlyId: FriendlyId.Tableclock,
@@ -528,17 +528,17 @@ const desk: BenrathObject = {
   description: "Dieser Schreibschrank wurde zur selben Zeit, wie das Schloss gefertigt, also um 1770. Er wurde für das Kurfürstenpaar Elisabeth Auguste und Karl Theodor in einer Mannheimer Werkstatt gefertigt. Ein Hinweis darauf findet man auf den beiden Vordertüren. Sie sind sehr kunstvoll mit den Porträts der beiden geschmückt. Dies ist übrigens das einzige Möbelstück, das existiert, das die Porträts so kunstvoll zeigt.",
   room: Room.RoomNorthWest,
   thumbnail: {
-    url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677690995/detailshots/object_16_desk/object_16_desk-01_zsdhlo.jpg",
+    url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678395385/detailshots/object_16_desk/object_16_desk-01_zsdhlo.jpg",
     alt: "Schrank mit Schreibtisch und Schubladen",
-    width: 6000,
-    height: 4000,
+    width: 3999,
+    height: 2666,
   },
   imageUrls: [
     {
-      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677690995/detailshots/object_16_desk/object_16_desk-01_zsdhlo.jpg",
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678395385/detailshots/object_16_desk/object_16_desk-01_zsdhlo.jpg",
       alt: "Schrank mit Schreibtisch Schubladen",
-      width: 6000,
-      height: 4000,
+      width: 3999,
+      height: 2666,
     },
     {
       url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677690995/detailshots/object_16_desk/object_16_desk-02_u1asms.jpg",
