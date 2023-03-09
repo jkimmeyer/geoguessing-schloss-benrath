@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import sbMenuFrameStyles from '../SbMenuFrame/SbMenuFrame.module.css'
 import { IconNames } from "../../types";
 import SbIcon from "../SbIcon/SbIcon";
@@ -7,27 +7,59 @@ import { publish } from "../../lib/events";
 export const SbMapOverlay = () => {
   const [mapOpen, setMapOpen] = useState(false);
 
+  const resume = (map: HTMLElement | null) => {
+    publish('game:resume', { noOverlay: true })
+
+    if (map) {
+      map.style.display = "none";
+    }
+
+    setMapOpen(false);
+  }
+
+  const pause = (map: HTMLElement | null) => {
+    publish('game:paused', { noOverlay: true })
+
+    if (map) {
+      map.style.display = "block";
+    }
+    setMapOpen(true);
+  }
+
   const toggleMap = () => {
     const map = document.getElementById("7");
 
     if (mapOpen) {
-      publish('game:resume', {noOverlay: true})
-
-      if (map) {
-        map.style.display = "none";
-      }
+      resume(map)
     } else {
-      publish('game:paused', { noOverlay: true })
-
-      if (map) {
-        map.style.display = "block";
-      }
+      map?.addEventListener("click", () => {
+        resume(map)
+      });
+      pause(map)
     }
-
-    setMapOpen(current => !current);
   }
 
+  const escFunction = useCallback((event: KeyboardEvent) => {
+    if (event.key === "Escape") {
+      if (mapOpen) {
+        publish('game:resume', {})
+      }
 
+      const map = document.getElementById("7");
+      resume(map)
+
+
+      setMapOpen(false)
+    }
+  }, [mapOpen]);
+
+  useEffect(() => {
+    document.addEventListener("keydown", escFunction, false);
+
+    return () => {
+      document.removeEventListener("keydown", escFunction, false);
+    };
+  }, [escFunction]);
 
   return (
     <div className={sbMenuFrameStyles['menu-frame--menu-container']} data-map>

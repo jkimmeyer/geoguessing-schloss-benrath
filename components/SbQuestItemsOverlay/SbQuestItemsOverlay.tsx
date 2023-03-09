@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { BenrathObject, IconNames } from "../../types";
 import SbIcon from "../SbIcon/SbIcon";
 import SbQuestItems from "../SbQuestItems/SbQuestItems";
@@ -22,6 +22,24 @@ export const SbQuestItemsOverlay = (props: Props) => {
 
     setQuestItemsOpen(current => !current)
   }
+
+  const escFunction = useCallback((event: KeyboardEvent) => {
+    if (event.key === "Escape") {
+      if (questItemsOpen) {
+        publish('game:resume', {})
+      }
+
+      setQuestItemsOpen(false)
+    }
+  }, [questItemsOpen]);
+
+  useEffect(() => {
+    document.addEventListener("keydown", escFunction, false);
+
+    return () => {
+      document.removeEventListener("keydown", escFunction, false);
+    };
+  }, [escFunction]);
 
   return (
     <div className={sbMenuFrameStyles['menu-frame--menu-container']} data-quest>

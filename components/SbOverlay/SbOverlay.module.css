@@ -10,3 +10,26 @@
     pointer-events: all;
   }
 }
+
+.flash-container {
+  position: relative;
+  inset-inline: 0;
+  padding: var(--spacing-16);
+}
+
+.flash {
+  position: absolute;
+  inset-inline-start: 50%;
+  min-inline-size: 300px;
+  border-radius: 4px;
+  padding: var(--spacing-16);
+  transform: translateX(-50%);
+
+  &[data-status='success'] {
+    background-color: var(--color-primary);
+  }
+
+  &[data-status='neutral'] {
+    background-color: var(--color-background-neutral);
+  }
+}

@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode, useCallback, useEffect, useState } from 'react';
 import { useCommunication } from '../../hooks/useCommunication';
 import { useGame } from '../../hooks/useGame';
 import { publish } from '../../lib/events';
@@ -51,6 +51,22 @@ const SbMenuFrame: React.FC<Props> = ({
     publish('game:resume', {})
     setGameFinishedOverlayOpen(false)
   }
+
+  const escFunction = useCallback((event: KeyboardEvent) => {
+    if (event.key === "Escape") {
+      if (currentObjectOverlayOpen) {
+        toggleObjectOverlay()
+      }
+    }
+  }, [currentObjectOverlayOpen, toggleObjectOverlay]);
+
+  useEffect(() => {
+    document.addEventListener("keydown", escFunction, false);
+
+    return () => {
+      document.removeEventListener("keydown", escFunction, false);
+    };
+  }, [escFunction]);
 
   return (
     <div className={sbMenuFrameStyles['menu-frame']}>

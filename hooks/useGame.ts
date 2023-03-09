@@ -3,7 +3,6 @@ import { benrathObjects } from "../benrathObjects";
 import { UserContext } from "../context/userContext";
 import { publish, subscribe, unsubscribe } from "../lib/events";
 import { BenrathObject, UserContextType } from "../types";
-
 /**
  * Shuffles array in place. ES6 version
  * @param {Array} a items An array containing the items.
@@ -42,16 +41,20 @@ export function useGame() {
     const benrathObject = findBenrathObject(hiddenItems, benrathObjectId)
     const foundBenrathObject = findBenrathObject(foundItems, benrathObjectId)
 
-    if (!benrathObject || benrathObject.id != currentItemId) { return }
-    if (foundBenrathObject) {
-      alert("Diesen Gegenstand hast du schon gefunden!")
+    if (!benrathObject || benrathObject.id != currentItemId) {
+      if (foundBenrathObject) {
+        publish("game:flash", { message: "Diesen Gegenstand hast du schon gefunden!", type: "neutral" })
+      }
       return
     }
+
+
 
     setHiddenItems((current) => current.filter((item) => item.id != currentItemId))
     setFoundItems((foundItems) => [...foundItems, benrathObject])
     setCurrentItemId(current => current + 1)
     publish("game:addScore", {})
+    publish("game:flash", { message: "Neuen Gegenstand gefunden!", type: "success" })
 
     if (hiddenItems.length <= 1) {
       setGameFinished(true);
