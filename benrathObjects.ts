@@ -34,6 +34,40 @@ const window: BenrathObject = {
   friendlyId: FriendlyId.Window,
 }
 
+const womansWingInfo: BenrathObject = {
+  title: "Der Damenflügel",
+  subtitle: "Der östliche Schlossflügel",
+  description: "Der östliche Gartensaal ist Teil des Museum Corps de Logis, das sich im Hauptgebäude des Schlosses befindet. Es ist ein repräsentativer Raum mit einer reichen Stuckdekoration und einem Deckengemälde von Januarius Zick. Der Raum wurde als Speisesaal für den Kurfürsten und seine Gäste genutzt. In diesem Raum spielte das Thema Natur eine wichtige Rolle.",
+  room: Room.WomansWing,
+  thumbnail: {
+    url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678368156/detailshots/info_01_womansWingInfo/info_01_womansWingInfo-01_o7vu51.jpg",
+    alt: "Blick in den Damensaal",
+    width: 6000,
+    height: 4000,
+  },
+  imageUrls: [
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678368156/detailshots/info_01_womansWingInfo/info_01_womansWingInfo-01_o7vu51.jpg",
+      alt: "Blick in den Damensaal",
+      width: 6000,
+      height: 4000,
+    },
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678368157/detailshots/info_01_womansWingInfo/info_01_womansWingInfo-02_pwsq54.jpg",
+      alt: "Profil von Elisabeth-Auguste",
+      width: 6000,
+      height: 4000,
+    },
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678368158/detailshots/info_01_womansWingInfo/info_01_womansWingInfo-03_chb5bl.jpg",
+      alt: "Initialien von Elisabeth-Auguste",
+      width: 6000,
+      height: 4000,
+    }
+  ],
+  friendlyId: FriendlyId.WomansWingInfo
+}
+
 const wineglass: BenrathObject = {
   title: "Weinglasabdruck",
   subtitle: "",
@@ -101,6 +135,46 @@ const domeHallFresco: BenrathObject = {
   friendlyId: FriendlyId.DomeHallFresco,
 }
 
+const domeHallInfo: BenrathObject = {
+  title: "Der Kuppelsaal",
+  subtitle: "Das Herz des Schloss Benrath",
+  description: "Vor 250 Jahren war Schloss Benrath noch umgeben von Wäldern und Wiesen. Dies macht es zum optimalen Ausgangspunkt für Kurfürstliche Jagdausflüge. So ist es kaum verwunderlich, dass sich das im Kuppelsaal verweise auf die jagd entdecken lassen. Einer dieser Verweise befindet sich in der kuppel. Auch im Stuck an den Wänden des Kursaals lassen sich veiel Jagd motive entdecken. Beispielsweise Jagdhunde, und Jagdnetze. Noch eine weitere Verbindung, dass das Jagt Motiv zu die Schlossherin Elisabeth Auguste war passionierte Jägerin ihrer Jagdleidenschaft, wurde ebenfalls im Kuppelsaal verewigt. Über einem Spiegel sehen wir Elisabeth Auguste im Profil mit einer Mondsichel im Haar.Die Mondsichel ist eines der typischen Merkmale von Diana. Elisabeth Auguste wird hier also selbst zur Göttin der Jagd. Der von einer zweischaligen Kuppel überfangene Hauptsaal nach dem Muster eines Salon à l'italienne wird vom sternförmig verlegten Lahnmarmor des Bodens sowie dem Stuckmarmor seines Aufrisses bestimmt. Zu drei Seiten nach Süden mittels hoher Fenstertüren belichtet gliedern acht korinthische Pilasterpaare die Fassade. Zwischen ihnen stehen Puttenpaare mit Füllhörnern, festliches Stuckgehänge undJagdutensilien verweisen auf das bestimmende Thema. Die kassettierte Decke stellt einen Verweis auf das römische Pantheon dar, wobei der Antikenbezug noch nicht die Puristik des aufziehenden Klassizismus besitzt, wiewenige Jahre später etwa in Wörlitz (Schloss) oder Kassel.",
+  room: Room.DomeHall,
+  thumbnail: {
+    url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678367501/detailshots/info_02_domeHallInfo/info_02_domeHallInfo-01_azo3vd.jpg",
+    alt: "Bick in den sommerlich erleuchtete Kuppelsaal",
+    width: 768,
+    height: 512,
+  },
+  imageUrls: [
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678367501/detailshots/info_02_domeHallInfo/info_02_domeHallInfo-01_azo3vd.jpg",
+      alt: "Bick in den sommerlich erleuchtete Kuppelsaal",
+      width: 768,
+      height: 512,
+    },
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678367505/detailshots/info_02_domeHallInfo/info_02_domeHallInfo-02_mazibm.jpg",
+      alt: "Kronleuchter in der Kuppelhalle",
+      width: 5359,
+      height: 3573,
+    },
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678367508/detailshots/info_02_domeHallInfo/info_02_domeHallInfo-03_sviyrc.jpg",
+      alt: "Deckenfresco in der Kuppelhalle",
+      width: 6000,
+      height: 4000,
+    },
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678367506/detailshots/info_02_domeHallInfo/info_02_domeHallInfo-04_oa8tvs.jpg",
+      alt: "Standesamtliche Hochzeit im Kuppelsaal",
+      width: 6000,
+      height: 4000,
+    }
+  ],
+  friendlyId: FriendlyId.DomeHallInfo,
+}
+
 const lake: BenrathObject = {
   title: "Spiegelweiher",
   description: "Der 470 Meter lange Spiegelweiher bildet die Hauptachse und entspricht der im Gebäude  liegenden Mittelachse mit Vestibül und Kuppelsaal. Der Weiher wird von  Rasenstreifen und hohen Bäumen gesäumt. Sein reflektierender Wasserspiegel verstärkt den Lichteinfall in die Räume des Schlosses, welches sich wiederum von ferne gesehen in der ruhigen Wasserfläche spiegelt.",
@@ -154,6 +228,40 @@ const table: BenrathObject = {
     }
   ],
   friendlyId: FriendlyId.Table,
+}
+
+const mansWingInfo: BenrathObject = {
+  title: "Der Herrenflügel",
+  subtitle: "Der westliche Schlossflügel",
+  description: "Der westliche Gartensaal ist ebenfalls Teil des Museum Corps de Logis und befindet sich gegenüber dem östlichen Gartensaal. Er ist ein eleganter Raum mit einer feinen Stuckdekoration und einem Deckengemälde von Johann Baptist Zimmermann. Der Raum wurde als Musikzimmer für den Kurfürsten und seine Gäste genutzt.",
+  room: Room.MansWing,
+  thumbnail: {
+    url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678368468/detailshots/info_03_mansWingInfo/info_03_mansWingInfo-01_a4qmvt.jpg",
+    alt: "Blick aus dem Kuppelsaal in den Herrenflügel",
+    width: 768,
+    height: 507,
+  },
+  imageUrls: [
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678368468/detailshots/info_03_mansWingInfo/info_03_mansWingInfo-01_a4qmvt.jpg",
+      alt: "Blick aus dem Kuppelsaal in den Herrenflügel",
+      width: 768,
+      height: 507,
+    },
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678368469/detailshots/info_03_mansWingInfo/info_03_mansWingInfo-02_rksovw.jpg",
+      alt: "Inner des Herrenflügels",
+      width: 1300,
+      height: 859,
+    },
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678368470/detailshots/info_03_mansWingInfo/info_03_mansWingInfo-03_wxmhxo.jpg",
+      alt: "Profil von Kart Theodor",
+      width: 1300,
+      height: 859,
+    }
+  ],
+  friendlyId: FriendlyId.MansWingInfo
 }
 
 const sofa: BenrathObject = {
@@ -313,6 +421,74 @@ const uhr: BenrathObject = {
   friendlyId: FriendlyId.Clock,
 }
 
+const outdoor: BenrathObject = {
+  title: "Der Anstrich des Schlosses",
+  subtitle: "Peach Blossom oder Pfirsichblüte",
+  description: "Die Farbe des Schlosses wurde anhand von historischen Malereien rekonstruiert. Ob das Altrosa der tatsächliche ursprüngliche Farbton des historischen Schlosses war, kann nicht gänzlich geklärt werden.",
+  room: Room.EntranceHall,
+  thumbnail: {
+    url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678369712/detailshots/object_11_outddor/object_11_outdoor-01_eyusap.jpg",
+    alt: "Blick auf den Damenflügel von außen",
+    width: 1024,
+    height: 679,
+  },
+  imageUrls: [
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678369712/detailshots/object_11_outddor/object_11_outdoor-01_eyusap.jpg",
+      alt: "Blick auf den Damenflügel von außen",
+      width: 1024,
+      height: 679,
+    },
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678369712/detailshots/object_11_outddor/object_11_outdoor-02_drfxej.jpg",
+      alt: "Blick auf den Damenflügel von außen im Winter",
+      width: 1440,
+      height: 960,
+    }
+  ],
+  friendlyId: FriendlyId.Outdoor
+}
+
+const entranceHallInfo: BenrathObject = {
+  title: "Die Eingangshalle",
+  subtitle: "Willkommen im Schloss Benrath",
+  description: "In der Mittelachse der Nordseite liegt das mit dem Portikus bereits in der Fassade angekündigte elegante Vestibül. Nach Süden grenzt unmittelbar der prachtvollste Raum des Baus an. der die Südfassade vertiefendeund zwei Gartensäle flankierende Kuppelsaal. Die beiden galerieartigen Säle zählen bereits zu den kurfürstlichen Appartements, die nach Norden hin jeweils um Schlafzimmer und Kabinett ergänzt werden. Damit werden die herrschaftlichen Funktions bereiche von der Mittelachse aus symmetrisch gespiegelt und entsprechen dem System des Appartement double. Der zwischen den durch die Fassadenfenster belichteten Appartements liegende Bereich ist um zwei ovale Höfe gruppiert. Im Vestibül werden dabei herrschaftliche und bukolische Dimensionen verschränkt. Der hohe längsrechteckige Raum wird durch einen Boden aus Marmorplatten sowie flacheWand und Deckenreliefs charakterisiert. Die drei Fensterachsen der Nordfassade besitzenihre Entsprechung in drei Türöffnungen an der Südseite, vondenen die mittlere den Durchgang in den Kuppelsaal öffnet, während die beiden anderen zu Treppen in die privaten Bäder bzw. das Zwischengeschoss führen. Die Türöffnungen der Enfilade an der Nordfassade sowie die Fenstertüren zum Lichthof werden von Supraporten mit Reliefdarstellungen der vier Jahreszeiten bekrönt. Die Lünetten der Schmalseiten sind mit Schlusssteinmasken versehen, die ebenfalls die Jahreszeiten thematisieren, während in den Mittelachsen Sol und Luna den Wechsel der Tages und Nachtzeiten darstellen. Ammarkantesten treten die Reliefsmit der Darstellung der vier Elemente an den Längs seiten in Erscheinung, die nach dem Vorbilddes Treppenhauses im Mann heimer Schloss, der wichtigsten architektonischen und ornamentalen Referenz des Ben rather Schlosses, in je eigenen Feldern platziert wurden.",
+  room: Room.EntranceHall,
+  thumbnail: {
+    url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678370802/detailshots/info_11_entranceHallInfo/info_11_entranceHallInfo-01_g8uj0r.jpg",
+    alt: "Blick in die Eingangshalle des Schlosses",
+    width: 5645,
+    height: 3763,
+  },
+  imageUrls: [
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678370802/detailshots/info_11_entranceHallInfo/info_11_entranceHallInfo-01_g8uj0r.jpg",
+      alt: "Blick in die Eingangshalle des Schlosses",
+      width: 5645,
+      height: 3763,
+    },
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678370805/detailshots/info_11_entranceHallInfo/info_11_entranceHallInfo-02_dwdgbz.jpg",
+      alt: "Wandfresco in der Eingangshalle",
+      width: 6000,
+      height: 4000,
+    },
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678370797/detailshots/info_11_entranceHallInfo/info_11_entranceHallInfo-03_mac9we.jpg",
+      alt: "Kronleuchter in der Eingangshalle",
+      width: 6000,
+      height: 4000,
+    },
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678370807/detailshots/info_11_entranceHallInfo/info_11_entranceHallInfo-04_hj2q5w.jpg",
+      alt: "Fossilien im Marmornoden in der Eingangshalle",
+      width: 6000,
+      height: 4000,
+    }
+  ],
+  friendlyId: FriendlyId.EntraneHallInfo
+}
+
 const desk: BenrathObject = {
   title: "Schreibschrank",
   subtitle: "Schreiben, wie ein König",
@@ -410,9 +586,8 @@ const tableclockLeft: BenrathObject = {
       height: 4000,
     }
   ],
-  friendlyId: FriendlyId.TableclockLeft,
+  friendlyId: FriendlyId.TableclockLeft
 }
-
 
 const tableclockRight: BenrathObject = {
   title: "Tischuhr mit Kurpfälzischem Wappen",
@@ -444,20 +619,25 @@ const tableclockRight: BenrathObject = {
       height: 4000,
     }
   ],
-  friendlyId: FriendlyId.TableclockRight,
+  friendlyId: FriendlyId.TableclockRight
 }
 
 export const benrathObjects: BenrathObject[] = [
-  table,
   window,
+  womansWingInfo,
   wineglass,
   domeHallFresco,
   lake,
+  domeHallInfo,
+  table,
+  mansWingInfo,
   sofa,
   stuck,
   poudreuse,
   sessel,
   uhr,
+  outdoor,
+  entranceHallInfo,
   desk,
   fresco,
   tableclockLeft,
