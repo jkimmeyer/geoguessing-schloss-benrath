@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import sbMenuFrameStyles from '../SbMenuFrame/SbMenuFrame.module.css'
 import { IconNames } from "../../types";
 import SbIcon from "../SbIcon/SbIcon";
@@ -38,6 +38,28 @@ export const SbMapOverlay = () => {
       pause(map)
     }
   }
+
+  const escFunction = useCallback((event: KeyboardEvent) => {
+    if (event.key === "Escape") {
+      if (mapOpen) {
+        publish('game:resume', {})
+      }
+
+      const map = document.getElementById("7");
+      resume(map)
+
+
+      setMapOpen(false)
+    }
+  }, [mapOpen]);
+
+  useEffect(() => {
+    document.addEventListener("keydown", escFunction, false);
+
+    return () => {
+      document.removeEventListener("keydown", escFunction, false);
+    };
+  }, [escFunction]);
 
   return (
     <div className={sbMenuFrameStyles['menu-frame--menu-container']} data-map>
