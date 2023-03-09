@@ -41,6 +41,7 @@ export enum FriendlyId {
   Sofa = "object_04_sofa",
   Stucco = "object_05_stuck",
   Poudreuse = "object_06_poudreuse",
+  Tableclock = "object_07_tableclock",
   Chair = "object_08_sessel",
   Clock = "object_11_uhr",
   Outdoor = "object_11_outdoor",
