@@ -3,7 +3,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
     src: string | StaticImageData;
     alt: string;
   width: number;
-  height: number;
+  height?: undefined;
 }
 
 const SbImage: React.FC<Props> = ({
