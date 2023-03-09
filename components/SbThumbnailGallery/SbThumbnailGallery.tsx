@@ -2,9 +2,9 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { Options } from '@splidejs/splide';
 import React, { ReactNode } from 'react';
 import { ImageType } from '../../types';
-import Image from 'next/image'
 import '@splidejs/react-splide/css';
 import thumbnailStyles from '../../assets/stylesheets/thumbnail.module.css'
+import SbImage from '../SbImage/SbImage';
 
 interface Props {
   images: ImageType[];
@@ -38,7 +38,7 @@ export class SbThumbnailGallery extends React.Component<Props> {
   renderSlides(): ReactNode[] {
     return this.props.images.map(slide => (
       <SplideSlide key={slide.url}>
-        <Image src={slide.url} alt={slide.alt} width={slide.width} height={slide.height} className={thumbnailStyles['thumbnail--image']} />
+        <SbImage src={slide.url} alt={slide.alt} width={slide.width} height={slide.height} className={thumbnailStyles['thumbnail--image']} />
       </SplideSlide>
     ));
   }
