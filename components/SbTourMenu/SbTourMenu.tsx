@@ -4,7 +4,12 @@ import { UserContextType } from '../../types';
 import SbButton from '../SbButton/SbButton';
 import tourMenuStyles from './SbTourMenu.module.css'
 
-const SbTourMenu: React.FC = ({
+interface Props {
+  toggleMenu: () => void;
+}
+
+const SbTourMenu: React.FC<Props> = ({
+  toggleMenu
 }) => {
 
   const { currentUser } = useContext(UserContext) as UserContextType
@@ -12,9 +17,9 @@ const SbTourMenu: React.FC = ({
   return (
     <div className={tourMenuStyles['tour-menu']}>
       <p>{`Hallo, ${currentUser?.playerName}!`}</p>
-        <SbButton>Weiterspielen</SbButton>
+      <SbButton onClick={() => toggleMenu()}>Weiterspielen</SbButton>
 
-        <SbButton>Spiel beenden</SbButton>
+      <SbButton href="/leaderboard">Spiel beenden</SbButton>
     </div>
   );
 }

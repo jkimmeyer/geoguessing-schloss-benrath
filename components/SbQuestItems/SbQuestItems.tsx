@@ -17,7 +17,7 @@ const SbQuestItems: React.FC<Props> = ({hiddenItems, foundItems}) => {
         <SbHeading color={HeadingColor.Dark} level={HeadingLevel.h2} size={HeadingSize.Large} title="Suche diese Gegenstände" />
 
         <stack-l class={questItemsStyles["quest-items--list"]}>
-          {hiddenItems.sort((a, b) => (a.id || 0) - (b.id || 0)).map((questItem, i) => {
+          {hiddenItems.sort((a, b) => (a.id || 0) - (b.id || 0)).slice(0,3).map((questItem, i) => {
             return <SbQuestItem questItem={questItem} key={i} />;
           })}
         </stack-l>

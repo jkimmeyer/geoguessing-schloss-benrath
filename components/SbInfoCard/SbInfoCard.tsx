@@ -2,7 +2,6 @@ import { BenrathObject, HeadingLevel, IconNames } from '../../types';
 import SbCard from '../SbCard/SbCard';
 import SbHeading from '../SbHeading/SbHeading';
 import infoCardStyles from './SbInfoCard.module.css';
-import Image from 'next/image'
 import SbButton from '../SbButton/SbButton';
 import SbIcon from '../SbIcon/SbIcon';
 import { SbThumbnailGallery } from '../SbThumbnailGallery/SbThumbnailGallery';
@@ -22,7 +21,6 @@ const SbInfoCard: React.FC<Props> = ({
       <SbCard>
         <SbButton onClick={() => buttonHandler()}>
           <SbIcon icon={IconNames.Back}></SbIcon>
-
         </SbButton>
 
 
