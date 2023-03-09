@@ -70,8 +70,8 @@ const womansWingInfo: BenrathObject = {
 
 const wineglass: BenrathObject = {
   title: "Weinglasabdruck",
-  subtitle: "",
-  description: "Die Getränkeausgabe war nicht in der Küche, sondern in der Nähe der Festtafel positioniert, und so konnten beim Öffnen von Champagnerflaschen oder beim Anzapfen von Bierfässern die Inhalte gelegentlich fontänenartig gegen die gefassten Wandpaneelen und Türen spritzen. Nicht selten entstanden dabei auch Flecken auf den Parkettböden. Während der Empfänge im Kuppelsaal stellten die Gäste ihre Gläser auf den Kamin simsen, Konsoltischen und auf die Stuckmarmorsockel der Putten mit Füllhörnern ab, was nachträglich an den sich abzeichnenden Ringen auf den kostbaren Oberflächen zu erkennen war. Zum Schutz dieser Flächen wurden ab 1963 passgenaue Glasplatten aufgelegt, wovon je doch die Puttensockel ausgenommen waren. Diese zeigen noch heute zahlreiche Ringe, die von Gläsern und Kaffee tassen herrühren.",
+  subtitle: "Alle Gläser hoch",
+  description: "Die Getränkeausgabe war nicht in der Küche, sondern in der Nähe der Festtafel positioniert. So konnten beim Öffnen von Champagnerflaschen oder beim Anzapfen von Bierfässern die Inhalte gelegentlich fontänenartig gegen die gefassten Wandpaneele und Türen spritzen. Nicht selten entstanden dabei auch Flecken auf den Parkettböden. Während der Empfänge im Kuppelsaal stellten die Gäste ihre Gläser auf den Simsen der Kamine, den Konsoltischen und auf die Sockel aus Stuck und Marmor der Putten mit Füllhörnern ab. Noch heute zeichnen sich durch die Flüssigkeiten verursachte Ringe auf den kostbaren Oberflächen ab. Zum Schutz dieser Flächen wurden ab 1963 passgenaue Glasplatten aufgelegt, wovon jedoch die Puttensockel ausgenommen waren. Diese zeigen noch heute zahlreiche Ringe, die von Gläsern und Kaffeetassen herrühren.",
   room: Room.DomeHall,
   thumbnail: {
     url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677421657/detailshots/object_02_wineglass/object_02_wineglass_02_dxhjpq.jpg",
@@ -138,7 +138,7 @@ const domeHallFresco: BenrathObject = {
 const domeHallInfo: BenrathObject = {
   title: "Der Kuppelsaal",
   subtitle: "Das Herz des Schloss Benrath",
-  description: "Vor 250 Jahren war Schloss Benrath noch umgeben von Wäldern und Wiesen. Dies macht es zum optimalen Ausgangspunkt für Kurfürstliche Jagdausflüge. So ist es kaum verwunderlich, dass sich das im Kuppelsaal verweise auf die jagd entdecken lassen. Einer dieser Verweise befindet sich in der kuppel. Auch im Stuck an den Wänden des Kursaals lassen sich veiel Jagd motive entdecken. Beispielsweise Jagdhunde, und Jagdnetze. Noch eine weitere Verbindung, dass das Jagt Motiv zu die Schlossherin Elisabeth Auguste war passionierte Jägerin ihrer Jagdleidenschaft, wurde ebenfalls im Kuppelsaal verewigt. Über einem Spiegel sehen wir Elisabeth Auguste im Profil mit einer Mondsichel im Haar.Die Mondsichel ist eines der typischen Merkmale von Diana. Elisabeth Auguste wird hier also selbst zur Göttin der Jagd. Der von einer zweischaligen Kuppel überfangene Hauptsaal nach dem Muster eines Salon à l'italienne wird vom sternförmig verlegten Lahnmarmor des Bodens sowie dem Stuckmarmor seines Aufrisses bestimmt. Zu drei Seiten nach Süden mittels hoher Fenstertüren belichtet gliedern acht korinthische Pilasterpaare die Fassade. Zwischen ihnen stehen Puttenpaare mit Füllhörnern, festliches Stuckgehänge undJagdutensilien verweisen auf das bestimmende Thema. Die kassettierte Decke stellt einen Verweis auf das römische Pantheon dar, wobei der Antikenbezug noch nicht die Puristik des aufziehenden Klassizismus besitzt, wiewenige Jahre später etwa in Wörlitz (Schloss) oder Kassel.",
+  description: "Vor 250 Jahren war Schloss Benrath noch umgeben von Wäldern und Wiesen. Dies macht es zum optimalen Ausgangspunkt für kurfürstliche Jagdausflüge. So ist es kaum verwunderlich, dass sich das im Kuppelsaal Verweise auf die Jagd entdecken lassen. Einer dieser Hinweise befindet sich in der Kuppel. Auch im Stuck an den Wänden des Kursaals lassen sich viel Jagdmotive entdecken. Beispielsweise Jagdhunde, und Jagdnetze. Über einem Spiegel sehen wir Elisabeth Auguste im Profil, mit einer Mondsichel im Haar. Die Mondsichel ist eines der typischen Merkmale von Diana. Elisabeth Auguste wird hier also selbst zur Göttin der Jagd. Der von einer zweischaligen Kuppel überfangene Hauptsaal nach dem Muster eines Salon à l'italienne wird vom sternförmig verlegten Lahnmarmor des Bodens sowie dem Stuckmarmor seines Aufrisses bestimmt. Zu drei Seiten nach Süden, mittels hoher Fenstertüren belichtet, gliedern acht korinthische Pilasterpaare die Fassade. Zwischen ihnen stehen Puttenpaare mit Füllhörnern, festliches Stuckgehänge und Jagdutensilien. Die kassettierte Decke stellt einen Bezug zum römischen Pantheon her.",
   room: Room.DomeHall,
   thumbnail: {
     url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678367501/detailshots/info_02_domeHallInfo/info_02_domeHallInfo-01_azo3vd.jpg",
@@ -177,7 +177,7 @@ const domeHallInfo: BenrathObject = {
 
 const lake: BenrathObject = {
   title: "Spiegelweiher",
-  description: "Der 470 Meter lange Spiegelweiher bildet die Hauptachse und entspricht der im Gebäude  liegenden Mittelachse mit Vestibül und Kuppelsaal. Der Weiher wird von  Rasenstreifen und hohen Bäumen gesäumt. Sein reflektierender Wasserspiegel verstärkt den Lichteinfall in die Räume des Schlosses, welches sich wiederum von ferne gesehen in der ruhigen Wasserfläche spiegelt.",
+  description: "Der 470 Meter lange Spiegelweiher bildet die Hauptachse und entspricht der im Gebäude liegenden Mittelachse mit Vestibül und Kuppelsaal. Der Weiher wird von  Rasenstreifen und hohen Bäumen gesäumt. Sein reflektierender Wasserspiegel verstärkt den Lichteinfall in die Räume des Schlosses, welches sich wiederum von ferne gesehen in der ruhigen Wasserfläche spiegelt.",
   room: Room.WomansWing,
   thumbnail: {
     url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677749083/detailshots/object_02_lake/object_02_lake_01_sjvfnb.jpg",
@@ -204,8 +204,8 @@ const lake: BenrathObject = {
 
 const table: BenrathObject = {
   title: "Konsolentisch",
-  subtitle: "Bei Empfangsvorbereitungen wurde das Bein abgebrochen",
-  description: "Klimatisch bedingte Schände entwickeln sich durch Quell- und Schwindprozesse der unterschiedlichen verbauten Materialien langsam, dafür jedoch in einem beträchtlichen Ausmaß. Erst mit der Zeit wurden Rissbildungen und Verformungen an den Parketthölzern sichtbar, zu deren Entstehung auch die Beheizung mancher Kellerräume beitrug. Vergleichbare Schadensphänomene zeigten sich an den Wandvertäfelungen – aufstehende und sich ablösende Fassungsschichten deuteten auf Bereiche des Holzträgers hin, die Risse und geöffnete Fugen aufwiesen. Aufbrechende und sich lösende Fassungsschichten waren zudem an den mit Polimentvergoldung versehenen Zierleisten, Rahmen und Konsoltischen zu verzeichnen.",
+  subtitle: "Spuren der Zeit",
+  description: "Klimatisch bedingte Schäden entwickeln sich durch Quell- und Schwindprozesse der unterschiedlichen verbauten Materialien langsam, dafür jedoch in einem beträchtlichen Ausmaß. Erst mit der Zeit wurden Rissbildungen und Verformungen an den Parketthölzern sichtbar, zu deren Entstehung auch die Beheizung mancher Kellerräume beitrug. Vergleichbare Schadensphänomene zeigten sich an den Wandvertäfelungen – aufstehende und sich ablösende Fassungsschichten deuteten auf Bereiche des Holzträgers hin, die Risse und geöffnete Fugen aufwiesen. Aufbrechende und sich lösende Fassungsschichten waren zudem an den mit Polimentvergoldung versehenen Zierleisten, Rahmen und Konsoltischen zu verzeichnen.",
   room: Room.DomeHall,
   thumbnail: {
     url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677421997/detailshots/object_03_table/object_03_table_01_esojhc.jpg",
@@ -233,7 +233,7 @@ const table: BenrathObject = {
 const mansWingInfo: BenrathObject = {
   title: "Der Herrenflügel",
   subtitle: "Der westliche Schlossflügel",
-  description: "Der westliche Gartensaal ist ebenfalls Teil des Museum Corps de Logis und befindet sich gegenüber dem östlichen Gartensaal. Er ist ein eleganter Raum mit einer feinen Stuckdekoration und einem Deckengemälde von Johann Baptist Zimmermann. Der Raum wurde als Musikzimmer für den Kurfürsten und seine Gäste genutzt.",
+  description: "Der westliche Gartensaal, auch Herrensaal genannt, ist ebenfalls Teil des Museum Corps de Logis und befindet sich gegenüber dem östlichen Gartensaal, dem Damensaal. Er ist ein eleganter Raum mit einer feinen Stuckdekoration und einem Deckengemälde von Johann Baptist Zimmermann. Der Raum wurde als Musikzimmer für den Kurfürsten und seine Gäste genutzt.",
   room: Room.MansWing,
   thumbnail: {
     url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678368468/detailshots/info_03_mansWingInfo/info_03_mansWingInfo-01_a4qmvt.jpg",
@@ -267,7 +267,7 @@ const mansWingInfo: BenrathObject = {
 const sofa: BenrathObject = {
   title: "Muschelbett",
   subtitle: "Schlafen, wie eine Herrscherin",
-  description: "Das Sofa wurde als Bett genutzt und ist von Elisabeth Augusta. Das Bett war Teil einer offenen Muschel, welche die gesamte Höhe der Bettnische einnahm. Dies geht aus Zeichnungen des Schlossarchitekten Nicolas de Pigage sowie aus Reisebereichten aus dem 18. Jahrhundert hervor.",
+  description: "Das Sofa wurde als Bett genutzt und ist von Elisabeth Auguste. Das Bett war Teil einer offenen Muschel, welche die gesamte Höhe der Bettnische einnahm. Dies geht aus Zeichnungen des Schlossarchitekten Nicolas de Pigage sowie aus Reisebereichten aus dem 18. Jahrhundert hervor.",
   room: Room.HexagonRoomEast,
   thumbnail: {
     url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677749171/detailshots/object_04_sofa/object_04_sofa_01_ll9ayj.jpg",
@@ -307,7 +307,7 @@ const sofa: BenrathObject = {
 const stuck: BenrathObject = {
   title: "Badezimmer",
   subtitle: "Kunstwerk aus Stuck",
-  description: "Die Bäder manifestieren einmal mehr, dass die Raumökonomie des kurfürstlichen Landschlosses rationalen. An Sprüchen folgte, was ihrer luxuriösen Ausstattung jedoch keinen Abbruch tat. Beide Bäder bestehen aus großen Nischen, die unmittelbar an den Hof angrenzen. Die Wände zieren künstlerisch großartige Stuckdekorationen: Im Bad des Kurfürsten bildet der Stuck eine Eichenlaub Grotte, in deren Zentrum zwei Satyrputten eine Amphora halten, unter der die Wanne platziert werden sollte. Im Bad der Kurfürstin bildet eine stuckierte Tropfstein wand den unteren Bereich. Zwei weibliche Hermen tragen ein gebauschtes Tuch, das den oberen Bereich verdeckt.",
+  description: "Die Bäder manifestieren einmal mehr, dass die Raumökonomie des kurfürstlichen Landschlosses rationalen Ansprüchen folgte, was ihrer luxuriösen Ausstattung jedoch keinen Abbruch tat. Beide Bäder bestehen aus großen Nischen, die unmittelbar an den Hof angrenzen. Die Wände zieren künstlerisch großartige Stuckdekorationen: Im Bad des Kurfürsten bildet der Stuck eine Eichenlaub Grotte, in deren Zentrum zwei Satyrputten eine Amphora halten, unter der die Wanne platziert werden sollte. Im Bad der Kurfürstin bildet eine stuckierte Tropfsteinwand den unteren Bereich. Zwei weibliche Hermen tragen ein gebauschtes Tuch, das den oberen Bereich verdeckt.",
   room: Room.BathEast,
   thumbnail: {
     url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677753477/detailshots/object_05_stuck/object_05_stuck-01_a6favb.jpg",
@@ -340,7 +340,7 @@ const stuck: BenrathObject = {
 const poudreuse: BenrathObject = {
   title: "Poudreuse",
   subtitle: "Der historische Schminktisch",
-  description: "Möbeltyp entstand um 1745 in Frankreich. Mittelplatte lässt sich herausziehen und als Spiegel aufstellen. Infos in Buch",
+  description: "Dieser Möbeltype entstand um 1745 in Frankreich. Die Mittelplatte des Tisches lässt sich herausziehen und als Spiegel aufstellen. Wie der Name erahnen lässt, wurde dieser Tisch zum schminken und pudern genutzt.",
   room: Room.MakeupRoomEast,
   thumbnail: {
     url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677690712/detailshots/object_06_poudreuse/object_06_poudreuse-01_vm96gz.jpg",
@@ -365,10 +365,43 @@ const poudreuse: BenrathObject = {
   friendlyId: FriendlyId.Poudreuse,
 }
 
+const tableclock: BenrathObject = {
+  title: "Portaluhr mit Obelisken und Taubenpaar",
+  description: "Diese um 1780 angefertigte und reich dekorierte Pendeluhr bildet mit sechs Säulen ein großes, repräsentatives Portal und entspricht damit dem verbreiteten Typus der Portaluhren. Ihre Säulen stehen auf einer an den Seiten abgerundeten Grundplatte aus Marmor, die mit Friesen aus vergoldeter Bronze verziert ist. Das große Uhrwerk, aus Messing und Stahl mit einer Laufdauer von 14 Tagen pro Aufzug mittels eines Schlüssels durch die im Zifferblatt angebrachten Aufzugslöcher, besitzt als technische Besonderheit eine Grahamhemmung. Diese Hemmung ist in französischen Pendeluhren selten zu finden und macht diese Uhr zu einer frühen Präzisionsuhr. Das schwach gewölbte Zifferblatt aus weißer Emaille besitzt eine Punktminuterie, sowie arabische Stundenzahlen. Die bei dieser Uhr asymmetrisch angeordneten Aufzugslöcher sind bei Uhren aus dieser Zeit zur Seltenheit geworden. Stunden- und Minutenzeiger aus vergoldeter Bronze sind streng klassizistisch ausgeführt, wobei der Stundenzeiger in einer Lilie ausläuft. Das Zifferblatt verschließt ein gewölbtes Uhrglas, das von einer verzierten Messinglünette eingefasst wird. Kunstvoll ist in roter Schrift die Signatur LeJeune a Paris aufgebracht.",
+  room: Room.OvenRoomEast,
+  thumbnail: {
+    url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677690820/detailshots/object_07_tableclock/object_07_tableclock-01_pzg9cs.jpg",
+    alt: "Detailaufnahme der Verzierung der Portaluhr",
+    width: 6000,
+    height: 4000,
+  },
+  imageUrls: [
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677690820/detailshots/object_07_tableclock/object_07_tableclock-01_pzg9cs.jpg",
+      alt: "Detailaufnahme der Verzierung der Portaluhr",
+      width: 6000,
+      height: 4000,
+    },
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677690820/detailshots/object_07_tableclock/object_07_tableclock-02_bfl1ie.jpg",
+      alt: "Ziffernblatt der Portaluhr",
+      width: 6000,
+      height: 4000,
+    },
+    {
+      url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677690820/detailshots/object_07_tableclock/object_07_tableclock-03_zh1zzf.jpg",
+      alt: "Totalaufnahme der Portaluhr",
+      width: 6000,
+      height: 4000,
+    }
+  ],
+  friendlyId: FriendlyId.Tableclock,
+}
+
 const sessel: BenrathObject = {
   title: "Sessel mit Seidenbezug",
   subtitle: "Sitzen, wie eine Herrscherin",
-  description: "Sessel mit gelbem Seidenbezug aus erster Ausstattungsphase um ca. 1770. Muster passend zur Tapete. Besonders hierbei: Die weite Sitzöffnung. So war es auch Damen, die in Röcken gekleidet waren, erlaubt, sich leicht seitlich auf den Sessel zu setzen und sich von ihrer 'schönen' Seite zu zeigen.",
+  description: "Dieser Sessel mit gelbem Seidenbezug stammt aus der ersten Ausstattungsphase um ca. 1770. Das Muster ist passend zur Tapete im Raum gehalten. Die Besonderheit bei diesem Möbelstück: Die weite Sitzöffnung. So war es auch Damen, die in Röcken gekleidet waren, erlaubt, sich leicht seitlich auf den Sessel zu setzen und sich von ihrer 'schönen' Seite zu zeigen.",
   room: Room.RoomNorthEast,
   thumbnail: {
     url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677690868/detailshots/object_08_sessel/object_08_sessel-01_lyr2ic.jpg",
@@ -396,7 +429,7 @@ const sessel: BenrathObject = {
 const uhr: BenrathObject = {
   title: "Uhren",
   subtitle: "Eine einzigartige Sammlung",
-  description: "In vielen Räumen des Schlossen findet man heute noch historische Uhren. Viele stehen auf Kaminsimsen und Möblen oder hängen an den Seidentapenten. Noch heute verfügt das Schloss über drei fest verbaute Uhren, von denen zwei in Jahre 1771 hergestellt wurden. Viele Wand- und Kaminuhren aus der Urspruchgsausstattung gingen durch veränderte Besitzverhätnisse verloren. Seit 1945 wurde immer mehr Aufmerksamkeit auf die ergäzung der Sammlung gelegt. Vor kurzem wurde eine sehr besondere Tischpendeluhr, die der kurpfälzische Uhrmacher Guillaume Cornille um 1770 in Düsseldorf für das Schloss Benrath anfertigte, erworben.",
+  description: "In vielen Räumen des Schlosses findet man heute noch historische Uhren. Eine Vielzahl dieser stehen auf Kaminsimsen und Möblen oder hängen an den Seidentapenten. Noch heute verfügt das Schloss über drei fest verbaute Uhren, von denen zwei im Jahre 1771 hergestellt wurden. Viele Wand- und Kaminuhren aus der Ursprungsausstattung gingen durch veränderte Besitzverhältnisse verloren. Seit 1945 wurde immer mehr Arbeit in die Ergänzung der Sammlung gesteckt. Vor kurzem erst wurde eine sehr besondere Tischpendeluhr, die der kurpfälzische Uhrmacher Guillaume Cornille um 1770 in Düsseldorf für das Schloss Benrath anfertigte, erworben.",
   room: Room.EntranceHall,
   thumbnail: {
     url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1677690928/detailshots/object_11_uhr/object_11_uhr-01_ho46ow.jpg",
@@ -424,7 +457,7 @@ const uhr: BenrathObject = {
 const outdoor: BenrathObject = {
   title: "Der Anstrich des Schlosses",
   subtitle: "Peach Blossom oder Pfirsichblüte",
-  description: "Die Farbe des Schlosses wurde anhand von historischen Malereien rekonstruiert. Ob das Altrosa der tatsächliche ursprüngliche Farbton des historischen Schlosses war, kann nicht gänzlich geklärt werden.",
+  description: "Die Farbe des Schlosses wurde anhand von historischen Malereien rekonstruiert. Ob das Altrosa, auch bekannt unter dem Namen 'Pfirsichblüte', der tatsächliche ursprüngliche Farbton des historischen Schlosses war, kann nicht gänzlich geklärt werden. Die Pracht der Farbe ist jedoch unumstritten.",
   room: Room.EntranceHall,
   thumbnail: {
     url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678369712/detailshots/object_11_outddor/object_11_outdoor-01_eyusap.jpg",
@@ -452,7 +485,7 @@ const outdoor: BenrathObject = {
 const entranceHallInfo: BenrathObject = {
   title: "Die Eingangshalle",
   subtitle: "Willkommen im Schloss Benrath",
-  description: "In der Mittelachse der Nordseite liegt das mit dem Portikus bereits in der Fassade angekündigte elegante Vestibül. Nach Süden grenzt unmittelbar der prachtvollste Raum des Baus an. der die Südfassade vertiefendeund zwei Gartensäle flankierende Kuppelsaal. Die beiden galerieartigen Säle zählen bereits zu den kurfürstlichen Appartements, die nach Norden hin jeweils um Schlafzimmer und Kabinett ergänzt werden. Damit werden die herrschaftlichen Funktions bereiche von der Mittelachse aus symmetrisch gespiegelt und entsprechen dem System des Appartement double. Der zwischen den durch die Fassadenfenster belichteten Appartements liegende Bereich ist um zwei ovale Höfe gruppiert. Im Vestibül werden dabei herrschaftliche und bukolische Dimensionen verschränkt. Der hohe längsrechteckige Raum wird durch einen Boden aus Marmorplatten sowie flacheWand und Deckenreliefs charakterisiert. Die drei Fensterachsen der Nordfassade besitzenihre Entsprechung in drei Türöffnungen an der Südseite, vondenen die mittlere den Durchgang in den Kuppelsaal öffnet, während die beiden anderen zu Treppen in die privaten Bäder bzw. das Zwischengeschoss führen. Die Türöffnungen der Enfilade an der Nordfassade sowie die Fenstertüren zum Lichthof werden von Supraporten mit Reliefdarstellungen der vier Jahreszeiten bekrönt. Die Lünetten der Schmalseiten sind mit Schlusssteinmasken versehen, die ebenfalls die Jahreszeiten thematisieren, während in den Mittelachsen Sol und Luna den Wechsel der Tages und Nachtzeiten darstellen. Ammarkantesten treten die Reliefsmit der Darstellung der vier Elemente an den Längs seiten in Erscheinung, die nach dem Vorbilddes Treppenhauses im Mann heimer Schloss, der wichtigsten architektonischen und ornamentalen Referenz des Ben rather Schlosses, in je eigenen Feldern platziert wurden.",
+  description: "In der Mittelachse der Nordseite liegt das mit dem Portikus bereits in der Fassade angekündigte elegante Vestibül. Nach Süden grenzt unmittelbar der prachtvollste Raum des Baus an. Die beiden galerieartigen Säle zählen bereits zu den kurfürstlichen Appartements, die nach Norden hin jeweils um Schlafzimmer und Kabinett ergänzt werden. Damit werden die herrschaftlichen Funktionsbereiche von der Mittelachse aus symmetrisch gespiegelt und entsprechen dem System des ‚Appartement double‘. Der zwischen den durch die Fassadenfenster belichteten Appartements liegende Bereich ist um zwei ovale Höfe gruppiert. Im Vestibül werden dabei herrschaftliche und bukolische Dimensionen verschränkt. Der hohe längsrechteckige Raum wird durch einen Boden aus Marmorplatten sowie flache Wände und Deckenreliefs charakterisiert. Die drei Fensterachsen der Nordfassade besitzen ihre Entsprechung in drei Türöffnungen an der Südseite, von denen die mittlere den Durchgang in den Kuppelsaal öffnet, während die beiden anderen zu Treppen in die privaten Bäder bzw. das Zwischengeschoss führen. Die Türöffnungen der Enfilade an der Nordfassade sowie die Fenstertüren zum Lichthof werden von Supraporten mit Reliefdarstellungen der vier Jahreszeiten bekrönt. Die Lünetten der Schmalseiten sind mit Schlusssteinmasken versehen, die ebenfalls die Jahreszeiten thematisieren, während in den Mittelachsen Sol und Luna den Wechsel des Tages- und Nachtrhythmus darstellen. Am markantesten treten die Reliefs mit der Darstellung der vier Elemente an den Längsseiten in Erscheinung, die nach dem Vorbild des Treppenhauses im Mannheimer Schloss, der wichtigsten architektonischen und ornamentalen Referenz des Benrather Schlosses, in je eigenen Feldern platziert wurden.",
   room: Room.EntranceHall,
   thumbnail: {
     url: "https://res.cloudinary.com/dzp9ta4c7/image/upload/v1678370802/detailshots/info_11_entranceHallInfo/info_11_entranceHallInfo-01_g8uj0r.jpg",
@@ -634,6 +667,7 @@ export const benrathObjects: BenrathObject[] = [
   sofa,
   stuck,
   poudreuse,
+  tableclock,
   sessel,
   uhr,
   outdoor,
