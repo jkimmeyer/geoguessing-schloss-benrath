@@ -1,4 +1,5 @@
 .info-card {
+  block-size: 100%;
   pointer-events: all;
 }
 
@@ -7,6 +8,7 @@
 }
 
 .info-card--content {
+  overflow-y: auto;
   align-items: start;
   gap: var(--spacing-32);
   padding: var(--spacing-16);
@@ -19,4 +21,9 @@
 .info-card--image {
   inline-size: auto;
   max-block-size: 300px;
+}
+
+.info-card--button {
+  margin-block-end: 25px;
+  text-align: center;
 }

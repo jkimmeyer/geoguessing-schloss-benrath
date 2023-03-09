@@ -21,7 +21,7 @@ const Overlay = () => {
     }
   }
 
-  const {foundItems, hiddenItems, score} = useGame()
+  const {foundItems, hiddenItems, score, gameFinished, gameFinishedOverlayOpen} = useGame()
 
   useEffect(() => {
     subscribe("game:paused", buttonHandler)
@@ -54,6 +54,8 @@ const Overlay = () => {
         onboarding={onboardingCompleted}
         toggleOnboarding={toggleOnboarding}
         hiddenItems={hiddenItems}
+        gameFinished={gameFinished}
+        gameFinishedOverlayOpen={gameFinishedOverlayOpen}
         foundItems={foundItems}
         score={score}
       />
