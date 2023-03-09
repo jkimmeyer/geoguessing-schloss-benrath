@@ -95,6 +95,7 @@ function onVirtualTourInit() {
 function onVirtualTourLoaded() {
   disposePreloader();
   document.getElementById("7").style.display = "none";
+  document.querySelector("#\\31 19 > div:nth-child(2) > div").style.overflow = "hidden";
 }
 
 function onVirtualTourEnded() {

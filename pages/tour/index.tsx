@@ -112,7 +112,7 @@ export default function index() {
         </div>
       </div>
 
-      <div id="viewer" className="fill-viewport viewer-class">
+      <div id="viewer" className={`fill-viewport viewer-class ${indexStyles["page"]}`}>
         <Overlay />
       </div>
     </div>
