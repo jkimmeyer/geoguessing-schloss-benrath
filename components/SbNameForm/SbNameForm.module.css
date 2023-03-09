@@ -56,5 +56,11 @@
 }
 
 .name-form--person-icon {
+  display: flex;
   font-size: 1.5rem;
+  color: var(--color-text);
+
+  &[data-active='true'] {
+    color: var(--color-primary);
+  }
 }

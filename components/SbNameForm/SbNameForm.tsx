@@ -12,7 +12,7 @@ export const SbNameForm = () => {
   const [result, setResult] = useState('')
   const [loading, setLoading] = useState(false)
 
-  const { setCurrentUser } = useContext(UserContext) as UserContextType
+  const {currentUser, setCurrentUser } = useContext(UserContext) as UserContextType
 
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
     setPlayername(event.currentTarget.value);
@@ -77,7 +77,10 @@ export const SbNameForm = () => {
         }
 
         {!loading &&
-          <div className={sbNameFormStyles['name-form--icon'] + ' ' + sbNameFormStyles['name-form--person-icon']}>
+          <div
+            className={sbNameFormStyles['name-form--icon'] + ' ' + sbNameFormStyles['name-form--person-icon']}
+            data-active={currentUser?.playerName !== '' && currentUser?.playerName !== null && currentUser?.playerName !== undefined}
+          >
             <SbIcon icon={ IconNames.Person}></SbIcon>
           </div>
         }
