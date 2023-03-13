@@ -1,3 +1,9 @@
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100vh;
+}
+
 .landing-page-image {
   block-size: auto;
 }

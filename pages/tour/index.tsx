@@ -14,7 +14,7 @@ const Overlay = () => {
   const [overlayOpen, setOverlayOpen] = useState(true);
 
   const buttonHandler = (event: CustomEvent) => {
-    if (event.detail.noOverlay) {
+    if (event.detail.noOverlay || !onboardingCompleted) {
       return
     } else {
       setOverlayOpen(current => !current)
@@ -29,6 +29,7 @@ const Overlay = () => {
 
     return () => {
       unsubscribe("game:paused", buttonHandler)
+      unsubscribe("game:resume", buttonHandler)
     }
   })
 
@@ -43,6 +44,7 @@ const Overlay = () => {
 
     toggleOnboardingCompleted(current => !current)
     publish("game:started", {})
+    setOverlayOpen(current => !current)
   }
   return (
     <SbOverlay withContent={overlayOpen}>

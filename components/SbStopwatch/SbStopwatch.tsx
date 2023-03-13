@@ -19,17 +19,23 @@ export const MyStopwatch = () => {
     setTimeForLast({seconds, minutes, hours})
   }
 
+  const resume = () => {
+    if (seconds > 0 || minutes > 0 || hours > 0) {
+      start()
+    }
+  }
+
   useEffect(() => {
     subscribe('game:started', start)
     subscribe('game:paused', pause)
-    subscribe('game:resume', start)
+    subscribe('game:resume', resume)
     subscribe('game:reset', reset)
     subscribe('game:addScore', addScore)
 
     return () => {
       unsubscribe('game:started', start)
       unsubscribe('game:paused', pause)
-      unsubscribe('game:resume', start)
+      unsubscribe('game:resume', resume)
       unsubscribe('game:reset', reset)
       unsubscribe('game:addScore', addScore)
       reset
