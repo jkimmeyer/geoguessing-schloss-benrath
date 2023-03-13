@@ -13,6 +13,7 @@ import angelSculptures from '../assets/images/Angel_Sculptures.jpg'
 import SbTitle from '../components/SbTitle/SbTitle';
 import { landingPageImages } from '../landingPageImages';
 import landingPageStyles from '../assets/stylesheets/landing-page.module.css';
+import SbFooter from '../components/SbFooter/SbFooter';
 import SbImage from '../components/SbImage/SbImage';
 
 export default function Home() {
@@ -86,6 +87,7 @@ export default function Home() {
           { t('landingPage.startTour') }
         </SbButton>
       </Page>
+      <SbFooter></SbFooter>
     </div>
   )
 }
