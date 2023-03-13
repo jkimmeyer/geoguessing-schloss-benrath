@@ -1,9 +1,8 @@
-import Router from "next/router";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { benrathObjects } from "../benrathObjects";
+import { UserContext } from "../context/userContext";
 import { publish, subscribe, unsubscribe } from "../lib/events";
-import { BenrathObject } from "../types";
-
+import { BenrathObject, UserContextType } from "../types";
 /**
  * Shuffles array in place. ES6 version
  * @param {Array} a items An array containing the items.
@@ -33,25 +32,33 @@ export function useGame() {
   const [hiddenItems, setHiddenItems] = useState(questItems);
   const [currentItemId, setCurrentItemId] = useState(0);
   const [score, setScore] = useState(0);
+  const [gameFinished, setGameFinished] = useState(false);
+  const [gameFinishedOverlayOpen, setGameFinishedOverlayOpen] = useState(false);
+
 
   const objectFound = (event: CustomEvent) => {
     const benrathObjectId = event.detail.objectId;
     const benrathObject = findBenrathObject(hiddenItems, benrathObjectId)
     const foundBenrathObject = findBenrathObject(foundItems, benrathObjectId)
 
-    if (!benrathObject || benrathObject.id != currentItemId) { return }
-    if (foundBenrathObject) {
-      alert("Diesen Gegenstand hast du schon gefunden!")
+    if (!benrathObject || benrathObject.id != currentItemId) {
+      if (foundBenrathObject) {
+        publish("game:flash", { message: "Diesen Gegenstand hast du schon gefunden!", type: "neutral" })
+      }
       return
     }
+
+
 
     setHiddenItems((current) => current.filter((item) => item.id != currentItemId))
     setFoundItems((foundItems) => [...foundItems, benrathObject])
     setCurrentItemId(current => current + 1)
     publish("game:addScore", {})
+    publish("game:flash", { message: "Neuen Gegenstand gefunden!", type: "success" })
 
-    if (hiddenItems.length === 0) {
-      Router.push('/leaderboard')
+    if (hiddenItems.length <= 1) {
+      setGameFinished(true);
+      setGameFinishedOverlayOpen(true)
     }
   }
 
@@ -78,10 +85,35 @@ export function useGame() {
       }
     }
 
-    if (duration >= SECONDS_TO_FIND_OBJECTS || duration === 0) {
-      setScore(current => current + 0)
+
+    if (duration >= SECONDS_TO_FIND_OBJECTS) {
+      setScore((current) => {
+        const score = current + 0
+        postData(score)
+        return score
+      })
     } else {
-      setScore(current => (current + SECONDS_TO_FIND_OBJECTS - duration))
+      setScore((current) => {
+        const score = current + SECONDS_TO_FIND_OBJECTS - duration
+        postData(score);
+        return score;
+      })
+    }
+  }
+
+  const { currentUser } = useContext(UserContext) as UserContextType
+
+  const postData = async (score: number) => {
+    try {
+      const body = { playerName: currentUser?.playerName, score: score };
+      const response = await fetch(`/api/rankings/edit`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      return response.json()
+    } catch (error) {
+      console.error(error);
     }
   }
 
@@ -103,6 +135,9 @@ export function useGame() {
     foundItems,
     hiddenItems,
     score,
-    setScore
+    setScore,
+    gameFinished,
+    gameFinishedOverlayOpen,
+    setGameFinishedOverlayOpen
   }
 }

@@ -1,6 +1,7 @@
 
 import Image from 'next/image';
 import { BenrathObject } from '../../types';
+import SbImage from '../SbImage/SbImage';
 import questItemStyles from './SbQuestItem.module.css';
 
 interface Props {
@@ -17,7 +18,7 @@ const SbQuestItem: React.FC<Props> = ({
 }) => {
   return (
     <div className={questItemStyles["quest-item"]} data-active={isNext} data-grid={inGrid}>
-      <Image
+      <SbImage
         className={questItemStyles["quest-item--image"]}
         src={questItem.thumbnail.url}
         alt={questItem.thumbnail.alt}
@@ -25,7 +26,7 @@ const SbQuestItem: React.FC<Props> = ({
         height={questItem.thumbnail.height}
       />
 
-    <div className="quest-item--title">
+    <div className={questItemStyles["quest-item--title"]}>
       {questItem.title}
       </div>
     </div>

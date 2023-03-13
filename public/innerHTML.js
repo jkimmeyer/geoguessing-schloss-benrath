@@ -61,6 +61,7 @@ function loadTour() {
   tour.bind(TDV.Tour.EVENT_TOUR_LOADED, onVirtualTourLoaded);
   tour.bind(TDV.Tour.EVENT_TOUR_ENDED, onVirtualTourEnded);
   tour.load();
+  window.tour = tour
 }
 
 function pauseTour() {
@@ -95,6 +96,7 @@ function onVirtualTourInit() {
 function onVirtualTourLoaded() {
   disposePreloader();
   document.getElementById("7").style.display = "none";
+  document.querySelector("#\\31 19 > div:nth-child(2) > div").style.overflow = "hidden";
 }
 
 function onVirtualTourEnded() {

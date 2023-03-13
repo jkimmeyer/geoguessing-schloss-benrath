@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { ImageType } from '../../types'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
+import SbImage from '../SbImage/SbImage';
 
 interface Props {
   images: ImageType[],
@@ -37,7 +38,7 @@ const SbImageSlider: React.FC<Props> = ({
         } }}>
       {images.map((image, index) => (
         <SplideSlide key={index}>
-          <Image src={image.url} alt={image.alt} width={320}
+          <SbImage src={image.url} alt={image.alt} width={320}
             height={180} />
         </SplideSlide>
       ))}

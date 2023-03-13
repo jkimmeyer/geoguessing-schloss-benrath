@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { IconNames } from "../../types";
 import SbIcon from "../SbIcon/SbIcon";
 import SbTourMenu from "../SbTourMenu/SbTourMenu";
@@ -8,7 +8,7 @@ import { publish } from "../../lib/events";
 export const SbMenuOverlay = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
+  const toggleMenu = useCallback(() => {
     if (menuOpen) {
       publish('game:resume', {})
     } else {
@@ -16,7 +16,25 @@ export const SbMenuOverlay = () => {
     }
 
     setMenuOpen(current => !current)
-  };
+  }, [menuOpen]);
+
+  const escFunction = useCallback((event: KeyboardEvent) => {
+    if (event.key === "Escape") {
+      if (menuOpen) {
+        publish('game:resume', {})
+      }
+
+      setMenuOpen(false)
+    }
+  }, [menuOpen]);
+
+  useEffect(() => {
+    document.addEventListener("keydown", escFunction, false);
+
+    return () => {
+      document.removeEventListener("keydown", escFunction, false);
+    };
+  }, [escFunction]);
 
   return (
     <div className={sbMenuFrameStyles['menu-frame--menu-container']} data-menu>
@@ -24,7 +42,7 @@ export const SbMenuOverlay = () => {
 
         {menuOpen &&
           <div className={sbMenuFrameStyles["menu-frame--overlay-menu"]}>
-            <SbTourMenu />
+            <SbTourMenu toggleMenu={toggleMenu} />
           </div>
         }
 

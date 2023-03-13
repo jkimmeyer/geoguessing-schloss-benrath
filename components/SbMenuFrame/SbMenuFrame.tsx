@@ -1,11 +1,14 @@
-import { ReactNode } from 'react';
+import { ReactNode, useCallback, useEffect, useState } from 'react';
 import { useCommunication } from '../../hooks/useCommunication';
+import { useGame } from '../../hooks/useGame';
+import { publish } from '../../lib/events';
 import { BenrathObject } from '../../types';
 import SbInfoCard from '../SbInfoCard/SbInfoCard';
 import { SbMapOverlay } from '../SbMapOverlay/SbMapOverlay';
 import { SbMenuOverlay } from '../SbMenuOverlay/SbMenuOverlay';
 import SbOnboarding from '../SbOnboarding/SbOnboarding';
 import { SbQuestItemsOverlay } from '../SbQuestItemsOverlay/SbQuestItemsOverlay';
+import SbSuccessOverlay from '../SbSuccessOverlay/SbSuccessOverlay';
 import SbTourFrame from '../SbTourFrame/SbTourFrame';
 import sbMenuFrameStyles from './SbMenuFrame.module.css'
 
@@ -17,8 +20,9 @@ interface Props {
   hiddenItems: BenrathObject[];
   foundItems: BenrathObject[];
   score: number;
+  gameFinished: boolean;
+  gameFinishedOverlayOpen: boolean;
 }
-
 
 const SbMenuFrame: React.FC<Props> = ({
   timer,
@@ -27,11 +31,42 @@ const SbMenuFrame: React.FC<Props> = ({
   toggleOnboarding,
   hiddenItems,
   foundItems,
-  score
+  score,
+  gameFinished,
 }) => {
   const { currentObjectOverlayOpen, currentBenrathObject, toggleObjectOverlay } = useCommunication();
+  const [gameFinishedOverlayOpen, setGameFinishedOverlayOpen] = useState(false)
 
   const buttonHandler = () => toggleObjectOverlay();
+
+  const buttonHandlerFinished = () => {
+    toggleObjectOverlay();
+    if (gameFinished) {
+      publish('game:paused', {})
+      setGameFinishedOverlayOpen(true)
+    }
+  }
+
+  const toggleGameFinishOverlay = () => {
+    publish('game:resume', {})
+    setGameFinishedOverlayOpen(false)
+  }
+
+  const escFunction = useCallback((event: KeyboardEvent) => {
+    if (event.key === "Escape") {
+      if (currentObjectOverlayOpen) {
+        toggleObjectOverlay()
+      }
+    }
+  }, [currentObjectOverlayOpen, toggleObjectOverlay]);
+
+  useEffect(() => {
+    document.addEventListener("keydown", escFunction, false);
+
+    return () => {
+      document.removeEventListener("keydown", escFunction, false);
+    };
+  }, [escFunction]);
 
   return (
     <div className={sbMenuFrameStyles['menu-frame']}>
@@ -41,10 +76,18 @@ const SbMenuFrame: React.FC<Props> = ({
 
       { currentObjectOverlayOpen &&
           <SbTourFrame>
-            <SbInfoCard benrathObject={currentBenrathObject} buttonHandler={buttonHandler} />
+            <SbInfoCard
+              benrathObject={currentBenrathObject}
+              buttonHandler={gameFinished ? buttonHandlerFinished : buttonHandler}
+            />
           </SbTourFrame>
       }
 
+      {gameFinishedOverlayOpen &&
+        <SbTourFrame>
+          <SbSuccessOverlay score={score} closeHandler={toggleGameFinishOverlay} />
+        </SbTourFrame>
+      }
 
       <div className={sbMenuFrameStyles['menu-frame--logo']}>
         {logo}

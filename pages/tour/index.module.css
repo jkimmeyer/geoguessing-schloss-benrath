@@ -80,3 +80,8 @@
 
   animation: fadein var(--fadein-duration) ease-in-out infinite;
 }
+
+.page {
+  max-inline-size: 100vw;
+  max-block-size: 100vh;
+}

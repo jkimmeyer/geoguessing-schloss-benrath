@@ -1,6 +1,7 @@
 import buttonStyles from './SbButton.module.css';
 import { ButtonSize, ButtonType } from '../../types';
 import Link from 'next/link';
+import React from 'react';
 
 interface Props extends React.ButtonHTMLAttributes < HTMLButtonElement > {
   buttonType?: ButtonType;
@@ -10,6 +11,7 @@ interface Props extends React.ButtonHTMLAttributes < HTMLButtonElement > {
   icon?: React.ReactNode;
   forceReload?: boolean;
   href?: string;
+  iconOnly?: boolean;
 }
 
 const SbButton: React.FC<Props> = ({
@@ -18,6 +20,7 @@ const SbButton: React.FC<Props> = ({
   children,
   disabled,
   icon,
+  iconOnly = false,
   href,
   ...props
 }) => {
@@ -31,7 +34,9 @@ const SbButton: React.FC<Props> = ({
         data-size={buttonSize}
       >
         {icon}
-        <span>{children}</span>
+        { !iconOnly &&
+          <span>{children}</span>
+        }
       </Link>
     )
   }
@@ -46,7 +51,9 @@ const SbButton: React.FC<Props> = ({
       {...props}
     >
       {icon}
-      <span>{children}</span>
+      { !iconOnly &&
+        <span>{children}</span>
+      }
     </button>
   );
 }
