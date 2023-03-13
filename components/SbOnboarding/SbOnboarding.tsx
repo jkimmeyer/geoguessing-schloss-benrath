@@ -28,7 +28,7 @@ const STEPS = [
   {
     title: "Deine nächste Aufgabe",
     id: 4,
-    description: "In der Gegenstandsübersicht unten in der Mitte siehst du, welches Objekt als nächstes zu Suchen ist. Es werden immer die nächsten drei Gegenstände angezeigt.",
+    description: "In der Gegenstandsübersicht unten in der Mitte siehst du, welches Objekt als nächstes zu Suchen ist. Es werden immer die nächsten drei Gegenstände angezeigt. Schaue bei der Suche nach den Gegenständen immer nach oben und nach unten!",
     direction: "bottom",
   },
   {
